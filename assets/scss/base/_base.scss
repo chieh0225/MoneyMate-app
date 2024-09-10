@@ -1,0 +1,48 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  // text-decoration: none; //已設定 $link-decoration: none
+  color: inherit;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // margin-bottom: 0;
+  letter-spacing: 0.02em;
+}
+
+p {
+  // margin-bottom: 0;
+  letter-spacing: 0.02em; //em 以目前 p 標籤的文字大小做計算
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.object-fit {
+  object-fit: cover;
+}
+
+[class^="mgc_"] {
+  font-size: 24px; /* 設定圖示大小 */
+  width: 24px;
+  height: 24px;
+}
+/* 新的 class 專門設定圖示大小為 28px */
+.icon-large {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+}
