@@ -1,3 +1,9 @@
+body {
+  width: 393px;
+  padding: 0px 16px;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -9,21 +15,6 @@ a {
   display: inline-block;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  // margin-bottom: 0;
-  letter-spacing: 0.02em;
-}
-
-p {
-  // margin-bottom: 0;
-  letter-spacing: 0.02em; //em 以目前 p 標籤的文字大小做計算
-}
-
 ul,
 li {
   margin: 0;
@@ -31,18 +22,114 @@ li {
   list-style: none;
 }
 
-.object-fit {
-  object-fit: cover;
+// 字體基準大小 (Base Value)
+$font-size-base: 11px;
+
+// 標題 (Headings)
+h1 {
+  font-size: 1.75rem; // 28px
+}
+h2 {
+  font-size: 1.4375rem; // 23px
+}
+h3 {
+  font-size: 1.1875rem; // 19px
+}
+
+// 文字樣式 (Text)
+.t1 {
+  font-size: 1rem; // 16px
+}
+.t2 {
+  font-size: 0.8125rem; // 13px
+}
+.t3 {
+  font-size: 0.6875rem; // 11px
 }
 
 [class^="mgc_"] {
-  font-size: 24px; /* 設定圖示大小 */
+  font-size: 24px; // 設定圖示大小
   width: 24px;
   height: 24px;
 }
-/* 新的 class 專門設定圖示大小為 28px */
+// 新的 class 專門設定圖示大小為 28px
 .icon-large {
   font-size: 28px;
   width: 28px;
   height: 28px;
+}
+
+// 顏色參數
+:root {
+  --navbar-surface: #ffffff;
+  --navbar-text: #737373;
+  --background: #f6f6f6;
+  --head-primary: #22c55e;
+  --head-label: #1a1a1a;
+  --surface-primary: #ffffff;
+  --surface-primary-hover: #f6f6f6;
+  --stroke-primary: #e7e7e7;
+  --icon-primary: #454545;
+  --icon-secondary: #ff8b35;
+  --text-primary: #262626;
+  --text-secondary: #4f4f4f;
+}
+// 深色模式顏色
+body.dark-mode {
+  --navbar-surface: #454545;
+  --navbar-text: #b0b0b0;
+  --background: #262626;
+  --head-primary: #262626;
+  --head-label: #ffffff;
+  --surface-primary: #4f4f4f;
+  --surface-primary-hover: #3d3d3d;
+  --stroke-primary: #4f4f4f;
+  --icon-primary: #d1d1d1;
+  --icon-secondary: #ffb56f;
+  --text-primary: #f6f6f6;
+  --text-secondary: #b0b0b0;
+}
+
+.navbar {
+  background-color: var(--navbar-surface);
+  color: var(--navbar-text);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--head-primary);
+}
+
+p {
+  color: var(--text-primary);
+}
+
+.label {
+  color: var(--head-label);
+}
+
+.button {
+  background-color: var(--surface-primary);
+}
+
+.button:hover {
+  background-color: var(--surface-primary-hover);
+}
+
+.icon-primary:before {
+  color: var(--icon-primary) !important;
+}
+
+.icon-secondary:before {
+  color: var(--icon-secondary) !important;
+}
+
+.object-fit {
+  object-fit: cover;
 }
