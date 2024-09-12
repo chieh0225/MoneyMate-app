@@ -1,7 +1,10 @@
 body {
-  width: 393px;
-  padding: 0px 16px;
+  max-width: 393px;
   margin: 0 auto;
+  margin-bottom: 90px;
+}
+.wrapper {
+  padding: 0 16px;
 }
 
 img {
@@ -122,12 +125,14 @@ p {
   background-color: var(--surface-primary-hover);
 }
 
-.icon-primary:before {
-  color: var(--icon-primary) !important;
+.icon-add:before {
+  color: var(--navbar-surface);
 }
-
+.icon-primary:before {
+  color: var(--icon-primary);
+}
 .icon-secondary:before {
-  color: var(--icon-secondary) !important;
+  color: var(--icon-secondary);
 }
 
 .object-fit {

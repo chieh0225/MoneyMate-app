@@ -1,0 +1,39 @@
+.footer {
+  max-width: 393px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 0 16px;
+  margin: 0 auto;
+  background-color: var(--navbar-surface);
+}
+
+.nav-item {
+  padding: 0 16px;
+}
+
+.nav-link {
+  color: var(--navbar-text);
+}
+
+.footer .icon-primary:before {
+  color: $neutral-300 !important;
+}
+
+.add-btn {
+  width: 48px;
+  height: 40px;
+  background-color: $primary-500;
+  border-radius: $border-radius-sm;
+  box-shadow: 2px 4px 20px 4px rgba(34, 197, 94, 0.2);
+}
+
+.nav-item.active .icon-primary:before,
+.nav-item.active .nav-link {
+  color: $primary-500 !important;
+}
+
+.nav-item:hover .icon-primary:before,
+.nav-item:hover .nav-link {
+  color: $primary-500 !important;
+}
