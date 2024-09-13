@@ -1,0 +1,31 @@
+.header {
+
+
+    .nav-underline {
+        gap: 0;
+    }
+
+    .nav-link {
+        color: var(--navbar-text);
+
+        &.active {
+            color: $primary-500;
+
+            span {
+                color: var(--text-primary);
+            }
+
+        }
+    }
+
+
+
+
+    // .tabActive {
+    //     color: $black ;
+
+    //     border-bottom: 1px solid $primary-500 span {
+    //         color: $primary-500;
+    //     }
+    // }
+}
