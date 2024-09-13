@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-e5024378.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-18af3694.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-c55ada5a.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-5fbe28a9.css">
   </head>
   <body>
     <h1>我是 header</h1>
@@ -88,8 +88,7 @@
         class="nav-link t3 pt-0 stretched-link"
         aria-current="page"
         href="./index.html"
-      >
-        首頁</a
+        >首頁</a
       >
     </li>
     <li
@@ -99,15 +98,48 @@
       <a class="nav-link t3 pt-0 stretched-link" href="#">紀錄</a>
     </li>
     <li class="d-flex align-items-center">
-      <button type="button" class="add-btn border-0">
+      <button
+        type="button"
+        class="add-btn border-0"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mainOffcanvas"
+        aria-controls="offcanvasBottom"
+      >
         <span class="mgc_add_fill icon-add align-text-bottom"></span>
       </button>
+      <!-- 第一個 Offcanvas -->
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="mainOffcanvas"
+        style="height: 100vh"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">計算結果</h5>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- 顯示結果的 input 元素 -->
+          <input
+            type="text"
+            id="result-input"
+            class="form-control"
+            readonly
+            data-bs-toggle="modal"
+            data-bs-target="#calculator-modal"
+          />
+        </div>
+      </div>
     </li>
     <li
       class="nav-item d-flex flex-column align-items-center gap-1 position-relative"
     >
       <span class="mgc_chart_pie_2_fill icon-primary align-text-bottom"></span>
-      <a class="nav-link t3 pt-0 stretched-link" href="#">圖表AI</a>
+      <a class="nav-link t3 pt-0 stretched-link" href="#">圖表</a>
     </li>
     <li
       class="nav-item d-flex flex-column align-items-center gap-1 position-relative"
@@ -117,6 +149,171 @@
     </li>
   </ul>
 </footer>
+
+<!-- 計算機 Modal -->
+<div class="calculator-modal-wrapper">
+  <div
+    class="modal fade"
+    id="calculator-modal"
+    tabindex="-1"
+    aria-labelledby="calculatorModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog mb-0 calculator-modal">
+      <div class="modal-content border-0">
+        <div class="modal-body p-0">
+          <div class="calculator card">
+            <div class="calculator-keys">
+              <div class="calculator-column">
+                <button
+                  type="button"
+                  value="7"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  7
+                </button>
+                <button
+                  type="button"
+                  value="4"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  4
+                </button>
+                <button
+                  type="button"
+                  value="1"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  1
+                </button>
+                <button
+                  type="button"
+                  value="00"
+                  class="btn btn-light waves-effect"
+                >
+                  00
+                </button>
+              </div>
+              <div class="calculator-column">
+                <button
+                  type="button"
+                  value="8"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  8
+                </button>
+                <button
+                  type="button"
+                  value="5"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  5
+                </button>
+                <button
+                  type="button"
+                  value="2"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  2
+                </button>
+                <button
+                  type="button"
+                  value="0"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  0
+                </button>
+              </div>
+              <div class="calculator-column">
+                <button
+                  type="button"
+                  value="9"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  9
+                </button>
+                <button
+                  type="button"
+                  value="6"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  6
+                </button>
+                <button
+                  type="button"
+                  value="3"
+                  class="btn btn-light calculator-number-btn waves-effect"
+                >
+                  3
+                </button>
+                <button
+                  type="button"
+                  class="decimal function btn btn-light calculator-icon-btn"
+                  value="."
+                >
+                  .
+                </button>
+              </div>
+              <div class="calculator-column">
+                <button
+                  type="button"
+                  class="operator btn btn-primary-500 calculator-icon-btn"
+                  value="+"
+                >
+                  <span class="mgc_add_fill align-text-bottom"></span>
+                </button>
+                <button
+                  type="button"
+                  class="operator btn btn-primary-500 calculator-icon-btn"
+                  value="-"
+                >
+                  <span class="mgc_minimize_fill align-text-bottom"></span>
+                </button>
+                <button
+                  type="button"
+                  class="operator btn btn-primary-500 calculator-icon-btn"
+                  value="*"
+                >
+                  <span class="mgc_close_fill align-text-bottom"></span>
+                </button>
+                <button
+                  type="button"
+                  class="operator btn btn-primary-500 calculator-icon-btno"
+                  value="/"
+                >
+                  ÷
+                </button>
+              </div>
+              <div class="calculator-column">
+                <button
+                  type="button"
+                  class="all-clear function btn btn-primary-500"
+                  value="all-clear"
+                >
+                  AC
+                </button>
+                <button
+                  type="button"
+                  class="operator btn btn-primary-500 calculator-icon-btn"
+                  value="backspace"
+                >
+                  <span class="mgc_arrow_left_fill align-text-bottom"></span>
+                </button>
+                <button
+                  type="button"
+                  class="equal-sign operator btn btn-secondary"
+                  value="="
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     
   </body>
