@@ -58,7 +58,7 @@
 .modal {
   left: auto;
 
-  .modal-backdrop {
+  &-backdrop {
     display: none !important; /* 隱藏 Modal 背景遮罩 */
   }
 
