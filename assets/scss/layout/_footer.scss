@@ -82,20 +82,19 @@
 }
 
 .calculator-modal-wrapper {
+  .modal.fade .modal-dialog {
+    transform: translateY(100%) !important;
+    transition: transform 0.2s ease-out;
+  }
+  .modal.show .modal-dialog {
+    transform: translateY(0) !important;
+  }
   .calculator-modal {
     position: fixed;
     bottom: 0;
     margin: 0 auto;
     width: 100%;
     max-width: 393px; /* 設置為 footer 的最大寬度 */
-
-    .modal.fade .modal-dialog {
-      transform: translateY(100%) !important;
-      transition: transform 0.3s ease-out;
-    }
-    .modal.show .modal-dialog {
-      transform: translateY(0) !important;
-    }
 
     .modal-content {
       border: 0;
