@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-a0df8d4e.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-c0e30981.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-08e39486.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-a374a8e6.css">
   </head>
   <body>
     <h1>我是 header</h1>
@@ -112,15 +112,25 @@
         class="offcanvas offcanvas-bottom"
         tabindex="-1"
         id="mainOffcanvas"
-        style="height: 100vh"
+        style="height: calc(100vh - 14px)"
       >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title">計算結果</h5>
+        <img
+          src="/MoneyMate-app/assets/Grabber-ccef7bf3.svg"
+          alt=""
+          width="36px"
+          height="5px"
+          class="mx-auto mt-1"
+        />
+        <div class="offcanvas-header justify-content-between pt-1 pb-2">
           <button
             type="button"
             class="btn-close text-reset"
             data-bs-dismiss="offcanvas"
           ></button>
+          <h5 class="offcanvas-title t1-b">新增紀錄</h5>
+          <button type="button" class="custom-btn-sm custom-btn-primary">
+            完成
+          </button>
         </div>
         <div class="offcanvas-body">
           <!-- 顯示結果的 input 元素 -->
@@ -164,149 +174,142 @@
         <div class="modal-body p-0">
           <div class="calculator card">
             <div class="calculator-keys">
-              <div class="calculator-column">
-                <button
-                  type="button"
-                  value="7"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  7
-                </button>
-                <button
-                  type="button"
-                  value="4"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  4
-                </button>
-                <button
-                  type="button"
-                  value="1"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  1
-                </button>
-                <button
-                  type="button"
-                  value="00"
-                  class="btn btn-light waves-effect"
-                >
-                  00
-                </button>
-              </div>
-              <div class="calculator-column">
-                <button
-                  type="button"
-                  value="8"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  8
-                </button>
-                <button
-                  type="button"
-                  value="5"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  5
-                </button>
-                <button
-                  type="button"
-                  value="2"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  2
-                </button>
-                <button
-                  type="button"
-                  value="0"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  0
-                </button>
-              </div>
-              <div class="calculator-column">
-                <button
-                  type="button"
-                  value="9"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  9
-                </button>
-                <button
-                  type="button"
-                  value="6"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  6
-                </button>
-                <button
-                  type="button"
-                  value="3"
-                  class="btn btn-light calculator-number-btn waves-effect"
-                >
-                  3
-                </button>
-                <button
-                  type="button"
-                  class="decimal function btn btn-light calculator-icon-btn"
-                  value="."
-                >
-                  .
-                </button>
-              </div>
-              <div class="calculator-column">
-                <button
-                  type="button"
-                  class="operator btn btn-primary-500 calculator-icon-btn"
-                  value="+"
-                >
-                  <span class="mgc_add_fill align-text-bottom"></span>
-                </button>
-                <button
-                  type="button"
-                  class="operator btn btn-primary-500 calculator-icon-btn"
-                  value="-"
-                >
-                  <span class="mgc_minimize_fill align-text-bottom"></span>
-                </button>
-                <button
-                  type="button"
-                  class="operator btn btn-primary-500 calculator-icon-btn"
-                  value="*"
-                >
-                  <span class="mgc_close_fill align-text-bottom"></span>
-                </button>
-                <button
-                  type="button"
-                  class="operator btn btn-primary-500 calculator-icon-btno"
-                  value="/"
-                >
-                  ÷
-                </button>
-              </div>
-              <div class="calculator-column">
-                <button
-                  type="button"
-                  class="all-clear function btn btn-primary-500"
-                  value="all-clear"
-                >
-                  AC
-                </button>
-                <button
-                  type="button"
-                  class="operator btn btn-primary-500 calculator-icon-btn"
-                  value="backspace"
-                >
-                  <span class="mgc_arrow_left_fill align-text-bottom"></span>
-                </button>
-                <button
-                  type="button"
-                  class="equal-sign operator btn btn-secondary"
-                  value="="
-                >
-                  OK
-                </button>
-              </div>
+              <button
+                type="button"
+                value="7"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                7
+              </button>
+              <button
+                type="button"
+                value="8"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                8
+              </button>
+              <button
+                type="button"
+                value="9"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                9
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn"
+                value="+"
+              >
+                <span class="mgc_add_fill align-text-bottom"></span>
+              </button>
+              <button
+                type="button"
+                class="all-clear function btn btn-primary-500 btn-ac h1-b text-white"
+                value="all-clear"
+              >
+                AC
+              </button>
+
+              <button
+                type="button"
+                value="4"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                4
+              </button>
+              <button
+                type="button"
+                value="5"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                5
+              </button>
+              <button
+                type="button"
+                value="6"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                6
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn"
+                value="-"
+              >
+                <span class="mgc_minimize_fill align-text-bottom"></span>
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn text-white"
+                value="backspace"
+              >
+                <span class="mgc_arrow_left_fill align-text-bottom"></span>
+              </button>
+
+              <button
+                type="button"
+                value="1"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                1
+              </button>
+              <button
+                type="button"
+                value="2"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                2
+              </button>
+              <button
+                type="button"
+                value="3"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                3
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn"
+                value="*"
+              >
+                <span class="mgc_close_fill align-text-bottom"></span>
+              </button>
+
+              <button
+                type="button"
+                value="00"
+                class="btn btn-light h1-b h-100 waves-effect"
+              >
+                00
+              </button>
+              <button
+                type="button"
+                value="0"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                0
+              </button>
+              <button
+                type="button"
+                class="decimal function btn btn-light h1-b calculator-number-btn"
+                value="."
+              >
+                .
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 h1-b text-white"
+                value="/"
+              >
+                ÷
+              </button>
+              <button
+                type="button"
+                class="equal-sign operator btn btn-secondary h1-b text-white btn-ok"
+                value="="
+              >
+                OK
+              </button>
             </div>
           </div>
         </div>
