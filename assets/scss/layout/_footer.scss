@@ -6,34 +6,131 @@
   padding: 0 16px;
   margin: 0 auto;
   background-color: var(--navbar-surface);
+
+  .nav-item {
+    padding: 0 16px;
+
+    .nav-link {
+      color: var(--navbar-text);
+    }
+
+    &.active {
+      .icon-primary:before,
+      .nav-link {
+        color: $primary-500 !important;
+      }
+    }
+
+    &:hover {
+      .icon-primary:before,
+      .nav-link {
+        color: $primary-500 !important;
+      }
+    }
+  }
+
+  .icon-primary:before {
+    color: $neutral-300 !important;
+  }
+
+  .add-btn {
+    width: 48px;
+    height: 40px;
+    background-color: $primary-500;
+    border-radius: $border-radius-sm;
+    box-shadow: 2px 4px 20px 4px rgba(34, 197, 94, 0.2);
+  }
+
+  .offcanvas-bottom {
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 393px; /* 設置為 footer 的最大寬度 */
+    height: auto;
+    max-height: 100vh;
+    border-radius: $border-radius-sm; // 待更正
+    .offcanvas-header .btn-close {
+      margin: 0;
+    }
+    .offcanvas-body {
+      width: 100%;
+    }
+  }
 }
 
-.nav-item {
-  padding: 0 16px;
+.modal {
+  left: auto;
+
+  &-backdrop {
+    display: none !important; /* 隱藏 Modal 背景遮罩 */
+  }
+
+  .fade .modal-dialog {
+    transform: translateY(100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .show .modal-dialog {
+    transform: translateY(0);
+  }
+
+  .modal-content {
+    border: 0;
+    border-radius: $border-radius-sm;
+    background-color: $neutral-300;
+  }
 }
 
-.nav-link {
-  color: var(--navbar-text);
-}
+.calculator-modal-wrapper {
+  .modal.fade .modal-dialog {
+    transform: translateY(100%) !important;
+    transition: transform 0.2s ease-out;
+  }
+  .modal.show .modal-dialog {
+    transform: translateY(0) !important;
+  }
+  .calculator-modal {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 393px; /* 設置為 footer 的最大寬度 */
 
-.footer .icon-primary:before {
-  color: $neutral-300 !important;
-}
+    .modal-content {
+      border: 0;
+      border-radius: $border-radius-sm;
+      background-color: $neutral-300;
 
-.add-btn {
-  width: 48px;
-  height: 40px;
-  background-color: $primary-500;
-  border-radius: $border-radius-sm;
-  box-shadow: 2px 4px 20px 4px rgba(34, 197, 94, 0.2);
-}
+      .calculator {
+        border-radius: $border-radius-sm;
+        background-color: $neutral-300;
 
-.nav-item.active .icon-primary:before,
-.nav-item.active .nav-link {
-  color: $primary-500 !important;
-}
+        .calculator-keys {
+          height: 313px;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-gap: 4px;
+          padding: 12px 16px 16px 16px;
 
-.nav-item:hover .icon-primary:before,
-.nav-item:hover .nav-link {
-  color: $primary-500 !important;
+          button {
+            border-bottom: 1px solid $neutral-950;
+            border-radius: $border-radius-sm;
+            font-weight: $font-weight-bold;
+          }
+
+          span {
+            pointer-events: none;
+          }
+          [class^="mgc_"]::before {
+            color: white !important;
+          }
+        }
+
+        .equal-sign {
+          height: 100%;
+          grid-area: 3 / 5 / 5 / 5;
+        }
+      }
+    }
+  }
 }

@@ -38,6 +38,18 @@ h2 {
 h3 {
   font-size: 1.1875rem; // 19px
 }
+.h1-b {
+  font-size: 1.75rem; // 28px
+  font-weight: 700;
+}
+.h2-b {
+  font-size: 1.4375rem; // 23px
+  font-weight: 700;
+}
+.h3-b {
+  font-size: 1.1875rem; // 19px
+  font-weight: 700;
+}
 
 // 文字樣式 (Text)
 .t1 {
@@ -48,6 +60,18 @@ h3 {
 }
 .t3 {
   font-size: 0.6875rem; // 11px
+}
+.t1-b {
+  font-size: 1rem; // 16px
+  font-weight: 700;
+}
+.t2-b {
+  font-size: 0.8125rem; // 13px
+  font-weight: 700;
+}
+.t3-b {
+  font-size: 0.6875rem; // 11px
+  font-weight: 700;
 }
 
 [class^="mgc_"] {
