@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.4",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
     "mingcute_icon": "^2.9.5",

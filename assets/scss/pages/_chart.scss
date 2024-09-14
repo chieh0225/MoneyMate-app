@@ -1,0 +1,13 @@
+#acquisitions {
+  transition: none !important;
+}
+
+/* 自定義 tooltip 的樣式 */
+#chartjs-tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22c55e; /* 字體顏色 */
+  text-align: center;
+  border-color: #22c55e;
+}
