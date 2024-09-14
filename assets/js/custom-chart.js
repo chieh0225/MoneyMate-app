@@ -85,6 +85,7 @@ const chart = new Chart(document.getElementById("acquisitions"), {
   data: data,
   options: {
     cutout: "80%", // 調整這個值來改變環的寬度
+    responsive: false, // 設定為 false 以保持固定大小
     animation: {
       duration: 0, // 全局設置動畫持續時間為 0
     },
