@@ -1,6 +1,9 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.js";
 
+// chart.js
+import "./assets/js/custom-chart.js";
+
 console.log("Hello world!");
 
 // 深色模式初始化
