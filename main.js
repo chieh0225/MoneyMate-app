@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateImageForDarkMode() {
     darkModeImages.forEach((image) => {
       if (document.body.classList.contains("dark-mode")) {
-        image.src = "/assets/images/Status Bar-dark.svg"; // 深色模式的圖片
+        image.src = "./assets/images/Status Bar-dark.svg"; // 深色模式的圖片
       } else {
-        image.src = "/assets/images/Status Bar.svg"; // 淺色模式的圖片
+        image.src = "./assets/images/Status Bar.svg"; // 淺色模式的圖片
       }
     });
   }
