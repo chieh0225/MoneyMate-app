@@ -16,10 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateImageForDarkMode() {
     darkModeImages.forEach((image) => {
+      // 動態設置圖片路徑
+      const isGitHubPages = window.location.hostname === "chieh0225.github.io"; // 判斷是否在 GitHub Pages 上
+      const basePath = isGitHubPages ? "/MoneyMate-app/" : "/"; // 根據是否在 GitHub Pages 上設置基礎路徑
+
       if (document.body.classList.contains("dark-mode")) {
-        image.src = "./assets/images/statusbar-dark.svg"; // 深色模式的圖片
+        image.src = basePath + "assets/images/statusbar-dark.svg"; // 深色模式的圖片
       } else {
-        image.src = "./assets/images/statusbar.svg"; // 淺色模式的圖片
+        image.src = basePath + "assets/images/statusbar.svg"; // 淺色模式的圖片
       }
     });
   }
