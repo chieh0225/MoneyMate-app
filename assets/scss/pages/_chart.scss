@@ -11,3 +11,14 @@
   text-align: center;
   border-color: #22c55e;
 }
+
+.cost-chart {
+  background-color: var(--surface-primary);
+  border: 1px solid $neutral-100;
+  border-radius: 0.5rem;
+  box-shadow: -1px 7px 5px 0px #bababa0d, -4px 21px 6px 0px #bababa00;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+}
