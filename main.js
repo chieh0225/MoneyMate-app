@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateImageForDarkMode() {
     darkModeImages.forEach((image) => {
       if (document.body.classList.contains("dark-mode")) {
-        image.src = "./assets/images/statusbar-dark.svg"; // 深色模式的圖片
+        image.src = "/MoneyMate-app/assets/images/statusbar-dark.svg"; // 深色模式的圖片
       } else {
-        image.src = "./assets/images/statusbar.svg"; // 淺色模式的圖片
+        image.src = "/MoneyMate-app/assets/images/statusbar.svg"; // 淺色模式的圖片
       }
     });
   }
