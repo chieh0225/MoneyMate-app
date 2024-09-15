@@ -1,3 +1,15 @@
+.personal-info {
+  color: #262626 !important;
+  background-color: #ffffff;
+  border: 1px solid var(--stroke-primary);
+  border-radius: 0.75rem;
+  & p,
+  span,
+  [class^="mgc_"]:before {
+    color: #262626 !important;
+  }
+}
+
 .form-check {
   display: flex;
   align-items: center;
@@ -34,10 +46,15 @@
 
 .setting-list button {
   margin: 0;
-  color: var(--text-primary);
-  background-color: var(--background);
+  color: #262626;
+  background-color: #ffffff;
   border: 1px solid var(--stroke-primary);
-  border-radius: $border-radius-sm;
+  border-radius: 0.75rem;
+  & p,
+  span,
+  [class^="mgc_"]:before {
+    color: #262626;
+  }
 }
 
 .setting-list .form-check-input:focus {

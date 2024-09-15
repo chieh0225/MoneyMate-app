@@ -85,6 +85,12 @@ h3 {
   width: 28px;
   height: 28px;
 }
+// 新的 class 專門設定圖示大小為 14px
+.icon-small {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
 
 // 顏色參數
 :root {
@@ -156,7 +162,7 @@ p {
   color: var(--icon-primary);
 }
 .icon-secondary:before {
-  color: var(--icon-secondary);
+  color: var(--icon-secondary) !important;
 }
 
 .object-fit {
