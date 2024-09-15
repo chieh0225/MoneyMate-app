@@ -7,6 +7,10 @@ import "./assets/js/calculator.js";
 // chart.js
 import "./assets/js/custom-chart.js";
 
+// 載入圖片
+import statusbarDark from "./assets/images/statusbar-dark.svg";
+import statusbar from "./assets/images/statusbar.svg";
+
 console.log("Hello world!");
 
 // 深色模式初始化
@@ -14,20 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
   const darkModeImages = document.querySelectorAll(".status-bar"); // 選擇所有 .status-bar 的圖片元素
 
-  function getImagePath(imageName) {
-    const isGitHubPages = window.location.hostname === "chieh0225.github.io";
-    const basePath = isGitHubPages
-      ? "/MoneyMate-app/assets/images/"
-      : "assets/images/";
-    return basePath + imageName;
-  }
-
   function updateImageForDarkMode() {
     darkModeImages.forEach((image) => {
       if (document.body.classList.contains("dark-mode")) {
-        image.src = getImagePath("statusbar-dark.svg"); // 深色模式的圖片
+        image.src = statusbarDark; // 深色模式的圖片
       } else {
-        image.src = getImagePath("statusbar.svg"); // 淺色模式的圖片
+        image.src = statusbar; // 淺色模式的圖片
       }
     });
   }
