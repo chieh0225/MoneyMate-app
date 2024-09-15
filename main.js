@@ -14,18 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkModeToggle = document.getElementById("darkModeToggle");
   const darkModeImages = document.querySelectorAll(".status-bar"); // 選擇所有 .status-bar 的圖片元素
 
+  function getImagePath(imageName) {
+    const isGitHubPages = window.location.hostname === "chieh0225.github.io";
+    const basePath = isGitHubPages
+      ? "/MoneyMate-app/assets/images/"
+      : "assets/images/";
+    return basePath + imageName;
+  }
+
   function updateImageForDarkMode() {
     darkModeImages.forEach((image) => {
-      // 動態設置圖片路徑
-      const isGitHubPages = window.location.hostname === "chieh0225.github.io"; // 判斷是否在 GitHub Pages 上
-      const basePath = isGitHubPages
-        ? "/MoneyMate-app/assets/images/"
-        : "/assets/images/";
-
       if (document.body.classList.contains("dark-mode")) {
-        image.src = basePath + "statusbar-dark.svg"; // 深色模式的圖片
+        image.src = getImagePath("statusbar-dark.svg"); // 深色模式的圖片
       } else {
-        image.src = basePath + "statusbar.svg"; // 淺色模式的圖片
+        image.src = getImagePath("statusbar.svg"); // 淺色模式的圖片
       }
     });
   }
