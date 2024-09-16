@@ -7,3 +7,16 @@
   border: none;
   border-radius: 100px;
 }
+
+.filter-btn {
+  padding: 8px 12px !important;
+  color: var(--filter-btn-text) !important;
+  background-color: var(--filter-btn-surface) !important;
+  border: none !important;
+  border-radius: 16px !important;
+  &:hover,
+  &:active {
+    color: var(--filter-btn-text-hover) !important;
+    background-color: var(--filter-btn-surface-hover) !important;
+  }
+}

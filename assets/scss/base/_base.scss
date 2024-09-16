@@ -106,6 +106,10 @@ h3 {
   --icon-secondary: #ff8b35;
   --text-primary: #262626;
   --text-secondary: #4f4f4f;
+  --filter-btn-text: #737373; // 變數名稱待確認
+  --filter-btn-surface: #f6f6f6; // 變數名稱待確認
+  --filter-btn-text-hover: #ffffff; // 變數名稱待確認
+  --filter-btn-surface-hover: #3d3d3d; // 變數名稱待確認
 }
 // 深色模式顏色
 body.dark-mode {
@@ -121,6 +125,10 @@ body.dark-mode {
   --icon-secondary: #ffb56f;
   --text-primary: #f6f6f6;
   --text-secondary: #b0b0b0;
+  --filter-btn-text: #ffffff; // 變數名稱待確認
+  --filter-btn-surface: #3d3d3d; // 變數名稱待確認
+  --filter-btn-text-hover: #737373; // 變數名稱待確認
+  --filter-btn-surface-hover: #f6f6f6; // 變數名稱待確認
 }
 
 .navbar {

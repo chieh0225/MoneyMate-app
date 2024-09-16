@@ -1,0 +1,43 @@
+.record-item {
+  padding: 12px 20px !important;
+  border-radius: 0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid $neutral-100 !important;
+  &:hover,
+  &:active {
+    background-color: $neutral-50 !important;
+  }
+  .card-body {
+    .icon-primary:before {
+      color: $primary-500 !important;
+    }
+  }
+}
+
+.custom-text-muted {
+  color: $neutral-500;
+}
+
+.account-type-tag {
+  padding: 8px;
+  border-radius: 8px !important;
+}
+.account-type-tag-secondary {
+  color: $secondary;
+  background-color: $secondary-50;
+}
+.account-type-tag-primary {
+  color: $primary;
+  background-color: $primary-50;
+}
+.account-type-tag-alert-b {
+  color: $alert-b-500;
+  background-color: $alert-b-50;
+}
+
+.user-list img {
+  margin-left: -4px;
+  border: 1px solid $neutral-100;
+}
