@@ -4,93 +4,218 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>紀錄</title>
     <script type="module" crossorigin src="/MoneyMate-app/assets/main-cee0b360.js"></script>
     <link rel="stylesheet" href="/MoneyMate-app/assets/main-04c4baf0.css">
   </head>
   <body>
-    <header class="menuTab w-100">
-  <ul class="nav nav-underline d-flex">
-    <li class="nav-item w-50 px-0">
-      <a
-        class="nav-link text-center active"
-        href="./index.html"
-        >icon<span>個人記帳</span></a
-      >
-    </li>
-    <li class="nav-item w-50 px-0">
-      <a
-        class="nav-link text-center "
-        href="./group-index.html"
-        >icon<span>群組分帳</span></a
-      >
-    </li>
-  </ul>
-</header>
-    <span class="mgc_search_line"></span>
-    <span class="mgc_search_fill icon-large"></span>
-    <h1>H1</h1>
-    <h2>H2</h2>
-    <h3>H3</h3>
-    <p class="t1">T1</p>
-    <p class="t2">T2</p>
-    <p class="t3">T3</p>
+    <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
 
-    <div class="card" style="width: 18rem">
-      <img src="/MoneyMate-app/assets/cat-0c0689ae.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit,
-          iusto odio assumenda alias id nobis earum!
-        </p>
+    <div class="d-flex flex-column">
+      <div class="bg-white d-flex flex-column gap-3 w-100 p-4">
+        <h1 class="text-black">紀錄</h1>
+        <ul
+          class="nav nav-pills gap-2 filter-btn-list"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active filter-btn"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              全部
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              日期排序
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              記帳類型
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              金額較高
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
-
-    <!-- Modal 按鈕 -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        <div class="d-flex flex-column gap-1 w-100">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">pad thai</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄360</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user1"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/02-28d76561.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user2"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user3"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/04-758c527d.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user4"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              關閉
-            </button>
-            <button type="button" class="btn btn-primary">確定</button>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">泰國機票來回</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-primary"
+                    >收入</span
+                  >
+                  <span class="ms-1 h3-b">＄9,999</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user1"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/02-28d76561.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user2"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user3"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/04-758c527d.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="user4"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div
+        class="tab-pane fade"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >
+        ...
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+        ...
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+        ...
+      </div>
     </div>
-
     <footer class="footer w-100">
   <ul class="d-flex align-items-start justify-content-between pt-4 pb-6">
     <li
