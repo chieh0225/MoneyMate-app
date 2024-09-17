@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>紀錄</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-cee0b360.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-04c4baf0.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-8adcc5d5.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-377c31e3.css">
   </head>
   <body>
     <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
 
     <div class="d-flex flex-column">
       <div class="bg-white d-flex flex-column gap-3 w-100 p-4">
-        <h1 class="text-black">紀錄</h1>
+        <h1 class="text-black h1-b">紀錄</h1>
+        <form class="d-flex search-record">
+          <div class="input-group">
+            <div class="search-icon lh-1">
+              <span
+                class="mgc_search_2_fill icon-primary align-text-bottom"
+              ></span>
+            </div>
+            <input
+              class="form-control lh-1 t1 search"
+              type="search"
+              placeholder="搜尋記帳記錄"
+              aria-label="搜尋記帳記錄"
+            />
+          </div>
+        </form>
         <ul
           class="nav nav-pills gap-2 filter-btn-list"
           id="pills-tab"
@@ -250,7 +265,7 @@
         class="offcanvas offcanvas-bottom"
         tabindex="-1"
         id="mainOffcanvas"
-        style="height: calc(100vh - 14px)"
+        style="height: calc(100vh - 68px)"
       >
         <img
           src="/MoneyMate-app/assets/Grabber-ccef7bf3.svg"
