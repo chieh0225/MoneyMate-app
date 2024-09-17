@@ -2,6 +2,7 @@ body {
   max-width: 393px;
   margin: 0 auto;
   margin-bottom: 90px;
+  padding-right: 0 !important; // 避免在 offcanvas 顯示時自動加上的 padding-right
 }
 .wrapper {
   padding: 0 16px;

@@ -1,3 +1,59 @@
+.search-record {
+  .input-group {
+    background-color: #ffffff;
+    border: 1px solid $neutral-100;
+    border-radius: 8px;
+    transition: border-color 0.2s ease; /* 添加過渡效果 */
+    box-shadow: -1px 7px 5px 0px #bababa0d, -4px 21px 6px 0px #bababa00;
+    position: relative; /* 確保 button 可以被正確定位 */
+
+    /* 當 input 獲得焦點時顯示外框 */
+    &:focus-within {
+      box-shadow: 0 0 0 2px $primary, -1px 7px 5px 0px #bababa0d,
+        -4px 21px 6px 0px #bababa00; /* 增加焦點效果而不改變尺寸 */
+      .icon-primary::before {
+        color: $primary-500;
+      }
+    }
+  }
+  .search-icon {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 8px;
+  }
+  .icon-primary::before {
+    color: $neutral-200;
+  }
+  .form-control {
+    border: transparent;
+    border-radius: 8px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 0;
+    padding-right: 40px;
+    &:focus {
+      box-shadow: none;
+      caret-color: $neutral-500;
+      background-color: transparent;
+    }
+  }
+  input::placeholder {
+    color: $neutral-300;
+  }
+
+  .btn-close {
+    font-size: 14px;
+    padding: 5px;
+    margin-right: 16px;
+    position: absolute; /* 使按鈕可以浮動在 .input-group 內 */
+    z-index: 100;
+    right: 0; /* 位於右側 */
+    top: 50%; /* 垂直置中 */
+    transform: translateY(-50%); /* 垂直置中調整 */
+  }
+}
+
 .record-item {
   padding: 12px 20px !important;
   border-radius: 0 !important;
