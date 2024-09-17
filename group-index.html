@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>群組總覽</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-8adcc5d5.js"></script>
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-f15c17ce.js"></script>
     <link rel="stylesheet" href="/MoneyMate-app/assets/main-377c31e3.css">
   </head>
   <body>
-    <header class="menuTab w-100">
+    <header class="menuTab w-100 sticky-top bg-light">
   <ul class="nav nav-underline d-flex">
     <li class="nav-item w-50 px-0">
       <a
         class="nav-link text-center "
         href="./index.html"
+        id="personIndex"
         >icon<span>個人記帳</span></a
       >
     </li>
@@ -22,13 +23,55 @@
       <a
         class="nav-link text-center active"
         href="./group-index.html"
+        id="groupIndex"
         >icon<span>群組分帳</span></a
       >
     </li>
   </ul>
 </header>
-    <h1>群組總覽</h1>
-    <p>123</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="">選擇帳本</p>
+      <div class="dropdown">
+        <a
+          class="btn dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          全部帳本
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">生日派對</a></li>
+          <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+          <li><a class="dropdown-item" href="#">日本行</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="d-flex overflow-x-scroll">
+      <li class="me-2">
+        <a href="./group-index.html" class="d-flex flex-column">群組總覽</a>
+      </li>
+      <li class="me-2"><a href="#" class="d-flex flex-column">生日派對</a></li>
+      <li class="me-2">
+        <a href="./travel-index.html" id="travelTest" class="d-flex flex-column"
+          >泰國旅遊</a
+        >
+      </li>
+      <li class="me-2"><a href="#" class="d-flex flex-column">日本行</a></li>
+    </ul>
+    <div id="homeArea" class="d-block">
+      <p>首頁區塊</p>
+    </div>
+    <div id="homeArea" class="d-none">
+      <p>首頁區塊</p>
+    </div>
+    <div id="recordArea" class="d-none">
+      <p>紀錄區塊</p>
+    </div>
+    <div id="chartArea" class="d-none">
+      <p>圖表區塊</p>
+    </div>
     <footer class="footer w-100">
   <ul class="d-flex align-items-start justify-content-between pt-4 pb-6">
     <li

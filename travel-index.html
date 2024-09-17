@@ -4,116 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>設定</title>
+    <title>旅遊測試</title>
     <script type="module" crossorigin src="/MoneyMate-app/assets/main-f15c17ce.js"></script>
     <link rel="stylesheet" href="/MoneyMate-app/assets/main-377c31e3.css">
   </head>
   <body>
-    <header>
-  <div class="setting-header">
-    <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
-    <h1 class="h1-b text-white ps-4">操作設定</h1>
-  </div>
+    <header class="menuTab w-100 sticky-top bg-light">
+  <ul class="nav nav-underline d-flex">
+    <li class="nav-item w-50 px-0">
+      <a
+        class="nav-link text-center "
+        href="./index.html"
+        id="personIndex"
+        >icon<span>個人記帳</span></a
+      >
+    </li>
+    <li class="nav-item w-50 px-0">
+      <a
+        class="nav-link text-center active"
+        href="./group-index.html"
+        id="groupIndex"
+        >icon<span>群組分帳</span></a
+      >
+    </li>
+  </ul>
 </header>
-
-    <div class="wrapper">
-      <div class="d-flex p-4 my-4 personal-info">
-        <div class="flex-shrink-0">
-          <img
-            src="/MoneyMate-app/assets/01-e7957e0c.png"
-            alt="..."
-            width="60"
-            height="60"
-            class="rounded-circle object-fit"
-          />
-        </div>
-        <div class="flex-grow-1 ms-3">
-          <p class="h2-b mb-2">Neil Wang</p>
-          <p class="t3">
-            <span
-              class="mgc_pencil_fill icon-small icon-primary align-text-bottom me-2"
-            ></span
-            >一鍵切換、隨意記帳就在 MoneyMate！
-          </p>
-        </div>
-        <span class="mgc_more_1_fill icon-primary align-text-bottom"></span>
+    <div class="d-flex justify-content-between align-items-center">
+      <p class="">選擇帳本</p>
+      <div class="dropdown">
+        <a
+          class="btn dropdown-toggle"
+          href="#"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          全部帳本
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">生日派對</a></li>
+          <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+          <li><a class="dropdown-item" href="#">日本行</a></li>
+        </ul>
       </div>
-      <ul class="setting-list d-flex flex-column gap-4 mt-4 pb-6">
-        <li class="w-100">
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_group_2_fill icon-primary me-2"></span>查看成員
-            </p>
-            <p class="t1">12 位</p>
-          </button>
-        </li>
-        <li class="w-100">
-          <button class="form-check form-switch button p-4 m-0 w-100">
-            <label
-              class="form-check-label t1-b d-flex align-items-center"
-              for="darkModeToggle"
-              ><span class="mgc_moon_fill icon-primary me-2"></span
-              >深色主題</label
-            >
-            <input
-              class="form-check-input border-0"
-              type="checkbox"
-              role="switch"
-              id="darkModeToggle"
-            />
-          </button>
-        </li>
-        <li class="w-100">
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_notebook_fill icon-primary me-2"></span>新增帳本
-            </p>
-            <p class="t1">共 10 本</p>
-          </button>
-        </li>
-        <li class="w-100">
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_tag_fill icon-primary me-2"></span>新增種類
-            </p>
-            <p class="t1">10 種</p>
-          </button>
-        </li>
-        <li class="w-100">
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_currency_dollar_fill icon-primary me-2"></span
-              >記帳幣別
-            </p>
-            <p class="t1">THB</p>
-          </button>
-        </li>
-        <li class="w-100">
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_classify_2_fill icon-primary me-2"></span
-              >預設紀錄
-            </p>
-            <p class="t1">0</p>
-          </button>
-        </li>
-        <li class="d-flex gap-4 w-100">
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_settings_2_fill icon-secondary me-2"></span
-              >更多選項
-            </p>
-          </button>
-          <button type="button" class="form-check button p-4 m-0 w-100">
-            <p class="t1-b d-flex align-items-center">
-              <span class="mgc_message_3_fill icon-secondary me-2"></span
-              >意見回覆
-            </p>
-          </button>
-        </li>
-      </ul>
+    </div>
+    <ul class="d-flex overflow-x-scroll">
+      <li class="me-2">
+        <a href="./group-index.html" class="d-flex flex-column">群組總覽</a>
+      </li>
+      <li class="me-2"><a href="#" class="d-flex flex-column">生日派對</a></li>
+      <li class="me-2">
+        <a href="#" id="travelTest" class="d-flex flex-column active"
+          >泰國旅遊</a
+        >
+      </li>
+      <li class="me-2"><a href="#" class="d-flex flex-column">日本行</a></li>
+    </ul>
+    <h2>旅遊測試首頁</h2>
+    <div id="homeArea" class="d-block">
+      <p>旅遊首頁區塊</p>
     </div>
 
+    <!-- <div id="chartArea" class="d-none">
+      <p>旅遊圖表區塊</p>
+    </div> -->
     <footer class="footer w-100">
   <ul class="d-flex align-items-start justify-content-between pt-4 pb-6">
     <li
