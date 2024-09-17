@@ -5,15 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>紀錄</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-f15c17ce.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-377c31e3.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-88575c13.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-bd66d93f.css">
   </head>
   <body>
     <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
 
     <div class="d-flex flex-column">
       <div class="bg-white d-flex flex-column gap-3 w-100 p-4">
-        <h1 class="text-black">紀錄</h1>
+        <div
+          class="d-flex justify-content-between align-items-end record-title"
+        >
+          <h1 class="text-black h1-b">紀錄</h1>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle h3-b border-0 p-0"
+              type="button"
+              id="record-dropdownbutton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              泰國旅遊
+              <span
+                class="mgc_down_fill icon-primary align-text-bottom ms-1"
+              ></span>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-end mt-2"
+              aria-labelledby="record-dropdownbutton"
+              style="min-width: 120px"
+            >
+              <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+              <li><a class="dropdown-item" href="#">生日派對</a></li>
+              <li><a class="dropdown-item" href="#">日本行</a></li>
+              <li><a class="dropdown-item" href="#">台北之旅</a></li>
+            </ul>
+          </div>
+        </div>
+
         <form class="d-flex search-record">
           <div class="input-group">
             <div class="search-icon lh-1">
@@ -26,7 +55,13 @@
               type="search"
               placeholder="搜尋記帳記錄"
               aria-label="搜尋記帳記錄"
+              id="search-input"
             />
+            <button type="button" class="custom-btn-close" id="clear-button">
+              <span
+                class="mgc_close_line icon-primary align-text-bottom"
+              ></span>
+            </button>
           </div>
         </form>
         <ul
@@ -100,7 +135,7 @@
         role="tabpanel"
         aria-labelledby="pills-home-tab"
       >
-        <div class="d-flex flex-column gap-1 w-100">
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
           <div class="card record-item">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
@@ -153,7 +188,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex flex-column gap-1 w-100">
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
           <div class="card record-item">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
