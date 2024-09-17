@@ -1,0 +1,29 @@
+// 首頁選單方形按鈕
+.rect-btn {
+    background-color: $white;
+    color: $neutral-400;
+    text-wrap: nowrap;
+    font-size: $t3-custom-font-size;
+    border-radius: $border-radius-xl;
+
+    .mgcIcon {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+
+        &::before {
+            color: $neutral-100
+        }
+
+        &.mgc_add_fill::before {
+            color: $primary-500
+        }
+    }
+
+    &.active {
+        background-color: $neutral-900;
+        color: $neutral-50
+    }
+
+
+}

@@ -6,11 +6,16 @@
     .nav-link {
         color: var(--navbar-text);
 
-        &.active {
-            color: $primary-500;
+        .mgcIcon::before {
+            color: var(--navbar-text);
+        }
 
-            span {
-                color: var(--text-primary);
+        &.active {
+            color: var(--text-primary);
+            border-bottom-color: $primary-500;
+
+            .mgcIcon::before {
+                color: $primary-500;
             }
 
         }

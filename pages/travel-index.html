@@ -7,7 +7,8 @@
     <title>旅遊測試</title>
   </head>
   <body>
-    <%- include('./layout/menu',{page:"group-index"}); -%>
+    <%- include('./layout/header'); -%> <%-
+    include('./layout/menu',{page:"group-index"}); -%>
     <div class="d-flex justify-content-between align-items-center">
       <p class="">選擇帳本</p>
       <div class="dropdown">
@@ -27,26 +28,32 @@
         </ul>
       </div>
     </div>
-    <ul class="d-flex overflow-x-scroll">
-      <li class="me-2">
-        <a href="./group-index.html" class="d-flex flex-column">群組總覽</a>
-      </li>
-      <li class="me-2"><a href="#" class="d-flex flex-column">生日派對</a></li>
-      <li class="me-2">
-        <a href="#" id="travelTest" class="d-flex flex-column active"
-          >泰國旅遊</a
-        >
-      </li>
-      <li class="me-2"><a href="#" class="d-flex flex-column">日本行</a></li>
-    </ul>
-    <h2>旅遊測試首頁</h2>
-    <div id="homeArea" class="d-block">
-      <p>旅遊首頁區塊</p>
+    <div class="wrapper">
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="">選擇帳本</p>
+        <div class="dropdown">
+          <a
+            class="btn dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            全部帳本
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">生日派對</a></li>
+            <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+            <li><a class="dropdown-item" href="#">日本行</a></li>
+          </ul>
+        </div>
+      </div>
+      <%- include('./layout/menu-catalog.ejs',{page:"travel-index"}); -%>
+      <h2>旅遊測試首頁</h2>
+      <div id="homeArea" class="d-block">
+        <p>旅遊首頁區塊</p>
+      </div>
     </div>
-
-    <!-- <div id="chartArea" class="d-none">
-      <p>旅遊圖表區塊</p>
-    </div> -->
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
