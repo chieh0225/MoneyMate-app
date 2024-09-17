@@ -12,6 +12,7 @@
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 @import "./layout/menu";
+@import "./layout/setting-header.scss";
 
 // components
 @import "./components/custom-buttons.scss";
@@ -20,3 +21,4 @@
 @import "./pages/index.scss";
 @import "./pages/chart.scss";
 @import "./pages/setting.scss";
+@import "./pages/record.scss";

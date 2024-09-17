@@ -4,30 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>setting</title>
+    <title>設定</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <%- include('./layout/setting-header'); -%>
 
     <div class="wrapper">
+      <div class="d-flex p-4 my-4 personal-info">
+        <div class="flex-shrink-0">
+          <img
+            src="../assets/images/avator/01.png"
+            alt="..."
+            width="60"
+            height="60"
+            class="rounded-circle object-fit"
+          />
+        </div>
+        <div class="flex-grow-1 ms-3">
+          <p class="h2-b mb-2">Neil Wang</p>
+          <p class="t3">
+            <span
+              class="mgc_pencil_fill icon-small icon-primary align-text-bottom me-2"
+            ></span
+            >一鍵切換、隨意記帳就在 MoneyMate！
+          </p>
+        </div>
+        <span class="mgc_more_1_fill icon-primary align-text-bottom"></span>
+      </div>
       <ul class="setting-list d-flex flex-column gap-4 mt-4 pb-6">
         <li class="w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_group_2_fill icon-primary align-text-bottom me-2"
-              ></span
-              >查看成員
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_group_2_fill icon-primary me-2"></span>查看成員
             </p>
             <p class="t1">12 位</p>
           </button>
         </li>
         <li class="w-100">
           <button class="form-check form-switch button p-4 m-0 w-100">
-            <label class="form-check-label t1" for="darkModeToggle"
-              ><span
-                class="mgc_moon_fill icon-primary align-text-bottom me-2"
-              ></span
+            <label
+              class="form-check-label t1-b d-flex align-items-center"
+              for="darkModeToggle"
+              ><span class="mgc_moon_fill icon-primary me-2"></span
               >深色主題</label
             >
             <input
@@ -40,32 +58,24 @@
         </li>
         <li class="w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_notebook_fill icon-primary align-text-bottom me-2"
-              ></span
-              >新增帳本
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_notebook_fill icon-primary me-2"></span>新增帳本
             </p>
             <p class="t1">共 10 本</p>
           </button>
         </li>
         <li class="w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_tag_fill icon-primary align-text-bottom me-2"
-              ></span
-              >新增種類
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_tag_fill icon-primary me-2"></span>新增種類
             </p>
             <p class="t1">10 種</p>
           </button>
         </li>
         <li class="w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_currency_dollar_fill icon-primary align-text-bottom me-2"
-              ></span
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_currency_dollar_fill icon-primary me-2"></span
               >記帳幣別
             </p>
             <p class="t1">THB</p>
@@ -73,10 +83,8 @@
         </li>
         <li class="w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_classify_2_fill icon-primary align-text-bottom me-2"
-              ></span
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_classify_2_fill icon-primary me-2"></span
               >預設紀錄
             </p>
             <p class="t1">0</p>
@@ -84,18 +92,14 @@
         </li>
         <li class="d-flex gap-4 w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_settings_2_fill icon-secondary align-text-bottom me-2"
-              ></span
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_settings_2_fill icon-secondary me-2"></span
               >更多選項
             </p>
           </button>
           <button type="button" class="form-check button p-4 m-0 w-100">
-            <p>
-              <span
-                class="mgc_message_3_fill icon-secondary align-text-bottom me-2"
-              ></span
+            <p class="t1-b d-flex align-items-center">
+              <span class="mgc_message_3_fill icon-secondary me-2"></span
               >意見回覆
             </p>
           </button>
