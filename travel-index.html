@@ -5,69 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>旅遊測試</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-88575c13.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-bd66d93f.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-25638753.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-b0d7756a.css">
   </head>
   <body>
-    <header class="menuTab w-100 sticky-top bg-light">
+    <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
+ <header class="menuTab w-100 sticky-top bg-light">
   <ul class="nav nav-underline d-flex">
     <li class="nav-item w-50 px-0">
       <a
-        class="nav-link text-center "
+        class="nav-link d-flex align-items-center justify-content-center "
         href="./index.html"
         id="personIndex"
-        >icon<span>個人記帳</span></a
+        ><span class="mgc_user_3_fill mgcIcon me-2"></span>個人記帳</a
       >
     </li>
     <li class="nav-item w-50 px-0">
       <a
-        class="nav-link text-center active"
+        class="nav-link d-flex align-items-center justify-content-center active"
         href="./group-index.html"
         id="groupIndex"
-        >icon<span>群組分帳</span></a
+        ><span class="mgc_group_3_fill mgcIcon me-2"></span
+        ><span>群組分帳</span></a
       >
     </li>
   </ul>
 </header>
-    <div class="d-flex justify-content-between align-items-center">
-      <p class="">選擇帳本</p>
-      <div class="dropdown">
-        <a
-          class="btn dropdown-toggle"
-          href="#"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          全部帳本
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">生日派對</a></li>
-          <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-          <li><a class="dropdown-item" href="#">日本行</a></li>
-        </ul>
+    <div class="wrapper">
+      <div class="d-flex justify-content-between align-items-center">
+        <p class="">選擇帳本</p>
+        <div class="dropdown">
+          <a
+            class="btn dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            全部帳本
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">生日派對</a></li>
+            <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+            <li><a class="dropdown-item" href="#">日本行</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="d-flex overflow-x-scroll">
+  <li class="me-2">
+    <a
+      href="./group-index.html"
+      class="rect-btn d-flex flex-column align-items-center p-5 "
+      ><span class="mgc_book_6_line mgcIcon mb-2"></span>群組總覽</a
+    >
+  </li>
+  <li class="me-2">
+    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+      ><span class="mgc_cake_line mgcIcon mb-2"></span>生日派對</a
+    >
+  </li>
+  <li class="me-2">
+    <a
+      href="./travel-index.html"
+      id="travelTest"
+      class="rect-btn d-flex flex-column align-items-center p-5 active"
+      ><span class="mgc_airplane_line mgcIcon mb-2"></span>泰國旅遊</a
+    >
+  </li>
+  <li class="me-2">
+    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+      ><span class="mgc_miyajima_torii_line mgcIcon mb-2"></span>日本行</a
+    >
+  </li>
+  <li class="me-2">
+    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+      ><span class="mgc_taipei101_line mgcIcon mb-2"></span>台北之旅</a
+    >
+  </li>
+  <li class="me-2">
+    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+      ><span class="mgc_house_line mgcIcon mb-2"></span>民宿包棟</a
+    >
+  </li>
+  <li class="me-2">
+    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+      ><span class="mgc_folder_download_line mgcIcon mb-2"></span>封存</a
+    >
+  </li>
+  <li class="me-2">
+    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+      ><span class="mgc_add_fill mgcIcon mb-2"></span>新增分帳</a
+    >
+  </li>
+</ul>
+      <h2>旅遊測試首頁</h2>
+      <div id="homeArea" class="d-block">
+        <p>旅遊首頁區塊</p>
       </div>
     </div>
-    <ul class="d-flex overflow-x-scroll">
-      <li class="me-2">
-        <a href="./group-index.html" class="d-flex flex-column">群組總覽</a>
-      </li>
-      <li class="me-2"><a href="#" class="d-flex flex-column">生日派對</a></li>
-      <li class="me-2">
-        <a href="#" id="travelTest" class="d-flex flex-column active"
-          >泰國旅遊</a
-        >
-      </li>
-      <li class="me-2"><a href="#" class="d-flex flex-column">日本行</a></li>
-    </ul>
-    <h2>旅遊測試首頁</h2>
-    <div id="homeArea" class="d-block">
-      <p>旅遊首頁區塊</p>
-    </div>
-
-    <!-- <div id="chartArea" class="d-none">
-      <p>旅遊圖表區塊</p>
-    </div> -->
     <footer class="footer w-100">
   <ul class="d-flex align-items-start justify-content-between pt-4 pb-6">
     <li
