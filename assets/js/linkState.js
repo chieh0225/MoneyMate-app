@@ -28,21 +28,25 @@ const homeSwitch = () => {
     footerHome.classList.add('active');
     footerRecord.classList.remove('active');
     footerChart.classList.remove('active');
+    footerSetting.classList.remove('active');
 }
 
 const recordSwitch = () => {
     footerRecord.classList.add('active');
     footerHome.classList.remove('active');
     footerChart.classList.remove('active');
+    footerSetting.classList.remove('active');
 }
 
 const chartSwitch = () => {
     footerChart.classList.add('active');
     footerRecord.classList.remove('active');
     footerHome.classList.remove('active');
+    footerSetting.classList.remove('active');
 }
 
 const settingSwitch = () => {
+    footerSetting.classList.add('active');
     footerChart.classList.remove('active');
     footerRecord.classList.remove('active');
     footerHome.classList.remove('active');
@@ -64,12 +68,9 @@ const currentState = () => {
     if (subjectTitle === "setting.html") {
         lastPage = localStorage.getItem("pageBack")
         localStorage.setItem("currentState", lastPage)
-        console.log("1");
     } else if (subjectTitle === subjectPage) {
-        console.log("2");
         localStorage.setItem("currentState", "person")
     } else if (subjectTitle !== subjectPage) {
-        console.log("3");
         localStorage.setItem("currentState", subjectTitle)
     }
 }
