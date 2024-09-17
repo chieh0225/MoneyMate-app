@@ -1,21 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const inputGroup = document.querySelector(".input-group");
-  const inputField = inputGroup.querySelector(".form-control");
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search-input");
+  const clearButton = document.getElementById("clear-button");
 
-  inputField.addEventListener("focus", function () {
-    if (!inputGroup.querySelector(".btn-close")) {
-      const closeButton = document.createElement("button");
-      closeButton.type = "button";
-      closeButton.className = "btn-close";
-      closeButton.setAttribute("aria-label", "Close");
-      inputGroup.appendChild(closeButton);
-    }
-  });
+  if (searchInput && clearButton) {
+    clearButton.addEventListener("click", () => {
+      searchInput.value = "";
+      searchInput.focus();
+      clearButton.style.display = "none"; // 清除後隱藏按鈕
+    });
 
-  inputField.addEventListener("blur", function () {
-    const closeButton = inputGroup.querySelector(".btn-close");
-    if (closeButton) {
-      inputGroup.removeChild(closeButton);
-    }
-  });
+    searchInput.addEventListener("input", () => {
+      clearButton.style.display = searchInput.value ? "inline" : "none";
+    });
+  } else {
+  }
 });

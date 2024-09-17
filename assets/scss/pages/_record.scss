@@ -1,3 +1,9 @@
+.record-title {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
 .search-record {
   .input-group {
     background-color: #ffffff;
@@ -11,7 +17,7 @@
     &:focus-within {
       box-shadow: 0 0 0 2px $primary, -1px 7px 5px 0px #bababa0d,
         -4px 21px 6px 0px #bababa00; /* 增加焦點效果而不改變尺寸 */
-      .icon-primary::before {
+      .mgc_search_2_fill.icon-primary::before {
         color: $primary-500;
       }
     }
@@ -26,6 +32,7 @@
     color: $neutral-200;
   }
   .form-control {
+    background-color: transparent;
     border: transparent;
     border-radius: 8px;
     padding-top: 9px;
@@ -41,16 +48,25 @@
   input::placeholder {
     color: $neutral-300;
   }
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none; // 隱藏 input[type="search"] 中的預設清除按鈕
+  }
 
-  .btn-close {
-    font-size: 14px;
-    padding: 5px;
+  .custom-btn-close {
+    background-color: transparent;
+    border: none;
+    padding: 0;
     margin-right: 16px;
     position: absolute; /* 使按鈕可以浮動在 .input-group 內 */
     z-index: 100;
     right: 0; /* 位於右側 */
     top: 50%; /* 垂直置中 */
     transform: translateY(-50%); /* 垂直置中調整 */
+    display: none; /* 預設隱藏 */
+    cursor: pointer;
+  }
+  #search-input:not(:placeholder-shown) + #clear-button {
+    display: inline; /* 當有文字時顯示按鈕 */
   }
 }
 

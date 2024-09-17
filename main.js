@@ -1,9 +1,6 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.js";
 
-// record-search-btn-close.js
-import "./assets/js/record-search-btn-close.js";
-
 // 計算機.js
 import "./assets/js/calculator.js";
 
@@ -106,3 +103,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// record.js
+import "./assets/js/record-search-btn-close.js";
+import "./assets/js/record-dropdownbutton.js";
