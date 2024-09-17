@@ -1,6 +1,7 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.js";
-
+// linkState
+import './assets/js/linkState.js';
 // chart.js
 import "./assets/js/custom-chart.js";
 

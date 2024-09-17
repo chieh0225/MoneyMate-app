@@ -1,9 +1,10 @@
-<header class="menuTab w-100">
+<header class="menuTab w-100 sticky-top bg-light">
   <ul class="nav nav-underline d-flex">
     <li class="nav-item w-50 px-0">
       <a
         class="nav-link text-center <%= page === 'index' ? 'active' : '' %>"
         href="./index.html"
+        id="personIndex"
         >icon<span>個人記帳</span></a
       >
     </li>
@@ -11,6 +12,7 @@
       <a
         class="nav-link text-center <%= page === 'group-index' ? 'active' : '' %>"
         href="./group-index.html"
+        id="groupIndex"
         >icon<span>群組分帳</span></a
       >
     </li>
