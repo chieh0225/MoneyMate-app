@@ -4,6 +4,8 @@ import "bootstrap/dist/js/bootstrap.js";
 // 計算機.js
 import "./assets/js/calculator.js";
 
+// linkState
+import './assets/js/linkState.js';
 // chart.js
 import "./assets/js/custom-chart.js";
 
