@@ -10,29 +10,81 @@
     <%- include('./layout/header'); -%> <%-
     include('./layout/menu',{page:"group-index"}); -%>
     <div class="wrapper">
-      <div class="d-flex justify-content-between align-items-center">
-        <p class="">選擇帳本</p>
-        <div class="dropdown">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
+      <div class="pt-4">
+        <div
+          class="title-section d-flex justify-content-between align-items-center mb-3"
+        >
+          <h3>選擇帳本</h3>
+          <button
+            type="button"
+            class="btn border-0 p-0 dropdown-toggle"
             role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            data-bs-toggle="modal"
+            data-bs-target="#AccountBook"
           >
             全部帳本
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">生日派對</a></li>
-            <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-            <li><a class="dropdown-item" href="#">日本行</a></li>
-          </ul>
+          </button>
+          <div
+            class="modal fade"
+            id="AccountBook"
+            tabindex="-1"
+            aria-labelledby="AccountBookLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog fixed-bottom">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="AccountBookLabel">
+                    Modal title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <%- include('./layout/menu-catalog.ejs',{page:"travel-index"}); -%>
       </div>
-      <%- include('./layout/menu-catalog.ejs',{page:"travel-index"}); -%>
-      <h2>旅遊測試首頁</h2>
-      <div id="homeArea" class="d-block">
-        <p>旅遊首頁區塊</p>
+      <div class="py-4">
+        <div
+          class="title-section d-flex justify-content-between align-items-center"
+        >
+          <h3>2024 年 07 月</h3>
+          <div class="dropdown">
+            <a
+              class="btn dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              全部帳本
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">生日派對</a></li>
+              <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+              <li><a class="dropdown-item" href="#">日本行</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <%- include('./layout/footer'); -%>

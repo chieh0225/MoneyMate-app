@@ -1,0 +1,10 @@
+// scroll 預設x軸隱藏樣式
+.scroll-invisible {
+    // overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        background-color: transparent;
+        /* 背景透明 */
+    }
+}

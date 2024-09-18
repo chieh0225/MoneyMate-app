@@ -1,0 +1,18 @@
+.title-section {
+    h3 {
+        color: var(--head-label);
+        font-weight: 700;
+    }
+
+    button[data-bs-toggle="modal"] {
+        color: $neutral-400;
+        font-weight: 700;
+    }
+
+    // dropdown-toggle 預設符號
+    .dropdown-toggle {
+        &::after {
+            border-top: 0.3em solid $primary-500;
+        }
+    }
+}
