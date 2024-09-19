@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>旅遊測試</title>
+    <title>泰國旅遊總覽</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%> <%-
-    include('./layout/menu',{page:"group-index"}); -%>
+    <!-- <%- include('./layout/header'); -%>  -->
+    <%- include('./layout/menu',{page:"group-index"}); -%>
     <div class="wrapper">
       <div class="pt-4">
         <div
@@ -25,18 +25,16 @@
             全部帳本
           </button>
           <div
-            class="modal fade"
+            class="modalBottom modal fade"
             id="AccountBook"
             tabindex="-1"
             aria-labelledby="AccountBookLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog fixed-bottom">
+            <div class="modal-dialog fixed-bottom m-0">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="AccountBookLabel">
-                    Modal title
-                  </h1>
+                  <h4 class="modal-title" id="AccountBookLabel">選擇帳本</h4>
                   <button
                     type="button"
                     class="btn-close"
@@ -44,18 +42,49 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
-                  </button>
+                <div class="modal-body">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link d-flex align-items-center"
+                        href="./group-index.html"
+                        ><span class="mgc_notebook_line me-2"></span>群組總覽</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_notebook_line me-2"></span>生日派對</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        href="./travel-index.html"
+                        aria-current="page"
+                        ><span class="mgc_notebook_line me-2"></span>泰國派對</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_notebook_line me-2"></span>日本行</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_notebook_line me-2"></span>台北之旅</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_notebook_line me-2"></span>民宿包棟</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_notebook_line me-2"></span>封存</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -65,25 +94,105 @@
       </div>
       <div class="py-4">
         <div
-          class="title-section d-flex justify-content-between align-items-center"
+          class="title-section d-flex justify-content-between align-items-center mb-3"
         >
           <h3>2024 年 07 月</h3>
-          <div class="dropdown">
-            <a
-              class="btn dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              全部帳本
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">生日派對</a></li>
-              <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-              <li><a class="dropdown-item" href="#">日本行</a></li>
-            </ul>
+          <button
+            type="button"
+            class="btn border-0 p-0 dropdown-toggle"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#Statistic"
+          >
+            每月統計
+          </button>
+          <div
+            class="modalBottom modal fade"
+            id="Statistic"
+            tabindex="-1"
+            aria-labelledby="StatisticLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog fixed-bottom m-0">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="StatisticLabel">時間統計單位</h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_calendar_2_line me-2"></span>年</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#" aria-current="page"
+                        ><span class="mgc_calendar_2_line me-2"></span>月</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><span class="mgc_calendar_2_line me-2"></span>週</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><span class="mgc_calendar_2_line me-2"></span>日</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="main-card mb-4">
+        <div
+          class="titleArea d-flex justify-content-between align-items-center mb-5"
+        >
+          <h4 class="fs-6">月結餘</h4>
+          <span class="mgc_question_fill mgcIcon"></span>
+        </div>
+        <div class="d-flex">
+          <p class="text-primary-500 fw-bold me-2">TWD</p>
+          <p class="fs-3 fw-bold">2,081,600</p>
+          <button type="button" class="btn eyeBtn border-0 p-0 ms-auto">
+            <span class="mgc_eye_2_fill mgcIcon"></span>
+          </button>
+        </div>
+        <hr />
+        <div class="d-flex">
+          <div class="d-flex flex-fill border-end me-2">
+            <p class="text-neutral-500 me-2">總支出</p>
+            <p class="text-neutral-950 fw-bold flex-grow-1">$45,202</p>
+          </div>
+          <div class="d-flex flex-fill">
+            <p class="text-neutral-500 me-2">總收入</p>
+            <p class="text-neutral-950 fw-bold flex-grow-1">$120,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-card mb-4">
+        <div
+          class="titleArea d-flex justify-content-between align-items-center mb-5"
+        >
+          <h4 class="fs-6">月支出</h4>
+          <p class="fs-c5 fw-bold">$99,999</p>
+        </div>
+      </div>
+      <div class="main-card mb-4">
+        <div
+          class="titleArea d-flex justify-content-between align-items-center mb-5"
+        >
+          <h4 class="fs-6">分帳關係</h4>
+          <span class="mgc_question_fill mgcIcon"></span>
         </div>
       </div>
     </div>

@@ -10,123 +10,224 @@
     <%- include('./layout/header'); -%> <%-
     include('./layout/menu',{page:"index"}); -%>
     <div class="wrapper">
-      <div class="d-flex justify-content-between align-items-center">
-        <p class="">選擇帳本</p>
-        <div class="dropdown">
-          <a
-            class="btn dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+      <div class="pt-4">
+        <div
+            class="title-section d-flex justify-content-between align-items-center mb-3"
           >
-            全部帳本
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">生日派對</a></li>
-            <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-            <li><a class="dropdown-item" href="#">日本行</a></li>
-          </ul>
-        </div>
-      </div>
-      <ul class="d-flex overflow-x-scroll scroll-invisible">
-        <li class="me-2">
-          <a
-            href="./index.html"
-            class="rect-btn active d-flex flex-column align-items-center p-5"
-            ><span class="mgc_book_6_line mgcIcon mb-2"></span>個人總覽</a
-          >
-        </li>
-        <li class="me-2">
-          <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-            ><span class="mgc_dinner_line mgcIcon mb-2"></span>生活帳本</a
-          >
-        </li>
-        <li class="me-2">
-          <a
-            href="#"
-            class="rect-btn d-flex flex-column align-items-center p-5"
-            ><span class="mgc_pig_money_line mgcIcon mb-2"></span>儲蓄帳本</a
-          >
-        </li>
-        <li class="me-2">
-          <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-            ><span class="mgc_trending_up_fill mgcIcon mb-2"></span>投資帳本</a
-          >
-        </li>
-        </li>
-  <li class="me-2">
-    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-      ><span class="mgc_add_fill mgcIcon mb-2"></span
-      >新增帳本</a
-    >
-  </li>
-      </ul>
-    </div>
-    <span class="mgc_search_line"></span>
-    <span class="mgc_search_fill icon-large"></span>
-    <h1>H1</h1>
-    <h2>H2</h2>
-    <h3>H3</h3>
-    <p class="t1">T1</p>
-    <p class="t2">T2</p>
-    <p class="t3">T3</p>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/cat.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit,
-          iusto odio assumenda alias id nobis earum!
-        </p>
-      </div>
-    </div>
-
-    <!-- Modal 按鈕 -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
+            <h3>選擇帳本</h3>
             <button
               type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
+              class="btn border-0 p-0 dropdown-toggle"
+              role="button"
+              data-bs-toggle="modal"
+              data-bs-target="#AccountBook"
             >
-              關閉
+              全部帳本
             </button>
-            <button type="button" class="btn btn-primary">確定</button>
+            <div
+              class="modalBottom modal fade"
+              id="AccountBook"
+              tabindex="-1"
+              aria-labelledby="AccountBookLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog fixed-bottom m-0">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="AccountBookLabel">選擇帳本</h4>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link d-flex align-items-center"
+                          href="./group-index.html"
+                          ><span class="mgc_notebook_line me-2"></span>群組總覽</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#"
+                          ><span class="mgc_notebook_line me-2"></span>生日派對</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link active"
+                          href="./travel-index.html"
+                          aria-current="page"
+                          ><span class="mgc_notebook_line me-2"></span>泰國派對</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#"
+                          ><span class="mgc_notebook_line me-2"></span>日本行</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#"
+                          ><span class="mgc_notebook_line me-2"></span>台北之旅</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#"
+                          ><span class="mgc_notebook_line me-2"></span>民宿包棟</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#"
+                          ><span class="mgc_notebook_line me-2"></span>封存</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <ul class="d-flex overflow-x-scroll scroll-invisible">
+          <li class="me-2">
+            <a
+              href="./index.html"
+              class="rect-btn active d-flex flex-column align-items-center p-5"
+              ><span class="mgc_book_6_line mgcIcon mb-2"></span>個人總覽</a
+            >
+          </li>
+          <li class="me-2">
+            <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+              ><span class="mgc_dinner_line mgcIcon mb-2"></span>生活帳本</a
+            >
+          </li>
+          <li class="me-2">
+            <a
+              href="#"
+              class="rect-btn d-flex flex-column align-items-center p-5"
+              ><span class="mgc_pig_money_line mgcIcon mb-2"></span>儲蓄帳本</a
+            >
+          </li>
+          <li class="me-2">
+            <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+              ><span class="mgc_trending_up_fill mgcIcon mb-2"></span>投資帳本</a
+            >
+          </li>
+          </li>
+    <li class="me-2">
+      <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+        ><span class="mgc_add_fill mgcIcon mb-2"></span
+        >新增帳本</a
+      >
+    </li>
+        </ul>
+      </div>
+      <div class="py-4">
+        <div
+          class="title-section d-flex justify-content-between align-items-center mb-3"
+        >
+          <h3>2024 年 07 月</h3>
+          <button
+            type="button"
+            class="btn border-0 p-0 dropdown-toggle"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#Statistic"
+          >
+            每月統計
+          </button>
+          <div
+            class="modalBottom modal fade"
+            id="Statistic"
+            tabindex="-1"
+            aria-labelledby="StatisticLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog fixed-bottom m-0">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="StatisticLabel">時間統計單位</h3>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link d-flex align-items-center" href="#"
+                        ><span class="mgc_calendar_2_line me-2"></span>年</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#" aria-current="page"
+                        ><span class="mgc_calendar_2_line me-2"></span>月</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><span class="mgc_calendar_2_line me-2"></span>週</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"
+                        ><span class="mgc_calendar_2_line me-2"></span>日</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
+      <div class="main-card mb-4">
+        <div
+          class="titleArea d-flex justify-content-between align-items-center mb-5"
+        >
+          <h4 class="fs-6">月結餘</h4>
+          <span class="mgc_question_fill mgcIcon"></span>
+        </div>
+        <div class="d-flex">
+          <p class="text-primary-500 fw-bold me-2">TWD</p>
+          <p class="fs-3 fw-bold">2,081,600</p>
+          <button type="button" class="btn eyeBtn border-0 p-0 ms-auto">
+            <span class="mgc_eye_2_fill mgcIcon"></span>
+          </button>
+        </div>
+        <hr />
+        <div class="d-flex">
+          <div class="d-flex flex-fill border-end me-2">
+            <p class="text-neutral-500 me-2">總支出</p>
+            <p class="text-neutral-950 fw-bold flex-grow-1">$45,202</p>
+          </div>
+          <div class="d-flex flex-fill">
+            <p class="text-neutral-500 me-2">總收入</p>
+            <p class="text-neutral-950 fw-bold flex-grow-1">$120,000</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-card mb-4">
+        <div
+          class="titleArea d-flex justify-content-between align-items-center mb-5"
+        >
+          <h4 class="fs-6">月支出</h4>
+          <p class="fs-c5 fw-bold">$99,999</p>
+        </div>
+      </div>
+      <div class="main-card mb-4">
+        <div
+          class="titleArea d-flex justify-content-between align-items-center mb-5"
+        >
+          <h4 class="fs-6">其他帳本 月結餘</h4>
+          <span class="mgc_question_fill mgcIcon"></span>
+        </div>
+      </div>
+    </div>    
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

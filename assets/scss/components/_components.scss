@@ -16,3 +16,41 @@
         }
     }
 }
+
+// main-card
+.main-card {
+    background-color: $white;
+    padding: $spacer * 1.25;
+    border: 1px solid $neutral-100;
+    border-radius: $border-radius-xl * .75;
+    box-shadow: -1px 7px 5px 0px #BABABA0D;
+
+    .titleArea {
+        .mgcIcon::before {
+            color: $alert-b-500;
+        }
+    }
+
+    .eyeBtn {
+        .mgcIcon::before {
+            color: $neutral-400;
+        }
+    }
+
+    hr {
+        border-top: 2px solid;
+        color: $neutral-50;
+    }
+}
+
+// modal
+.modalBottom.fade {
+    .modal-dialog {
+        transition: transform 1s ease-out;
+        transform: none
+    }
+
+    .modal.show .modal-dialog {
+        transform: translate(0, 200px);
+    }
+}
