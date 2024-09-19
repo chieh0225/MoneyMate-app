@@ -20,10 +20,6 @@ const groupIndex = document.querySelector('#groupIndex');
 const travel = document.querySelector('#travelTest');
 // console.log(travel);
 
-// const goLink = (index, target) => {
-//     window.location.href = `./${index}-${target}.html`
-// }
-
 const homeSwitch = () => {
     footerHome.classList.add('active');
     footerRecord.classList.remove('active');
@@ -53,14 +49,14 @@ const settingSwitch = () => {
 }
 
 const checkState = (page) => {
-    if (page === 'index.html') {
-        homeSwitch()
+    if (page === 'setting.html') {
+        settingSwitch();
     } else if (page === 'record.html') {
         recordSwitch()
     } else if (page === 'chart.html') {
         chartSwitch();
     } else {
-        settingSwitch();
+        homeSwitch()
     }
 }
 
