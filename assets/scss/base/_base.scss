@@ -3,6 +3,9 @@ body {
   margin: 0 auto;
   margin-bottom: 90px;
   padding-right: 0 !important; // 避免在 offcanvas 顯示時自動加上的 padding-right
+  &::-webkit-scrollbar {
+    display: none; /* 隱藏滾動條 */
+  }
 }
 .wrapper {
   padding: 0 16px;
