@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>泰國旅遊總覽</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-b26b2bb0.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-7efbcd5a.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-cd1c933c.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-abddd7f7.css">
   </head>
   <body>
-    <header>
+    <header class="header-status-bar">
   <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
 </header>
  <header class="menuTab w-100 sticky-top bg-light">
@@ -392,6 +392,7 @@
       <a class="nav-link t3 pt-0 stretched-link" href="./chart.html">圖表</a>
     </li>
 
+    <!-- 新增紀錄按鈕 -->
     <li class="d-flex justify-content-center align-items-center">
       <button
         type="button"
@@ -497,13 +498,12 @@
                   </li>
                 </ul> -->
               </div>
+              
               <!-- 顯示結果的 input 元素 -->
               <input
                 type="text"
                 id="result-input"
                 class="form-control text-end h2-b result-input"
-                placeholder="|"
-                value=""
                 data-bs-toggle="modal"
                 data-bs-target="#calculator-modal"
               />
