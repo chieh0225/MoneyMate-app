@@ -61,6 +61,82 @@
   }
 }
 
+.addrecord {
+  .result-input-wrapper {
+    border-bottom: 2px solid $primary-500;
+  }
+  .result-input {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    caret-color: transparent;
+    &:focus {
+      box-shadow: none; /* 移除外圈效果 */
+    }
+  }
+  .sync {
+    border-bottom: 1px solid $neutral-100;
+    button {
+      border: none;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+    }
+    .form-check-input {
+      margin: 0;
+    }
+  }
+
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .cost-list li {
+    border-bottom: 1px solid $neutral-100;
+  }
+}
+
+.addrecord-item {
+  .input-group:focus-within label,
+  .input-group:focus-within .img-upload-icon {
+    border-bottom: 2px solid $primary-500;
+    transition: none;
+    [class^="mgc_"]::before {
+      color: $primary-500 !important;
+    }
+  }
+  .form-label {
+    height: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $neutral-100;
+  }
+  .form-control {
+    height: 100%;
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid $neutral-100;
+    border-radius: 0;
+    transition: none;
+    &:focus {
+      box-shadow: none;
+      caret-color: $neutral-500;
+      background-color: transparent;
+      border-bottom: 2px solid $primary-500;
+      transition: none;
+    }
+  }
+  input::placeholder {
+    color: $neutral-300;
+    font-weight: normal;
+  }
+  .img-upload-icon {
+    height: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $neutral-100;
+  }
+}
+
 .modal {
   left: auto;
 
@@ -98,6 +174,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 393px; /* 設置為 footer 的最大寬度 */
+    height: 313px;
 
     .modal-content {
       border: 0;

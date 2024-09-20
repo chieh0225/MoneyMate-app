@@ -24,10 +24,6 @@
   transition: background-color 0s, border-color 0s;
 }
 
-.form-check-input:checked {
-  background-color: #0d6efd;
-}
-
 .form-check-input:checked::before {
   transform: translateX(1rem);
 }
