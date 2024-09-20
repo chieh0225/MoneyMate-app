@@ -8,6 +8,7 @@
 
     .mgcIcon {
         font-size: 40px;
+        line-height: 1;
         height: 40px;
         width: 40px;
 
@@ -25,3 +26,26 @@
         color: $neutral-50
     }
 }
+
+.square-category {
+    border-radius: $border-radius-xl*1.25;
+    background-color: $neutral-900;
+    padding: $spacer*1.125;
+
+    .mgcIcon {
+        font-size: $h3-font-size;
+        line-height: 1;
+        height: 28px;
+        width: 28px;
+
+        &::before {
+            color: $neutral-100;
+        }
+    }
+}
+
+// .category-item{
+//     &:hover{
+
+//     }
+// }

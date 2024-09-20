@@ -43,6 +43,11 @@
     }
 }
 
+// category-item
+// .category{
+
+// }
+
 // modal
 .modalBottom.fade {
     .modal-dialog {
@@ -52,5 +57,16 @@
 
     .modal.show .modal-dialog {
         transform: translate(0, 200px);
+    }
+}
+
+// progress
+.secondaryProgress {
+    background-color: $secondary-50;
+    height: $spacer * .25;
+    border-radius: $spacer * .25;
+
+    .progress-bar {
+        border-radius: $spacer * .25;
     }
 }
