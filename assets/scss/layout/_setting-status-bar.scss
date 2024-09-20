@@ -1,5 +1,6 @@
-.header-status-bar {
-  border-radius: 0.75rem 0.75rem 0 0;
+.setting-status-bar {
+  background-color: var(--head-primary);
+  border-radius: 0.75rem 0.75rem 0 0; /* 僅設置頂部圓角 */
   position: relative; /* 確保背景顏色保持一致 */
   z-index: 1; /* 確保 sticky 效果不會被其他元素遮擋 */
 }

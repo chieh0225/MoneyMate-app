@@ -1,12 +1,6 @@
 .setting-header {
   background-color: var(--head-primary);
-  border-radius: 0.75rem;
-  position: relative; /* 確保背景顏色保持一致 */
-  z-index: 1; /* 確保 sticky 效果不會被其他元素遮擋 */
-}
-
-.status-bar {
-  border-radius: 0.75rem 0.75rem 0 0; /* 僅設置頂部圓角 */
+  border-radius: 0 0 0.75rem 0.75rem;
 }
 
 .setting-header h1 {
