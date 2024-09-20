@@ -9,6 +9,8 @@ import "./assets/js/linkState.js";
 
 // chart
 import "./assets/js/custom-chart.js";
+import "./assets/js/barChart.js";
+
 
 // 載入圖片
 import statusbarDark from "./assets/images/statusbar-dark.svg";
