@@ -77,14 +77,22 @@
     }
   }
   .calendar {
+    position: relative; /* 確保有適當的定位上下文 */
+
     .form-control {
       padding: 0px 0px 0px 4px;
+      height: 20px;
     }
+
     input[type="date"]::-webkit-calendar-picker-indicator {
-      display: none;
+      display: none; /* 隱藏預設日曆圖示 */
     }
+
     .mgc_down_small_fill {
       cursor: pointer;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
     }
   }
 
