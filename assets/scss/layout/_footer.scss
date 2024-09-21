@@ -80,16 +80,20 @@
     position: relative; /* 確保有適當的定位上下文 */
 
     .form-control {
+      width: 98px;
       padding: 0px 0px 0px 4px;
       height: 20px;
+      padding-right: 20px; /* 為圖示留出空間 */
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
       display: none; /* 隱藏預設日曆圖示 */
+      -webkit-appearance: none; /* 針對 WebKit 瀏覽器 */
     }
 
     .mgc_down_small_fill {
       cursor: pointer;
+      pointer-events: auto; /* 確保可以點擊 */
       top: 50%;
       transform: translateY(-50%);
       right: 0px;
