@@ -78,13 +78,13 @@
   }
   .calendar {
     position: relative; /* 確保有適當的定位上下文 */
+    white-space: nowrap;
 
     .form-control {
       width: 98px;
-      white-space: nowrap;
       padding: 0px 0px 0px 4px;
       height: 20px;
-      padding-right: 20px; /* 為圖示留出空間 */
+      padding-right: 25px; /* 為圖示留出空間 */
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
