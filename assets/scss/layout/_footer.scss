@@ -82,10 +82,11 @@
     width: 124px;
 
     .form-control {
-      width: auto;
+      min-width: 98px;
       padding: 0px 0px 0px 4px;
       height: 20px;
-      padding-right: 25px; /* 為圖示留出空間 */
+      padding-right: 24px; /* 為圖示留出空間 */
+      box-sizing: border-box;
     }
 
     input[type="date"]::-webkit-calendar-picker-indicator {
@@ -93,7 +94,7 @@
       -webkit-appearance: none; /* 針對 WebKit 瀏覽器 */
     }
 
-    .mgc_down_small_fill {
+    .icon-primary:before {
       position: absolute;
       cursor: pointer;
       pointer-events: auto; /* 確保可以點擊 */
