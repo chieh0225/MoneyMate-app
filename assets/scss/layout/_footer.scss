@@ -78,6 +78,8 @@
   }
   .calendar {
     position: relative; /* 確保有適當的定位上下文 */
+    white-space: nowrap;
+    width: 124px;
 
     .form-control {
       width: 98px;
@@ -92,6 +94,7 @@
     }
 
     .mgc_down_small_fill {
+      position: absolute;
       cursor: pointer;
       pointer-events: auto; /* 確保可以點擊 */
       top: 50%;
