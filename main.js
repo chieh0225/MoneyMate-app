@@ -1,6 +1,9 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.js";
 
+// 月曆
+import "./assets/js/calendar.js";
+
 // 計算機
 import "./assets/js/calculator.js";
 
@@ -10,7 +13,6 @@ import "./assets/js/linkState.js";
 // chart
 import "./assets/js/custom-chart.js";
 import "./assets/js/barChart.js";
-
 
 // 載入圖片
 import statusbarDark from "./assets/images/statusbar-dark.svg";
@@ -54,6 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// record.js
+// record
 import "./assets/js/record-search-btn-close.js";
 import "./assets/js/record-dropdownbutton.js";

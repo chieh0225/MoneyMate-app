@@ -76,6 +76,18 @@
       box-shadow: none; /* 移除外圈效果 */
     }
   }
+  .calendar {
+    .form-control {
+      padding: 0px 0px 0px 4px;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    .mgc_down_small_fill {
+      cursor: pointer;
+    }
+  }
+
   .sync {
     border-bottom: 1px solid $neutral-100;
     button {

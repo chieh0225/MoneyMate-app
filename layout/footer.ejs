@@ -135,11 +135,13 @@
                 data-bs-target="#calculator-modal"
               />
             </div>
-            <p class="t2 d-flex align-items-center">
-              今天 2024/07/25<span
-                class="mgc_down_small_fill icon-primary icon-md ms-1"
-              ></span>
+
+            <p class="t2 d-flex align-items-center position-relative calendar">
+              今天
+              <input id="customDateInput" type="date" value="2024-07-25" class="form-control w-auto border-0 focus-shadow-none t2">
+              <span id="calendarIcon" class="mgc_down_small_fill icon-primary icon-md position-absolute" style="right: 0px;"></span>
             </p>
+          
           </div>
 
           <div class="py-3">
