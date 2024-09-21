@@ -4,43 +4,781 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>旅遊測試</title>
+    <title>旅遊紀錄</title>
   </head>
   <body>
-    <%- include('./layout/menu',{page:"group-index"}); -%>
-    <div class="d-flex justify-content-between align-items-center">
-      <p class="">選擇帳本</p>
-      <div class="dropdown">
-        <a
-          class="btn dropdown-toggle"
-          href="#"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
+    <%- include('./layout/header'); -%>
+
+    <div class="d-flex flex-column">
+      <div class="bg-white d-flex flex-column gap-3 w-100 p-4">
+        <div
+          class="d-flex justify-content-between align-items-end record-title"
         >
-          全部帳本
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">生日派對</a></li>
-          <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-          <li><a class="dropdown-item" href="#">日本行</a></li>
+          <h1 class="text-black h1-b">紀錄</h1>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle h3-b border-0 p-0"
+              type="button"
+              id="record-dropdownbutton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              泰國旅遊
+              <span class="mgc_down_fill icon-primary ms-1"></span>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-end mt-2"
+              aria-labelledby="record-dropdownbutton"
+              style="min-width: 120px"
+            >
+              <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
+              <li><a class="dropdown-item" href="#">生日派對</a></li>
+              <li><a class="dropdown-item" href="#">日本行</a></li>
+              <li><a class="dropdown-item" href="#">台北之旅</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="d-flex search-record">
+          <div class="input-group">
+            <div class="search-icon lh-1">
+              <span
+                class="mgc_search_2_fill icon-primary align-text-bottom"
+              ></span>
+            </div>
+            <input
+              class="form-control lh-1 t1 search"
+              type="search"
+              placeholder="搜尋記帳記錄"
+              aria-label="搜尋記帳記錄"
+              id="search-input"
+            />
+            <button type="button" class="custom-btn-close" id="clear-button">
+              <span
+                class="mgc_close_line icon-primary align-text-bottom"
+              ></span>
+            </button>
+          </div>
+        </form>
+        <ul
+          class="nav nav-pills gap-2 filter-btn-list"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active filter-btn"
+              id="pills-home-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-home"
+              type="button"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+            >
+              全部
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="pills-profile-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-profile"
+              type="button"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+            >
+              日期排序
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              記帳類型
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="pills-contact-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-contact2"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+            >
+              金額較高
+            </button>
+          </li>
         </ul>
       </div>
     </div>
-    <ul class="d-flex overflow-x-scroll">
-      <li class="me-2">
-        <a href="./group-index.html" class="d-flex flex-column">群組總覽</a>
-      </li>
-      <li class="me-2"><a href="#" class="d-flex flex-column">生日派對</a></li>
-      <li class="me-2">
-        <a href="#" id="travelTest" class="d-flex flex-column active"
-          >泰國旅遊</a
-        >
-      </li>
-      <li class="me-2"><a href="#" class="d-flex flex-column">日本行</a></li>
-    </ul>
-    <h2>旅遊測試紀錄頁</h2>
-    <p>旅遊紀錄區塊</p>
+    <div class="tab-content" id="pills-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="pills-home"
+        role="tabpanel"
+        aria-labelledby="pills-home-tab"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">pad thai</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄360</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">泰國機票來回</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄9,999</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                  <img
+                    src="../assets/images/avator/04.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Simon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">水族館門票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄2500</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">公費</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-primary"
+                    >收入</span
+                  >
+                  <span class="ms-1 h3-b">＄1000</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">地鐵票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-alert-b"
+                    >轉帳</span
+                  >
+                  <span class="ms-1 h3-b">＄180</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">pad thai</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄360</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">泰國機票來回</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄9,999</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                  <img
+                    src="../assets/images/avator/04.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Simon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">水族館門票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄2500</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">公費</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-primary"
+                    >收入</span
+                  >
+                  <span class="ms-1 h3-b">＄1000</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">地鐵票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-alert-b"
+                    >轉帳</span
+                  >
+                  <span class="ms-1 h3-b">＄180</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="pills-contact"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">pad thai</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄360</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">泰國機票來回</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄9,999</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                  <img
+                    src="../assets/images/avator/04.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Simon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">水族館門票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄2500</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">公費</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-primary"
+                    >收入</span
+                  >
+                  <span class="ms-1 h3-b">＄1000</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">地鐵票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-alert-b"
+                    >轉帳</span
+                  >
+                  <span class="ms-1 h3-b">＄180</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="pills-contact2"
+        role="tabpanel"
+        aria-labelledby="pills-contact-tab"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">泰國機票來回</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄9,999</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                  <img
+                    src="../assets/images/avator/04.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Simon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-item">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">水族館門票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄2500</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <%- include('./layout/footer'); -%>
 

@@ -9,15 +9,16 @@
 @import "./base/base.scss";
 
 // layout
-@import "./layout/header.scss";
-@import "./layout/footer.scss";
+@import "./layout/header";
+@import "./layout/footer";
 @import "./layout/menu";
-@import "./layout/setting-header.scss";
+@import "./layout/setting-status-bar";
+@import "./layout/setting-header";
 
 // components
 @import "./components/utilities";
 @import "./components/components";
-@import "./components/custom-buttons.scss";
+@import "./components/custom-buttons";
 @import "./components/menu-link";
 
 // pages
