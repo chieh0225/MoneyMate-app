@@ -54,14 +54,51 @@
 // }
 
 // modal
-.modalBottom.fade {
+.modalBottom {
+
+
     .modal-dialog {
-        transition: transform 1s ease-out;
-        transform: none
+        width: 100%;
+        max-width: 393px;
     }
 
-    .modal.show .modal-dialog {
-        transform: translate(0, 200px);
+    // 出現消失動畫
+    &.fade {
+        .modal-dialog {
+            // transition: transform 1s ease-out;
+            // transform: none;
+            transform: translateY(100%); // 初始狀態位於屏幕下方
+            opacity: 0; // 初始透明度為0
+            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        }
+    }
+
+    &.show {
+        .modal-dialog {
+            // transform: translate(0, 200px);
+            transform: translateY(0); // 當 modal 顯示時，從屏幕底部滑上來
+            opacity: 1; // 顯示時恢復透明度
+        }
+    }
+
+    .modal-content {
+        background-color: $white;
+        border-top-left-radius: $border-radius-xl;
+        border-top-right-radius: $border-radius-xl;
+        box-shadow: 6px 4px 24px 0px #6E6E6E40;
+    }
+
+    .nav-link {
+        padding: $spacer*.75 $spacer*2;
+
+        &:hover {
+            background-color: $neutral-100 ;
+        }
+
+        &.active {
+            // color: $white;
+            background-color: $neutral-200 ;
+        }
     }
 }
 
