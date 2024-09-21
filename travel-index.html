@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>泰國旅遊總覽</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-6f3c3224.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-c9f9be48.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-1ee629e0.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-d06342c9.css">
   </head>
   <body>
     <header class="header-status-bar">
@@ -171,57 +171,59 @@
           <button
             type="button"
             class="btn border-0 p-0 dropdown-toggle"
-            role="button"
             data-bs-toggle="modal"
-            data-bs-target="#Statistic"
+            data-bs-target="#modalBottom"
           >
             每月統計
           </button>
+          <!-- modalBottom -->
           <div
-            class="modalBottom modal fade"
-            id="Statistic"
-            tabindex="-1"
-            aria-labelledby="StatisticLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog fixed-bottom m-0">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title" id="StatisticLabel">時間統計單位</h3>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link d-flex align-items-center" href="#"
-                        ><span class="mgc_calendar_2_line me-2"></span>年</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#" aria-current="page"
-                        ><span class="mgc_calendar_2_line me-2"></span>月</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"
-                        ><span class="mgc_calendar_2_line me-2"></span>週</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"
-                        ><span class="mgc_calendar_2_line me-2"></span>日</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+  class="modalBottom modal fade"
+  id="modalBottom"
+  tabindex="-1"
+  aria-labelledby="modalBottomLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog fixed-bottom start-50 translate-middle-x m-0">
+    <div class="modal-content">
+      <div class="px-5 pt-3 pb-4">
+        <div class="d-flex justify-content-between">
+          <h3 class="modal-title" id="modalBottomLabel">時間統計單位</h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <div class="px-4">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="#"
+              ><span class="mgc_calendar_2_line me-2"></span>年</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" aria-current="page"
+              ><span class="mgc_calendar_2_line me-2"></span>月</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><span class="mgc_calendar_2_line me-2"></span>週</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><span class="mgc_calendar_2_line me-2"></span>日</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
         <div class="mb-3">
           <div class="main-card mb-4">
