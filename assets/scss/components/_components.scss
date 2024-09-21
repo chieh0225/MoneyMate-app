@@ -65,7 +65,7 @@
     }
 }
 
-// progress
+// progress-bar
 .secondaryProgress {
     background-color: $secondary-50;
     height: $spacer * .25;
@@ -74,4 +74,14 @@
     .progress-bar {
         border-radius: $spacer * .25;
     }
+}
+
+// roundedTag-sm
+.roundedTag-sm {
+    color: $neutral-500;
+    background-color: $neutral-50;
+    font-weight: 700;
+    border: 1px solid $neutral-100;
+    border-radius: $border-radius-lg;
+    padding: $spacer * .25 $spacer * .5;
 }

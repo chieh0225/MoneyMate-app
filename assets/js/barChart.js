@@ -84,31 +84,154 @@ import Chart from 'chart.js/auto';
     );
 })();
 
-// example
+// recent analysis 
 (async function () {
-    const data = [
-        { year: 2010, count: 10 },
-        { year: 2011, count: 20 },
-        { year: 2012, count: 15 },
-        { year: 2013, count: 25 },
-        { year: 2014, count: 22 },
-        { year: 2015, count: 30 },
-        { year: 2016, count: 28 },
+    const recentMonthIncome = [
+        { month: '2月', count: 0 },
+        { month: '3月', count: 0 },
+        { month: '4月', count: 0 },
+        { month: '5月', count: 0 },
+        { month: '6月', count: 28000 },
+        { month: '7月', count: 36000 },
     ];
-
+    const recentAnalysisIncome = document.querySelector('#recentAnalysisIncome');
     new Chart(
-        document.querySelector('#acquisitions2'),
+        recentAnalysisIncome,
         {
             type: 'bar',
             data: {
-                labels: data.map(row => row.year),
+                labels: recentMonthIncome.map((row, index) => {
+                    return index % 2 === 0 ? row.month : '';
+                }),
                 datasets: [
                     {
-                        label: 'Acquisitions by year',
-                        data: data.map(row => row.count)
-                    }
+                        data: recentMonthIncome.map(row => row.count),
+                        backgroundColor: "#22C55E",
+                        borderRadius: 4, // 設置圓角半徑
+                        borderSkipped: false // 確保四邊都可以設置圓角
+                    },
                 ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        ticks: {
+                            maxRotation: 0, // 降低旋轉角度
+                            minRotation: 0, // 降低旋轉角度
+                        },
+                        grid: {
+                            display: false  // 隱藏 X 軸格線
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        stepSize: 10000,  // 每次增量 20k
+                        position: 'right', // 將 Y 軸顯示在右邊
+                        ticks: {
+                            callback: function (value) {
+                                return value % 20000 === 0 ? value / 1000 + 'k' : '';
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false // 隱藏圖例
+                    }
+                }
             }
         }
     );
 })();
+
+(async function () {
+    const recentMonthExpense = [
+        { month: '2月', count: 0 },
+        { month: '3月', count: 0 },
+        { month: '4月', count: 0 },
+        { month: '5月', count: 0 },
+        { month: '6月', count: 0 },
+        { month: '7月', count: 0 },
+    ];
+    const recentAnalysisExpense = document.querySelector('#recentAnalysisExpense');
+    new Chart(
+        recentAnalysisExpense,
+        {
+            type: 'bar',
+            data: {
+                labels: recentMonthExpense.map((row, index) => {
+                    return index % 2 === 0 ? row.month : '';
+                }),
+                datasets: [
+                    {
+                        data: recentMonthExpense.map(row => row.count),
+                        backgroundColor: "#22C55E",
+                        borderRadius: 4, // 設置圓角半徑
+                        borderSkipped: false // 確保四邊都可以設置圓角
+                    },
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        ticks: {
+                            maxRotation: 0, // 降低旋轉角度
+                            minRotation: 0, // 降低旋轉角度
+                        },
+                        grid: {
+                            display: false  // 隱藏 X 軸格線
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        stepSize: 10000,  // 每次增量 20k
+                        min: 0,
+                        max: 40000,
+                        position: 'right', // 將 Y 軸顯示在右邊
+                        ticks: {
+                            callback: function (value) {
+                                return value % 20000 === 0 ? value / 1000 + 'k' : '';
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false // 隱藏圖例
+                    }
+                }
+            }
+        }
+    );
+})();
+
+// example
+// (async function () {
+//     const data = [
+//         { year: 2010, count: 10 },
+//         { year: 2011, count: 20 },
+//         { year: 2012, count: 15 },
+//         { year: 2013, count: 25 },
+//         { year: 2014, count: 22 },
+//         { year: 2015, count: 30 },
+//         { year: 2016, count: 28 },
+//     ];
+
+//     new Chart(
+//         document.querySelector('#acquisitions2'),
+//         {
+//             type: 'bar',
+//             data: {
+//                 labels: data.map(row => row.year),
+//                 datasets: [
+//                     {
+//                         label: 'Acquisitions by year',
+//                         data: data.map(row => row.count)
+//                     }
+//                 ]
+//             }
+//         }
+//     );
+// })();

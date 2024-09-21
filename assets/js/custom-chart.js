@@ -15,23 +15,23 @@ const textSecondaryColor = getComputedStyleValue("--text-secondary");
 let tooltipEl = document.getElementById("chartjs-tooltip");
 
 const data = {
-  labels: ["購物", "住宿", "交通", "食物"],
+  labels: ["食物", "票卷", "住宿", "飲料"],
   datasets: [
     {
       label: "My First Dataset",
-      data: [2000, 1000, 4900, 4100], // 原始數據
+      data: [12050, 24000, 9080, 550], // 原始數據
       backgroundColor: [
-        "rgb(134, 239, 173)",
-        "rgb(74, 222, 129)",
-        "rgb(255, 106, 14)",
-        "rgb(74, 222, 129)",
+        "#4ADE81",
+        "#22C55E",
+        "#86EFAD",
+        "#BBF7D1",
       ],
       hoverBackgroundColor: [
         // 這是 hover 時的顏色
-        "rgba(134, 239, 173, 0.6)",
-        "rgba(74, 222, 129, 0.6)",
-        "rgba(255, 106, 14, 0.6)",
-        "rgba(74, 222, 129, 0.6)",
+        "#4ADE81",
+        "#22C55E",
+        "#86EFAD",
+        "#BBF7D1",
       ],
       hoverOffset: 4,
     },
@@ -133,12 +133,10 @@ const chart = new Chart(document.getElementById("acquisitions"), {
           }
 
           const position = context.chart.canvas.getBoundingClientRect();
-          tooltipEl.style.left = `${
-            position.left + window.pageXOffset + tooltip.caretX
-          }px`;
-          tooltipEl.style.top = `${
-            position.top + window.pageYOffset + tooltip.caretY
-          }px`;
+          tooltipEl.style.left = `${position.left + window.pageXOffset + tooltip.caretX
+            }px`;
+          tooltipEl.style.top = `${position.top + window.pageYOffset + tooltip.caretY
+            }px`;
           tooltipEl.style.width = "auto";
           tooltipEl.style.height = "auto";
 
