@@ -50,8 +50,14 @@
     width: 100%;
     max-width: 393px; /* 設置為 footer 的最大寬度 */
     height: auto;
-    max-height: 100vh;
-    border-radius: $border-radius-lg;
+    min-height: 100px; /* 設定最小高度，根據需要調整 */
+    max-height: calc(
+      100vh - env(safe-area-inset-bottom)
+    ); /* 自動減去工具列或安全區域的高度 */
+    border-radius: 16px;
+    // .cardTop {
+    //   margin-top: -18px;
+    // }
     .offcanvas-header .btn-close {
       margin: 0;
     }
@@ -67,10 +73,10 @@
 .addrecord {
   .nav-underline .nav-link {
     color: $neutral-200 !important;
-    border-bottom-color: $neutral-200 !important;
+    border-bottom: 1px solid $neutral-200 !important;
     &.active {
       color: #1a1a1a !important;
-      border-bottom-color: $primary-500 !important;
+      border-bottom: 2px solid $primary-500 !important;
     }
   }
   .icon-primary:before {
