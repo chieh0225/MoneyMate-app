@@ -82,7 +82,7 @@
     width: 124px;
 
     .form-control {
-      min-width: 98px;
+      width: calc(100% - 24px);
       padding: 0px 0px 0px 4px;
       height: 20px;
       padding-right: 24px; /* 為圖示留出空間 */
@@ -94,7 +94,7 @@
       -webkit-appearance: none; /* 針對 WebKit 瀏覽器 */
     }
 
-    .icon-primary:before {
+    .mgc_down_small_fill {
       position: absolute;
       cursor: pointer;
       pointer-events: auto; /* 確保可以點擊 */
