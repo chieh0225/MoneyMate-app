@@ -1,8 +1,8 @@
 import "./assets/scss/all.scss";
 import "bootstrap/dist/js/bootstrap.js";
 
-// 月曆
-import "./assets/js/calendar.js";
+// // 月曆
+// import "./assets/js/calendar.js";
 
 // 計算機
 import "./assets/js/calculator.js";

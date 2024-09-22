@@ -65,8 +65,18 @@
 }
 
 .addrecord {
+  .icon-primary:before {
+    color: $primary-500 !important;
+  }
   .result-input-wrapper {
-    border-bottom: 2px solid $primary-500;
+    border: 1px solid $neutral-200;
+    border-radius: 16px;
+    &:focus-within {
+      border: 2px solid $primary-500;
+    }
+    button {
+      color: $primary-500 !important;
+    }
   }
   .result-input {
     border: none;
@@ -76,36 +86,38 @@
       box-shadow: none; /* 移除外圈效果 */
     }
   }
-  .calendar {
-    position: relative; /* 確保有適當的定位上下文 */
-    white-space: nowrap;
-    width: 124px;
 
-    .form-control {
-      width: calc(100% - 24px);
-      padding: 0px 0px 0px 4px;
-      height: 20px;
-      padding-right: 24px; /* 為圖示留出空間 */
-      box-sizing: border-box;
-    }
+  // .calendar {
+  //   position: relative; /* 確保有適當的定位上下文 */
+  //   white-space: nowrap;
+  //   min-width: 124px;
 
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      display: none; /* 隱藏預設日曆圖示 */
-      -webkit-appearance: none; /* 針對 WebKit 瀏覽器 */
-    }
+  //   .form-control {
+  //     min-width: 98px;
+  //     width: calc(100% - 24px);
+  //     padding: 0px 0px 0px 4px;
+  //     height: 20px;
+  //     padding-right: 24px; /* 為圖示留出空間 */
+  //     box-sizing: border-box;
+  //   }
 
-    .mgc_down_small_fill {
-      position: absolute;
-      cursor: pointer;
-      pointer-events: auto; /* 確保可以點擊 */
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0px;
-    }
-  }
+  //   input[type="date"]::-webkit-calendar-picker-indicator {
+  //     display: none; /* 隱藏預設日曆圖示 */
+  //     -webkit-appearance: none; /* 針對 WebKit 瀏覽器 */
+  //   }
+
+  //   .mgc_down_small_fill {
+  //     position: absolute;
+  //     cursor: pointer;
+  //     pointer-events: auto; /* 確保可以點擊 */
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //     right: 0px;
+  //   }
+  // }
 
   .sync {
-    border-bottom: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-200;
     button {
       border: none;
       padding: 0;
@@ -116,12 +128,37 @@
       margin: 0;
     }
   }
+  .spendingCategory {
+    border-bottom: 1px solid $neutral-200;
+    .input-tag-list {
+      display: flex;
+      flex-wrap: nowrap !important;
+      align-items: flex-start;
+      overflow-x: auto;
+      .nav-item {
+        padding: 0;
+      }
+      .input-tag-item {
+        margin-right: 8px;
+        padding: 4px 8px;
+        border-radius: 8px !important;
+      }
+      .input-tag {
+        color: var(--filter-btn-text) !important;
+        background-color: var(--filter-btn-surface) !important;
+        &.active {
+          color: var(--filter-btn-text-hover) !important;
+          background-color: var(--filter-btn-surface-hover) !important;
+        }
+      }
+    }
+  }
 
   .dropdown-toggle::after {
     display: none;
   }
   .cost-list li {
-    border-bottom: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-200;
   }
 }
 
@@ -138,13 +175,13 @@
     height: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-bottom: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-200;
   }
   .form-control {
     height: 100%;
     background-color: transparent;
     border: transparent;
-    border-bottom: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-200;
     border-radius: 0;
     transition: none;
     &:focus {
@@ -163,7 +200,7 @@
     height: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-bottom: 1px solid $neutral-100;
+    border-bottom: 1px solid $neutral-200;
   }
 }
 
