@@ -65,8 +65,21 @@
 }
 
 .addrecord {
+  .nav-underline .nav-link {
+    color: $neutral-200 !important;
+    border-bottom-color: $neutral-200 !important;
+    &.active {
+      color: #1a1a1a !important;
+      border-bottom-color: $primary-500 !important;
+    }
+  }
   .icon-primary:before {
     color: $primary-500 !important;
+  }
+  .currencySwitch {
+    button {
+      color: $neutral-400;
+    }
   }
   .result-input-wrapper {
     border: 1px solid $neutral-200;
@@ -74,7 +87,7 @@
     &:focus-within {
       border: 2px solid $primary-500;
     }
-    button {
+    p {
       color: $primary-500 !important;
     }
   }
@@ -118,6 +131,9 @@
 
   .sync {
     border-bottom: 1px solid $neutral-200;
+    &:focus-within {
+      border-bottom: 2px solid $primary-500;
+    }
     button {
       border: none;
       padding: 0;
@@ -130,6 +146,9 @@
   }
   .spendingCategory {
     border-bottom: 1px solid $neutral-200;
+    &:focus-within {
+      border-bottom: 2px solid $primary-500;
+    }
     .input-tag-list {
       display: flex;
       flex-wrap: nowrap !important;
@@ -159,6 +178,9 @@
   }
   .cost-list li {
     border-bottom: 1px solid $neutral-200;
+    &:focus-within {
+      border-bottom: 2px solid $primary-500;
+    }
   }
 }
 
