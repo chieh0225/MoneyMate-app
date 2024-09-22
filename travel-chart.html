@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>旅遊測試</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-b7f8769b.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-4bb93e23.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-3604bcb9.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-9c919281.css">
   </head>
   <body>
     <header class="menuTab w-100 sticky-top">
@@ -157,62 +157,69 @@
                 收入
               </button>
             </li>
-            <li class="nav-item flex-grow-1 p-0" role="presentation">
-              <button
-                class="nav-link py-3 text-center w-100"
-                id="pills-contact-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-contact"
-                type="button"
-                role="tab"
-                aria-controls="pills-contact"
-                aria-selected="false"
-              >
-                轉帳
-              </button>
-            </li>
           </ul>
-          <div class="d-flex flex-column align-items-end">
-            <div class="input-group align-items-center p-4 mb-2 result-input-wrapper">
+
+          <div class="d-flex flex-column gap-3 py-4">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <p class="h3-b pe-4">輸入金額</p>
+              </div>
+  
               <div class="dropdown">
                 <button
-                  class="btn dropdown-toggle h3-b border-0 p-0 d-flex align-items-center"
+                  class="btn dropdown-toggle t1-b border-0 p-0 d-flex justify-content-between align-items-center"
                   type="button"
-                  id="addrecord-dropdownbutton"
+                  id="sharing-dropdownbutton"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  THB
+                  幣值切換
                   <span class="mgc_down_small_fill icon-primary ms-1"></span>
                 </button>
-                <!-- <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton1" style="min-width: 60px">
-                  <li><a class="dropdown-item" href="#">TWD</a></li>
-                  <li><a class="dropdown-item" href="#">USD</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">JPY</a>
-                  </li>
-                </ul> -->
               </div>
-              
-              <!-- 顯示結果的 input 元素 -->
-              <input
-                type="text"
-                id="result-input"
-                class="form-control text-end h2-b result-input"
-                data-bs-toggle="modal"
-                data-bs-target="#calculator-modal"
-              />
             </div>
-
-            <p class="t2 d-flex align-items-center position-relative calendar">
-              今天
-              <input id="customDateInput" type="date" value="2024-07-25" class="form-control border-0 focus-shadow-none t2">
-              <span id="calendarIcon" class="mgc_down_small_fill icon-primary icon-md"></span>
-            </p>
-          
+  
+            <div class="d-flex flex-column align-items-end">
+              <div class="input-group align-items-center p-4 mb-2 result-input-wrapper">
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle h3-b border-0 p-0 d-flex align-items-center"
+                    type="button"
+                    id="addrecord-dropdownbutton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    THB
+                  </button>
+                  <!-- <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton1" style="min-width: 60px">
+                    <li><a class="dropdown-item" href="#">TWD</a></li>
+                    <li><a class="dropdown-item" href="#">USD</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">JPY</a>
+                    </li>
+                  </ul> -->
+                </div>
+                
+                <!-- 顯示結果的 input 元素 -->
+                <input
+                  type="text"
+                  id="result-input"
+                  class="form-control text-end h2-b result-input"
+                  data-bs-toggle="modal"
+                  data-bs-target="#calculator-modal"
+                />
+              </div>
+  
+              <!-- <p class="t2 d-flex align-items-center position-relative calendar">
+                今天
+                <input id="customDateInput" type="date" value="2024-07-25" class="form-control border-0 focus-shadow-none t2">
+                <span id="calendarIcon" class="mgc_down_small_fill icon-primary icon-md"></span>
+              </p> -->
+            
+            </div>
           </div>
 
-          <div class="py-3">
+          <div>
             <ul>
               <li class="d-flex justify-content-between align-items-center py-3 sync">
                 <p class="t1-b">同步到個人總覽</p>
@@ -228,6 +235,85 @@
                     id="Toggle"
                   />
                 </button>
+              </li>
+
+              <!-- 類別 -->
+              <li class="py-3 spendingCategory">
+                <div class="d-flex align-items-center overflow-hidden text-nowrap">
+                  <p class="t1-b pe-4">類別</p>
+                  <ul class="nav nav-pills input-tag-list overflow-x-scroll scroll-none" id="spendingCategory-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-food-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-food"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-food"
+                        aria-selected="true">食物</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-drink-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-drink"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-drink"
+                        aria-selected="true">飲料</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-transport-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-transport"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-transport"
+                        aria-selected="false">交通</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-ticket-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-ticket"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-ticket"
+                        aria-selected="false">票卷</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-accommodation-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-accommodation"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-accommodation"
+                        aria-selected="false">住宿</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-shopping-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-shopping"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-shopping"
+                        aria-selected="false">購物</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-others-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-others"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-others"
+                        aria-selected="false">其他</button>
+                    </li>
+                  </ul>                  
+                </div>
               </li>
 
               <!-- 名稱 -->
@@ -281,7 +367,7 @@
             </ul>
           </div>
 
-          <div class="pt-1">
+          <div>
             <ul class="cost-list">
               <li class="d-flex justify-content-between py-3">
                 <div class="d-flex">
@@ -295,7 +381,7 @@
                         height="28"
                         alt="Neil"
                       />
-                      <p class="t1-b">Neil</p>
+                      <p class="t1-b ms-2">Neil</p>
                     </div>
                   </div>
                 </div>
@@ -308,8 +394,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    全部
-                    <span class="mgc_right_small_line icon-primary ms-1"></span>
+                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
                   </button>
                 </div>
               </li>
@@ -326,7 +411,7 @@
                         height="28"
                         alt="Neil"
                       />
-                      <p class="t1-b">Neil</p>
+                      <p class="t1-b ms-2">Neil</p>
                     </div>
                     <div class="d-flex">
                       <img
@@ -336,7 +421,17 @@
                         height="28"
                         alt="Ryan"
                       />
-                      <p class="t1-b">Ryan</p>
+                      <p class="t1-b ms-2">Ryan</p>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                        class="rounded-circle object-fit"
+                        width="28"
+                        height="28"
+                        alt="Monika"
+                      />
+                      <p class="t1-b ms-2">Monika</p>
                     </div>
                   </div>
                 </div>
@@ -349,8 +444,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    均分
-                    <span class="mgc_right_small_line icon-primary ms-1"></span>
+                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
                   </button>
                 </div>
               </li>
