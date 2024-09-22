@@ -50,10 +50,7 @@
     width: 100%;
     max-width: 393px; /* 設置為 footer 的最大寬度 */
     height: auto;
-    min-height: 100px; /* 設定最小高度，根據需要調整 */
-    max-height: calc(
-      100vh - env(safe-area-inset-bottom)
-    ); /* 自動減去工具列或安全區域的高度 */
+    max-height: none;
     border-radius: 16px;
     // .cardTop {
     //   margin-top: -18px;

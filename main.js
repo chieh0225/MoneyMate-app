@@ -4,6 +4,9 @@ import "bootstrap/dist/js/bootstrap.js";
 // // 月曆
 // import "./assets/js/calendar.js";
 
+// offcanvas-bottom-height
+import "./assets/js/offcanvas-bottom-height.js";
+
 // 計算機
 import "./assets/js/calculator.js";
 
