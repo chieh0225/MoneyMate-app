@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>紀錄</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-3604bcb9.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-9c919281.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-ba1d6191.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-7ef13126.css">
   </head>
   <body>
     <header class="header-status-bar">
@@ -883,40 +883,32 @@
                 <p class="h3-b pe-4">輸入金額</p>
               </div>
   
-              <div class="dropdown">
+              <div class="dropdown currencySwitch">
                 <button
                   class="btn dropdown-toggle t1-b border-0 p-0 d-flex justify-content-between align-items-center"
                   type="button"
-                  id="sharing-dropdownbutton"
+                  id="currencySwitch-dropdownbutton"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   幣值切換
                   <span class="mgc_down_small_fill icon-primary ms-1"></span>
                 </button>
-              </div>
-            </div>
-  
-            <div class="d-flex flex-column align-items-end">
-              <div class="input-group align-items-center p-4 mb-2 result-input-wrapper">
-                <div class="dropdown">
-                  <button
-                    class="btn dropdown-toggle h3-b border-0 p-0 d-flex align-items-center"
-                    type="button"
-                    id="addrecord-dropdownbutton"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    THB
-                  </button>
-                  <!-- <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton1" style="min-width: 60px">
+                <!-- <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton1" style="min-width: 60px">
                     <li><a class="dropdown-item" href="#">TWD</a></li>
                     <li><a class="dropdown-item" href="#">USD</a></li>
                     <li>
                       <a class="dropdown-item" href="#">JPY</a>
                     </li>
-                  </ul> -->
-                </div>
+                </ul> -->
+              </div>
+            </div>
+  
+            <div class="d-flex flex-column align-items-end">
+              <div class="input-group align-items-center p-4 mb-2 result-input-wrapper">
+                  <p class="h3-b">
+                    THB
+                  </p>
                 
                 <!-- 顯示結果的 input 元素 -->
                 <input
@@ -925,6 +917,7 @@
                   class="form-control text-end h2-b result-input"
                   data-bs-toggle="modal"
                   data-bs-target="#calculator-modal"
+                  readonly
                 />
               </div>
   
