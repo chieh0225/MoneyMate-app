@@ -418,7 +418,7 @@
     <div class="modal-dialog mb-0 calculator-modal">
       <div class="modal-content border-0">
         <div class="modal-body p-0">
-          <div class="calculator card">
+          <div class="calculator card border-0 rounded-0">
             <div class="calculator-keys">
               <button
                 type="button"
@@ -448,13 +448,6 @@
               >
                 <span class="mgc_add_fill align-text-bottom"></span>
               </button>
-              <button
-                type="button"
-                class="all-clear function btn btn-primary-500 btn-ac h1-b text-white"
-                value="all-clear"
-              >
-                AC
-              </button>
 
               <button
                 type="button"
@@ -483,13 +476,6 @@
                 value="-"
               >
                 <span class="mgc_minimize_fill align-text-bottom"></span>
-              </button>
-              <button
-                type="button"
-                class="operator btn btn-primary-500 calculator-icon-btn text-white"
-                value="backspace"
-              >
-                <span class="mgc_arrow_left_fill align-text-bottom"></span>
               </button>
 
               <button
@@ -524,7 +510,7 @@
               <button
                 type="button"
                 value="00"
-                class="btn btn-light h1-b h-100 waves-effect"
+                class="btn btn-light calculator-number-btn h1-b h-100 waves-effect"
               >
                 00
               </button>
@@ -549,9 +535,24 @@
               >
                 ÷
               </button>
+
               <button
                 type="button"
-                class="equal-sign operator btn btn-secondary h1-b text-white btn-ok"
+                class="all-clear function btn btn-primary-500 btn-ac h1-b text-white"
+                value="all-clear"
+                >
+                AC
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn text-white"
+                value="backspace"
+                >
+                <span class="mgc_arrow_left_fill align-text-bottom"></span>
+              </button>
+              <button
+                type="button"
+                class="equal-sign operator btn btn-primary-600 h1-b text-white btn-ok"
                 value="="
               >
                 OK
