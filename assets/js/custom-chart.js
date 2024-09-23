@@ -19,7 +19,7 @@ const data = {
   datasets: [
     {
       label: "My First Dataset",
-      data: [10960, 22000, 8170, 4550], // 原始數據
+      data: [12050, 24000, 9080, 4950], // 原始數據
       backgroundColor: [
         "#4ADE81",
         "#22C55E",

@@ -103,8 +103,8 @@ import Chart from 'chart.js/auto';
         { month: '3月', count: 0 },
         { month: '4月', count: 0 },
         { month: '5月', count: 0 },
-        { month: '6月', count: 28000 },
-        { month: '7月', count: 36000 },
+        { month: '6月', count: 24000 },
+        { month: '7月', count: 26080 },
     ];
     const recentAnalysisExpense = document.querySelector('#recentAnalysisExpense');
     new Chart(
