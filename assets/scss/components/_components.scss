@@ -122,3 +122,23 @@
     border-radius: $border-radius-lg;
     padding: $spacer * .25 $spacer * .5;
 }
+
+// rounded-btn
+.roundedBtn {
+    padding: $spacer*.75 $spacer;
+    border-radius: $border-radius-lg;
+}
+
+.customBtn-primary {
+    color: $white;
+    background: $primary-500;
+    box-shadow: 2px 4px 20px 4px #22C55E33;
+
+    // &:hover {
+    //     background: $primary-400;
+    // }
+
+    &:focus {
+        background: $primary-600;
+    }
+}

@@ -19,7 +19,7 @@ const data = {
   datasets: [
     {
       label: "My First Dataset",
-      data: [12050, 24000, 9080, 550], // 原始數據
+      data: [10960, 22000, 8170, 4550], // 原始數據
       backgroundColor: [
         "#4ADE81",
         "#22C55E",
@@ -104,25 +104,27 @@ const chart = new Chart(document.getElementById("acquisitions"), {
 
           // 確保 tooltipEl 被正確設置
           if (!tooltipEl) {
-            tooltipEl = document.createElement("div");
+            tooltipEl = document.createElement("p");
             tooltipEl.id = "chartjs-tooltip";
-            tooltipEl.style.backgroundColor = "#F0FDF5";
-            tooltipEl.style.border = "1px solid #22C55E";
-            tooltipEl.style.borderRadius = "50px";
-            tooltipEl.style.padding = "4px 8px";
+            tooltipEl.classList.add('roundedTag-sm');
+            tooltipEl.style.color = "#737373";
+            tooltipEl.style.border = "1px solid #e7e7e7";
+            // tooltipEl.style.backgroundColor = "#F0FDF5";
+            // tooltipEl.style.borderRadius = "50px";
+            // tooltipEl.style.padding = "4px 8px";
             tooltipEl.style.position = "absolute";
             tooltipEl.style.pointerEvents = "none";
             tooltipEl.style.zIndex = "1000"; // 增加 z-index 確保 tooltip 顯示在最上層
 
             // 設置字體樣式
-            tooltipEl.style.fontSize = "11px";
-            tooltipEl.style.lineHeight = "1.4";
-            tooltipEl.style.fontWeight = "700";
+            // tooltipEl.style.fontSize = "11px";
+            // tooltipEl.style.lineHeight = "1.4";
+            // tooltipEl.style.fontWeight = "400";
 
             // 使用 Flexbox 來垂直置中內容
-            tooltipEl.style.display = "flex";
-            tooltipEl.style.alignItems = "center";
-            tooltipEl.style.justifyContent = "center";
+            // tooltipEl.style.display = "flex";
+            // tooltipEl.style.alignItems = "center";
+            // tooltipEl.style.justifyContent = "center";
 
             document.body.appendChild(tooltipEl);
           }
@@ -145,7 +147,7 @@ const chart = new Chart(document.getElementById("acquisitions"), {
             context.chart.data.labels[tooltip.dataPoints[0].dataIndex];
 
           // 顯示 tooltip 的內容
-          tooltipEl.innerHTML = `<strong># ${label}</strong>`;
+          tooltipEl.innerHTML = `${label}`;
           tooltipEl.style.opacity = "1";
         },
       },

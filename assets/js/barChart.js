@@ -41,6 +41,7 @@ import Chart from 'chart.js/auto';
         {
             type: 'bar',
             data: {
+                // labels: JulyData.map(row => row.date),
                 labels: JulyData.map((row, index) => {
                     return index % 7 === 0 ? row.date : '';
                 }),
@@ -60,6 +61,7 @@ import Chart from 'chart.js/auto';
                     x: {
                         beginAtZero: true,
                         ticks: {
+                            autoSkip: false,
                             maxRotation: 0, // 降低旋轉角度
                             minRotation: 0, // 降低旋轉角度
                         }
@@ -77,6 +79,16 @@ import Chart from 'chart.js/auto';
                 plugins: {
                     legend: {
                         display: false // 隱藏圖例
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function (tooltipItems) {
+                                const index = tooltipItems[0].dataIndex;
+                                // 即使 label 空白也顯示完整日期
+
+                                return `${JulyData[index].date}日`;
+                            }
+                        }
                     }
                 }
             }
@@ -86,13 +98,87 @@ import Chart from 'chart.js/auto';
 
 // recent analysis 
 (async function () {
-    const recentMonthIncome = [
+    const recentMonthExpense = [
         { month: '2月', count: 0 },
         { month: '3月', count: 0 },
         { month: '4月', count: 0 },
         { month: '5月', count: 0 },
         { month: '6月', count: 28000 },
         { month: '7月', count: 36000 },
+    ];
+    const recentAnalysisExpense = document.querySelector('#recentAnalysisExpense');
+    new Chart(
+        recentAnalysisExpense,
+        {
+            type: 'bar',
+            data: {
+                labels: recentMonthExpense.map((row, index) => {
+                    return index % 2 === 0 ? row.month : '';
+                }),
+                datasets: [
+                    {
+                        data: recentMonthExpense.map(row => row.count),
+                        backgroundColor: "#22C55E",
+                        borderRadius: {
+                            topLeft: 4,
+                            topRight: 4,
+                            bottomLeft: 0,
+                            bottomRight: 0
+                        }, // 設置圓角半徑
+                        borderSkipped: 'bottom'
+                    },
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        ticks: {
+                            maxRotation: 0, // 降低旋轉角度
+                            minRotation: 0, // 降低旋轉角度
+                        },
+                        grid: {
+                            display: false  // 隱藏 X 軸格線
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        stepSize: 10000,  // 每次增量 20k
+                        position: 'right', // 將 Y 軸顯示在右邊
+                        ticks: {
+                            callback: function (value) {
+                                return value % 20000 === 0 ? value / 1000 + 'k' : '';
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false // 隱藏圖例
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function (tooltipItems) {
+                                const index = tooltipItems[0].dataIndex;
+                                // 即使 label 空白也顯示完整月份
+                                return recentMonthExpense[index].month;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    );
+})();
+
+(async function () {
+    const recentMonthIncome = [
+        { month: '2月', count: 0 },
+        { month: '3月', count: 0 },
+        { month: '4月', count: 0 },
+        { month: '5月', count: 0 },
+        { month: '6月', count: 0 },
+        { month: '7月', count: 0 },
     ];
     const recentAnalysisIncome = document.querySelector('#recentAnalysisIncome');
     new Chart(
@@ -127,66 +213,6 @@ import Chart from 'chart.js/auto';
                     y: {
                         beginAtZero: true,
                         stepSize: 10000,  // 每次增量 20k
-                        position: 'right', // 將 Y 軸顯示在右邊
-                        ticks: {
-                            callback: function (value) {
-                                return value % 20000 === 0 ? value / 1000 + 'k' : '';
-                            }
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false // 隱藏圖例
-                    }
-                }
-            }
-        }
-    );
-})();
-
-(async function () {
-    const recentMonthExpense = [
-        { month: '2月', count: 0 },
-        { month: '3月', count: 0 },
-        { month: '4月', count: 0 },
-        { month: '5月', count: 0 },
-        { month: '6月', count: 0 },
-        { month: '7月', count: 0 },
-    ];
-    const recentAnalysisExpense = document.querySelector('#recentAnalysisExpense');
-    new Chart(
-        recentAnalysisExpense,
-        {
-            type: 'bar',
-            data: {
-                labels: recentMonthExpense.map((row, index) => {
-                    return index % 2 === 0 ? row.month : '';
-                }),
-                datasets: [
-                    {
-                        data: recentMonthExpense.map(row => row.count),
-                        backgroundColor: "#22C55E",
-                        borderRadius: 4, // 設置圓角半徑
-                        borderSkipped: false // 確保四邊都可以設置圓角
-                    },
-                ]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        ticks: {
-                            maxRotation: 0, // 降低旋轉角度
-                            minRotation: 0, // 降低旋轉角度
-                        },
-                        grid: {
-                            display: false  // 隱藏 X 軸格線
-                        }
-                    },
-                    y: {
-                        beginAtZero: true,
-                        stepSize: 10000,  // 每次增量 20k
                         min: 0,
                         max: 40000,
                         position: 'right', // 將 Y 軸顯示在右邊
@@ -200,6 +226,15 @@ import Chart from 'chart.js/auto';
                 plugins: {
                     legend: {
                         display: false // 隱藏圖例
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function (tooltipItems) {
+                                const index = tooltipItems[0].dataIndex;
+                                // 即使 label 空白也顯示完整月份
+                                return recentMonthIncome[index].month;
+                            }
+                        }
                     }
                 }
             }
