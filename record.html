@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>紀錄</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-d85a31c9.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-350dc875.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-a02cd526.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-a5ff40f1.css">
   </head>
   <body>
     <header class="header-status-bar">
@@ -64,63 +64,32 @@
             </button>
           </div>
         </form>
-        <ul
-          class="nav nav-pills gap-2 filter-btn-list"
-          id="pills-tab"
-          role="tablist"
-        >
+
+        <ul class="nav nav-pills gap-2 filter-btn-list" id="filter-buttons">
           <li class="nav-item" role="presentation">
             <button
               class="nav-link active filter-btn"
-              id="pills-home-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-home"
+              id="filter-all"
               type="button"
-              role="tab"
-              aria-controls="pills-home"
-              aria-selected="true"
             >
               全部
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link filter-btn"
-              id="pills-profile-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-profile"
-              type="button"
-              role="tab"
-              aria-controls="pills-profile"
-              aria-selected="false"
-            >
+            <button class="nav-link filter-btn" id="filter-date" type="button">
               日期排序
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link filter-btn"
-              id="pills-contact-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-contact"
-              type="button"
-              role="tab"
-              aria-controls="pills-contact"
-              aria-selected="false"
-            >
+            <button class="nav-link filter-btn" id="filter-type" type="button">
               記帳類型
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button
               class="nav-link filter-btn"
-              id="pills-contact-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-contact2"
+              id="filter-amount"
               type="button"
-              role="tab"
-              aria-controls="pills-contact"
-              aria-selected="false"
             >
               金額較高
             </button>
@@ -128,15 +97,16 @@
         </ul>
       </div>
     </div>
-    <div class="tab-content" id="pills-tabContent">
+
+    <div id="record-list">
       <div
-        class="tab-pane fade show active"
-        id="pills-home"
-        role="tabpanel"
-        aria-labelledby="pills-home-tab"
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="支出"
+        data-amount="360"
       >
         <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
+          <div class="card record-info">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
                 <p class="t2 custom-text-muted">2024 / 07 / 25</p>
@@ -167,8 +137,15 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="支出"
+        data-amount="9999"
+      >
         <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
+          <div class="card record-info">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
                 <p class="t2 custom-text-muted">2024 / 07 / 25</p>
@@ -220,8 +197,15 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="支出"
+        data-amount="2500"
+      >
         <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
+          <div class="card record-info">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
                 <p class="t2 custom-text-muted">2024 / 07 / 25</p>
@@ -252,8 +236,15 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="收入"
+        data-amount="1000"
+      >
         <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
+          <div class="card record-info">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
                 <p class="t2 custom-text-muted">2024 / 07 / 25</p>
@@ -283,8 +274,15 @@
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="轉帳"
+        data-amount="180"
+      >
         <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
+          <div class="card record-info">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
                 <p class="t2 custom-text-muted">2024 / 07 / 25</p>
@@ -308,473 +306,6 @@
                     width="28"
                     height="28"
                     alt="Neil"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="tab-pane fade"
-        id="pills-profile"
-        role="tabpanel"
-        aria-labelledby="pills-profile-tab"
-      >
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">pad thai</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄360</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">泰國機票來回</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄9,999</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/02-28d76561.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Ryan"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Monika"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/04-758c527d.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Simon"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">水族館門票</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄2500</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/02-28d76561.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Ryan"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">公費</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span class="badge account-type-tag account-type-tag-primary"
-                    >收入</span
-                  >
-                  <span class="ms-1 h3-b">＄1000</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Monika"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">地鐵票</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span class="badge account-type-tag account-type-tag-alert-b"
-                    >轉帳</span
-                  >
-                  <span class="ms-1 h3-b">＄180</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="tab-pane fade"
-        id="pills-contact"
-        role="tabpanel"
-        aria-labelledby="pills-contact-tab"
-      >
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">pad thai</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄360</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">泰國機票來回</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄9,999</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/02-28d76561.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Ryan"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Monika"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/04-758c527d.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Simon"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">水族館門票</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄2500</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/02-28d76561.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Ryan"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">公費</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span class="badge account-type-tag account-type-tag-primary"
-                    >收入</span
-                  >
-                  <span class="ms-1 h3-b">＄1000</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Monika"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">地鐵票</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span class="badge account-type-tag account-type-tag-alert-b"
-                    >轉帳</span
-                  >
-                  <span class="ms-1 h3-b">＄180</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="tab-pane fade"
-        id="pills-contact2"
-        role="tabpanel"
-        aria-labelledby="pills-contact-tab"
-      >
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">泰國機票來回</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄9,999</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/01-e7957e0c.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Neil"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/02-28d76561.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Ryan"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Monika"
-                  />
-                  <img
-                    src="/MoneyMate-app/assets/04-758c527d.png"
-                    class="rounded-circle object-fit"
-                    width="28"
-                    height="28"
-                    alt="Simon"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex flex-column gap-1 w-100 mb-1">
-          <div class="card record-item">
-            <div class="card-body p-0">
-              <div class="d-flex justify-content-between mb-1">
-                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
-                <span
-                  class="mgc_more_1_fill icon-primary align-text-bottom"
-                ></span>
-              </div>
-              <h5 class="card-title t1-b">水族館門票</h5>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <span
-                    class="badge account-type-tag account-type-tag-secondary"
-                    >支出</span
-                  >
-                  <span class="ms-1 h3-b">＄2500</span>
-                </div>
-                <!-- 使用者頭像 -->
-                <div class="d-flex user-list">
-                  <img
-                    src="/MoneyMate-app/assets/02-28d76561.png"
-                    class="rounded-circle object-fit m-0"
-                    width="28"
-                    height="28"
-                    alt="Ryan"
                   />
                 </div>
               </div>
@@ -1073,13 +604,13 @@
                         for="fileUpload"
                         class="img-upload-icon d-flex align-items-center m-0"
                       >
-                        <span class="mgc_pic_fill icon-primary"></span>
-                      </label>
-                      <input
+                        <input
                         type="file"
                         id="fileUpload"
                         style="display: none"
-                      />
+                        />
+                        <span class="mgc_pic_fill icon-primary"></span>
+                      </label>
                     </div>
                   </div>
                 </form>
