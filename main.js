@@ -62,3 +62,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // record
 import "./assets/js/record-search-btn-close.js";
 import "./assets/js/record-dropdownbutton.js";
+import "./assets/js/record-filter-btn.js";
