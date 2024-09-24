@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>設定</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-a02cd526.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-a5ff40f1.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-2761a84d.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-9aafaaf0.css">
   </head>
   <body>
     <header class="setting-status-bar">
@@ -271,7 +271,7 @@
 
           <div>
             <ul>
-              <li class="d-flex justify-content-between align-items-center py-3 sync">
+              <!-- <li class="d-flex justify-content-between align-items-center py-3 sync">
                 <p class="t1-b">同步到個人總覽</p>
                 <button class="form-check form-switch">
                   <label
@@ -285,10 +285,10 @@
                     id="Toggle"
                   />
                 </button>
-              </li>
+              </li> -->
 
               <!-- 類別 -->
-              <li class="py-3 spendingCategory">
+              <!-- <li class="py-3 spendingCategory">
                 <div class="d-flex align-items-center overflow-hidden text-nowrap">
                   <p class="t1-b pe-4">類別</p>
                   <ul class="nav nav-pills input-tag-list overflow-x-scroll scroll-none" id="spendingCategory-tab" role="tablist">
@@ -364,10 +364,10 @@
                     </li>
                   </ul>                  
                 </div>
-              </li>
+              </li> -->
 
               <!-- 名稱 -->
-              <li>
+              <!-- <li>
                 <form class="d-flex addrecord-item">
                   <div class="input-group align-items-center">
                     <label class="form-label t1-b m-0 pe-3" for="inputGroup01"
@@ -382,10 +382,10 @@
                     />
                   </div>
                 </form>
-              </li>
+              </li> -->
 
               <!-- 備註 -->
-              <li>
+              <!-- <li>
                 <form class="d-flex addrecord-item">
                   <div class="input-group align-items-center">
                     <label class="form-label t1-b m-0 pe-3" for="inputGroup02"
@@ -413,14 +413,210 @@
                     </div>
                   </div>
                 </form>
-              </li>
+              </li> -->
             </ul>
           </div>
 
           <div>
-            <ul class="cost-list">
+            <!-- <ul class="cost-list">
               <li class="d-flex justify-content-between py-3">
                 <div class="d-flex">
+                  <p class="t1-b pe-4">付款成員</p>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/01.png"
+                        class="rounded-circle object-fit m-0"
+                        width="28"
+                        height="28"
+                        alt="Neil"
+                      />
+                      <p class="t1-b ms-2">Neil</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                    type="button"
+                    id="sharing-dropdownbutton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                  </button>
+                </div>
+              </li>
+
+              <li class="d-flex justify-content-between py-3">
+                <div class="d-flex">
+                  <p class="t1-b pe-4">分帳方式</p>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/01.png"
+                        class="rounded-circle object-fit m-0"
+                        width="28"
+                        height="28"
+                        alt="Neil"
+                      />
+                      <p class="t1-b ms-2">Neil</p>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/02.png"
+                        class="rounded-circle object-fit"
+                        width="28"
+                        height="28"
+                        alt="Ryan"
+                      />
+                      <p class="t1-b ms-2">Ryan</p>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/03.png"
+                        class="rounded-circle object-fit"
+                        width="28"
+                        height="28"
+                        alt="Monika"
+                      />
+                      <p class="t1-b ms-2">Monika</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                    type="button"
+                    id="sharing-dropdownbutton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                  </button>
+                </div>
+              </li>
+            </ul> -->
+          </div>
+
+          <!-- 修正版input-list 元件組 -->
+          <ul class="input-list">
+            <li>
+              <p class="t1-b">同步到個人總覽</p>
+                <div class="form-check form-switch">
+                  <label
+                    class="form-check-label t1-b d-flex align-items-center"
+                    for="Toggle"
+                    >
+                  <input
+                    class="form-check-input focus-shadow-none"
+                    type="checkbox"
+                    role="switch"
+                    id="Toggle"
+                  />
+                </div>
+            </li>
+            <li>
+              <div class="d-flex align-items-center overflow-hidden text-nowrap">
+                  <p class="t1-b pe-4">類別</p>
+                  <ul class="nav nav-pills flex-nowrap overflow-x-scroll scroll-none" id="spendingCategory-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">食物</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">飲料</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">交通</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">票卷</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">住宿</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">購物</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="input-tag-item input-tag-neutral t1-b"
+                        data-bs-toggle="pill"
+                        type="button"
+                        role="tab"
+                        aria-selected="true">其他</button>
+                    </li>
+                  </ul>                  
+                </div>
+            </li>
+            <li>
+              <div class="input-group align-items-center">
+                    <label class="form-label t1-b m-0 pe-3" for="inputGroup01"
+                      >名稱</label
+                    >
+                    <input
+                      class="form-control lh-1 t1-b p-0"
+                      type="text"
+                      placeholder="點擊紀錄"
+                      aria-label="點擊紀錄"
+                      id="inputGroup01"
+                    />
+              </div>
+            </li>
+            <li>
+              <div class="input-group align-items-center">
+                    <label class="form-label t1-b m-0 pe-3" for="inputGroup02"
+                      >備註</label
+                    >
+                    <input
+                      class="form-control lh-1 t1-b p-0"
+                      type="text"
+                      placeholder="點擊紀錄（選填）"
+                      aria-label="點擊紀錄（選填）"
+                      id="inputGroup02"
+                    />
+                    <div>
+                      <label
+                        for="fileUpload"
+                        class="img-upload-icon d-flex align-items-center m-0"
+                      >
+                        <input
+                        type="file"
+                        id="fileUpload"
+                        style="display: none"
+                        />
+                        <span class="mgc_pic_fill icon-primary"></span>
+                      </label>
+                    </div>
+              </div>
+            </li>
+            <li>
+              <div class="d-flex">
                   <p class="t1-b pe-4">付款成員</p>
                   <div class="d-flex flex-column gap-2">
                     <div class="d-flex">
@@ -447,10 +643,9 @@
                     <span class="mgc_down_small_fill icon-primary ms-1"></span>
                   </button>
                 </div>
-              </li>
-
-              <li class="d-flex justify-content-between py-3">
-                <div class="d-flex">
+            </li>
+            <li>
+              <div class="d-flex">
                   <p class="t1-b pe-4">分帳方式</p>
                   <div class="d-flex flex-column gap-2">
                     <div class="d-flex">
@@ -497,9 +692,8 @@
                     <span class="mgc_down_small_fill icon-primary ms-1"></span>
                   </button>
                 </div>
-              </li>
-            </ul>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </li>
