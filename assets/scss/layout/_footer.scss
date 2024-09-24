@@ -18,6 +18,7 @@
     }
 
     &.active {
+
       .icon-primary:before,
       .nav-link {
         color: $primary-500 !important;
@@ -25,6 +26,7 @@
     }
 
     &:hover {
+
       .icon-primary:before,
       .nav-link {
         color: $primary-500 !important;
@@ -48,20 +50,25 @@
     position: fixed;
     margin: 0 auto;
     width: 100%;
-    max-width: 393px; /* 設置為 footer 的最大寬度 */
+    max-width: 393px;
+    /* 設置為 footer 的最大寬度 */
     height: auto;
     max-height: none;
     border-radius: 16px;
+
     // .cardTop {
     //   margin-top: -18px;
     // }
     .offcanvas-header .btn-close {
       margin: 0;
     }
+
     .offcanvas-body {
       width: 100%;
+
       &::-webkit-scrollbar {
-        display: none; /* 隱藏滾動條 */
+        display: none;
+        /* 隱藏滾動條 */
       }
     }
   }
@@ -71,35 +78,47 @@
   .nav-underline .nav-link {
     color: $neutral-200 !important;
     border-bottom: 1px solid $neutral-200 !important;
+
     &.active {
       color: #1a1a1a !important;
       border-bottom: 2px solid $primary-500 !important;
     }
   }
+
   .icon-primary:before {
     color: $primary-500 !important;
   }
+
   .currencySwitch {
     button {
       color: $neutral-400;
     }
   }
+
   .result-input-wrapper {
     border: 1px solid $neutral-200;
     border-radius: 16px;
+
     &:focus-within {
-      border: 2px solid $primary-500;
+      // 不要抖修正
+      // border: 2px solid $primary-500;
+      border: 1px solid $primary-500;
+      box-shadow: 0 0 0 1px $primary-500;
     }
+
     p {
       color: $primary-500 !important;
     }
   }
+
   .result-input {
     border: none;
     border-radius: 0;
     padding: 0;
+
     &:focus {
-      box-shadow: none; /* 移除外圈效果 */
+      box-shadow: none;
+      /* 移除外圈效果 */
     }
   }
 
@@ -134,40 +153,50 @@
 
   .sync {
     border-bottom: 1px solid $neutral-200;
+
     &:focus-within {
       border-bottom: 2px solid $primary-500;
     }
+
     button {
       border: none;
       padding: 0;
       margin: 0;
       background-color: transparent;
     }
+
     .form-check-input {
       margin: 0;
     }
   }
+
   .spendingCategory {
     border-bottom: 1px solid $neutral-200;
+
     &:focus-within {
       border-bottom: 2px solid $primary-500;
     }
+
     .input-tag-list {
       display: flex;
       flex-wrap: nowrap !important;
       align-items: flex-start;
       overflow-x: auto;
+
       .nav-item {
         padding: 0;
       }
+
       .input-tag-item {
         margin-right: 8px;
         padding: 4px 8px;
         border-radius: 8px !important;
       }
+
       .input-tag {
         color: var(--filter-btn-text) !important;
         background-color: var(--filter-btn-surface) !important;
+
         &.active {
           color: var(--filter-btn-text-hover) !important;
           background-color: var(--filter-btn-surface-hover) !important;
@@ -179,29 +208,95 @@
   .dropdown-toggle::after {
     display: none;
   }
+
   .cost-list li {
     border-bottom: 1px solid $neutral-200;
+
     &:focus-within {
       border-bottom: 2px solid $primary-500;
     }
   }
 }
 
+// 不要抖修正 input-list 元件結構
+.input-list {
+  &>li {
+    padding: $spacer 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      background-color: $neutral-200;
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    &:focus-within::after {
+      background-color: $primary-500;
+      ;
+      height: 2px;
+    }
+  }
+
+  .nav-item {
+    padding: 0;
+  }
+
+  .form-control {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    transition: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+  }
+
+  input::placeholder {
+    color: $neutral-300;
+    font-weight: normal;
+  }
+
+  .img-upload-icon {
+    height: 100%;
+    cursor: pointer !important;
+  }
+
+  [class^="mgc_"]::before {
+    color: $primary-500 !important;
+  }
+
+
+}
+
 .addrecord-item {
+
   .input-group:focus-within label,
   .input-group:focus-within .img-upload-icon {
     border-bottom: 2px solid $primary-500;
     transition: none;
+
     [class^="mgc_"]::before {
       color: $primary-500 !important;
     }
   }
+
   .form-label {
     height: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid $neutral-200;
   }
+
   .form-control {
     height: 100%;
     background-color: transparent;
@@ -209,6 +304,7 @@
     border-bottom: 1px solid $neutral-200;
     border-radius: 0;
     transition: none;
+
     &:focus {
       box-shadow: none;
       caret-color: $neutral-500;
@@ -217,10 +313,12 @@
       transition: none;
     }
   }
+
   input::placeholder {
     color: $neutral-300;
     font-weight: normal;
   }
+
   .img-upload-icon {
     height: 100%;
     padding-top: 12px;
@@ -234,7 +332,8 @@
   left: auto;
 
   &-backdrop {
-    display: none !important; /* 隱藏 Modal 背景遮罩 */
+    display: none !important;
+    /* 隱藏 Modal 背景遮罩 */
   }
 
   .fade .modal-dialog {
@@ -258,15 +357,18 @@
     transform: translateY(100%) !important;
     transition: transform 0.2s ease-out;
   }
+
   .modal.show .modal-dialog {
     transform: translateY(0) !important;
   }
+
   .calculator-modal {
     position: fixed;
     bottom: 0;
     margin: 0 auto;
     width: 100%;
-    max-width: 393px; /* 設置為 footer 的最大寬度 */
+    max-width: 393px;
+    /* 設置為 footer 的最大寬度 */
     min-height: 456px;
 
     .modal-content {
@@ -291,6 +393,7 @@
           span {
             pointer-events: none;
           }
+
           [class^="mgc_"]::before {
             color: white !important;
           }

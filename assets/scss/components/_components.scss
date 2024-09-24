@@ -142,3 +142,21 @@
         background: $primary-600;
     }
 }
+
+// input-tag
+.input-tag-item {
+    margin-right: map-get($map: $spacers, $key: 2);
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius-lg;
+}
+
+.input-tag-neutral {
+    color: var(--filter-btn-text) !important;
+    background-color: var(--filter-btn-surface) !important;
+    border: none;
+
+    &.active {
+        color: var(--filter-btn-text-hover) !important;
+        background-color: var(--filter-btn-surface-hover) !important;
+    }
+}
