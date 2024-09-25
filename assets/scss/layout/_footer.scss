@@ -18,7 +18,6 @@
     }
 
     &.active {
-
       .icon-primary:before,
       .nav-link {
         color: $primary-500 !important;
@@ -26,7 +25,6 @@
     }
 
     &:hover {
-
       .icon-primary:before,
       .nav-link {
         color: $primary-500 !important;
@@ -220,7 +218,7 @@
 
 // 不要抖修正 input-list 元件結構
 .input-list {
-  &>li {
+  & > li {
     padding: $spacer 0;
     display: flex;
     justify-content: space-between;
@@ -228,7 +226,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       background-color: $neutral-200;
       display: block;
       width: 100%;
@@ -239,7 +237,6 @@
 
     &:focus-within::after {
       background-color: $primary-500;
-      ;
       height: 2px;
     }
   }
@@ -258,7 +255,6 @@
     &:focus {
       box-shadow: none;
     }
-
   }
 
   input::placeholder {
@@ -274,12 +270,9 @@
   [class^="mgc_"]::before {
     color: $primary-500 !important;
   }
-
-
 }
 
 .addrecord-item {
-
   .input-group:focus-within label,
   .input-group:focus-within .img-upload-icon {
     border-bottom: 2px solid $primary-500;

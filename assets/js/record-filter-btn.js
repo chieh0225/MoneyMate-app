@@ -16,9 +16,10 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
 
       // 根據篩選條件判斷是否顯示記錄
       if (filters.includes("filter-date")) {
-        // 範例：過濾日期邏輯
+        // 過濾日期邏輯：匹配多個日期
+        const allowedDates = ["2024-07-25", "2024-07-20", "2024-07-15"];
         shouldShow =
-          shouldShow && record.getAttribute("data-date") === "2024-07-25";
+          shouldShow && allowedDates.includes(record.getAttribute("data-date"));
       }
       if (filters.includes("filter-type")) {
         // 範例：過濾記帳類型邏輯

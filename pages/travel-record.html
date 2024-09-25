@@ -15,27 +15,18 @@
           class="d-flex justify-content-between align-items-end record-title"
         >
           <h1 class="text-black h1-b">紀錄</h1>
-          <div class="dropdown">
+          <div>
             <button
-              class="btn dropdown-toggle h3-b border-0 p-0"
               type="button"
-              id="record-dropdownbutton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              class="btn dropdown-toggle h3-b border-0 p-0"
+              data-bs-toggle="modal"
+              data-bs-target="#modalBottom"
             >
               泰國旅遊
               <span class="mgc_down_fill icon-primary ms-1"></span>
             </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end mt-2"
-              aria-labelledby="record-dropdownbutton"
-              style="min-width: 120px"
-            >
-              <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-              <li><a class="dropdown-item" href="#">生日派對</a></li>
-              <li><a class="dropdown-item" href="#">日本行</a></li>
-              <li><a class="dropdown-item" href="#">台北之旅</a></li>
-            </ul>
+            <!-- modalBottom -->
+            <%- include('./layout/group-record-btmSheet.ejs'); -%>
           </div>
         </div>
 
