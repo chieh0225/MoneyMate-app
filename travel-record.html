@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>旅遊紀錄</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-2761a84d.js"></script>
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-cefc11f3.js"></script>
     <link rel="stylesheet" href="/MoneyMate-app/assets/main-9aafaaf0.css">
   </head>
   <body>
@@ -19,27 +19,79 @@
           class="d-flex justify-content-between align-items-end record-title"
         >
           <h1 class="text-black h1-b">紀錄</h1>
-          <div class="dropdown">
+          <div>
             <button
-              class="btn dropdown-toggle h3-b border-0 p-0"
               type="button"
-              id="record-dropdownbutton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+              class="btn dropdown-toggle h3-b border-0 p-0"
+              data-bs-toggle="modal"
+              data-bs-target="#modalBottom"
             >
               泰國旅遊
               <span class="mgc_down_fill icon-primary ms-1"></span>
             </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end mt-2"
-              aria-labelledby="record-dropdownbutton"
-              style="min-width: 120px"
+            <!-- modalBottom -->
+            <div
+  class="modalBottom modal fade"
+  id="modalBottom"
+  tabindex="-1"
+  aria-labelledby="modalBottomLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog fixed-bottom start-50 translate-middle-x m-0">
+    <div class="modal-content">
+      <div class="px-5 pt-3 pb-4">
+        <div class="d-flex justify-content-between">
+          <h3 class="modal-title" id="modalBottomLabel">群組分帳帳本</h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <div class="px-4">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="#"
+              ><span class="mgc_cake_line mgcIcon me-2"></span>生日派對</a
             >
-              <li><a class="dropdown-item" href="#">泰國旅遊</a></li>
-              <li><a class="dropdown-item" href="#">生日派對</a></li>
-              <li><a class="dropdown-item" href="#">日本行</a></li>
-              <li><a class="dropdown-item" href="#">台北之旅</a></li>
-            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="./travel-record.html"
+              aria-current="page"
+              ><span class="mgc_airplane_line mgcIcon me-2"></span>泰國旅遊</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><span class="mgc_miyajima_torii_line mgcIcon me-2"></span
+              >日本行</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><span class="mgc_taipei101_line mgcIcon me-2"></span>台北之旅</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><span class="mgc_house_line mgcIcon me-2"></span>民宿包棟</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><span class="mgc_folder_download_line mgcIcon me-2"></span
+              >封存</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
 
@@ -845,54 +897,53 @@
                   </button>
                 </div>
             </li>
-            <li>
+            <li class="align-items-start">
               <div class="d-flex">
-                  <p class="t1-b pe-4">分帳方式</p>
-                  <div class="d-flex flex-column gap-2">
-                    <div class="d-flex">
-                      <img
-                        src="/MoneyMate-app/assets/01-e7957e0c.png"
-                        class="rounded-circle object-fit m-0"
-                        width="28"
-                        height="28"
-                        alt="Neil"
-                      />
-                      <p class="t1-b ms-2">Neil</p>
-                    </div>
-                    <div class="d-flex">
-                      <img
-                        src="/MoneyMate-app/assets/02-28d76561.png"
-                        class="rounded-circle object-fit"
-                        width="28"
-                        height="28"
-                        alt="Ryan"
-                      />
-                      <p class="t1-b ms-2">Ryan</p>
-                    </div>
-                    <div class="d-flex">
-                      <img
-                        src="/MoneyMate-app/assets/03-ab6d0fad.png"
-                        class="rounded-circle object-fit"
-                        width="28"
-                        height="28"
-                        alt="Monika"
-                      />
-                      <p class="t1-b ms-2">Monika</p>
-                    </div>
+                <p class="t1-b pe-4">分帳方式</p>
+                <div class="d-flex flex-column gap-2">
+                  <div class="d-flex">
+                    <img
+                      src="/MoneyMate-app/assets/01-e7957e0c.png"
+                      class="rounded-circle object-fit m-0"
+                      width="28"
+                      height="28"
+                      alt="Neil"
+                    />
+                    <p class="t1-b ms-2">Neil</p>
+                  </div>
+                  <div class="d-flex">
+                    <img
+                      src="/MoneyMate-app/assets/02-28d76561.png"
+                      class="rounded-circle object-fit"
+                      width="28"
+                      height="28"
+                      alt="Ryan"
+                    />
+                    <p class="t1-b ms-2">Ryan</p>
+                  </div>
+                  <div class="d-flex">
+                    <img
+                      src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                      class="rounded-circle object-fit"
+                      width="28"
+                      height="28"
+                      alt="Monika"
+                    />
+                    <p class="t1-b ms-2">Monika</p>
                   </div>
                 </div>
-
-                <div class="dropdown">
-                  <button
-                    class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
-                    type="button"
-                    id="sharing-dropdownbutton"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
-                  </button>
-                </div>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                  type="button"
+                  id="sharing-dropdownbutton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                </button>
+              </div>
             </li>
           </ul>
         </div>
