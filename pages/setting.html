@@ -11,7 +11,7 @@
     include('./layout/setting-header'); -%>
 
     <div class="wrapper">
-      <div class="d-flex p-4 my-4 personal-info">
+      <button type="button" class="d-flex p-4 my-4 w-100 button personal-info">
         <div class="flex-shrink-0">
           <img
             src="../assets/images/avator/01.png"
@@ -21,7 +21,7 @@
             class="rounded-circle object-fit"
           />
         </div>
-        <div class="flex-grow-1 ms-3">
+        <div class="flex-grow-1 ms-3 text-start">
           <p class="h2-b mb-2">Neil Wang</p>
           <p class="t3">
             <span
@@ -31,14 +31,14 @@
           </p>
         </div>
         <span class="mgc_more_1_fill icon-primary align-text-bottom"></span>
-      </div>
+      </button>
       <ul class="setting-list d-flex flex-column gap-4 mt-4 pb-6">
         <li class="w-100">
           <button type="button" class="form-check button p-4 m-0 w-100">
             <p class="t1-b d-flex align-items-center">
               <span class="mgc_group_2_fill icon-primary me-2"></span>查看成員
             </p>
-            <p class="t1">12 位</p>
+            <p class="t1 p-secondary">12 位</p>
           </button>
         </li>
         <li class="w-100">
@@ -62,7 +62,7 @@
             <p class="t1-b d-flex align-items-center">
               <span class="mgc_notebook_fill icon-primary me-2"></span>新增帳本
             </p>
-            <p class="t1">共 10 本</p>
+            <p class="t1 p-secondary">共 8 本</p>
           </button>
         </li>
         <li class="w-100">
@@ -70,7 +70,7 @@
             <p class="t1-b d-flex align-items-center">
               <span class="mgc_tag_fill icon-primary me-2"></span>新增種類
             </p>
-            <p class="t1">10 種</p>
+            <p class="t1 p-secondary">7 種</p>
           </button>
         </li>
         <li class="w-100">
@@ -79,7 +79,7 @@
               <span class="mgc_currency_dollar_fill icon-primary me-2"></span
               >記帳幣別
             </p>
-            <p class="t1">THB</p>
+            <p class="t1 p-secondary">THB</p>
           </button>
         </li>
         <li class="w-100">
@@ -88,7 +88,7 @@
               <span class="mgc_classify_2_fill icon-primary me-2"></span
               >預設紀錄
             </p>
-            <p class="t1">0</p>
+            <p class="t1 p-secondary">0</p>
           </button>
         </li>
         <li class="d-flex gap-4 w-100">
