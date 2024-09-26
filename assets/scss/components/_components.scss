@@ -1,51 +1,51 @@
 .title-section {
-    h3 {
-        color: var(--head-label);
-        font-weight: 700;
-    }
+  h3 {
+    color: var(--head-label);
+    font-weight: 700;
+  }
 
-    button[data-bs-toggle="modal"] {
-        color: $neutral-400;
-        font-weight: 700;
-    }
+  button[data-bs-toggle="modal"] {
+    color: $neutral-400;
+    font-weight: 700;
+  }
 
-    // dropdown-toggle 預設符號
-    .dropdown-toggle {
-        &::after {
-            border-top: 0.3em solid $primary-500;
-        }
+  // dropdown-toggle 預設符號
+  .dropdown-toggle {
+    &::after {
+      border-top: 0.3em solid $primary-500;
     }
+  }
 }
 
 // main-card
 .main-card {
-    background-color: $white;
-    padding: $spacer * 1.25;
-    border: 1px solid $neutral-100;
-    border-radius: $border-radius-xl * .75;
-    box-shadow: -1px 7px 5px 0px #BABABA0D;
+  background-color: $white;
+  padding: $spacer * 1.25;
+  border: 1px solid $neutral-100;
+  border-radius: $border-radius-xl * 0.75;
+  box-shadow: -1px 7px 5px 0px #bababa0d;
 
-    .titleArea {
-        .mgcIcon::before {
-            color: $alert-b-500;
-        }
+  .titleArea {
+    .mgcIcon::before {
+      color: $alert-b-500;
     }
+  }
 
-    .eyeBtn {
-        .mgcIcon::before {
-            color: $neutral-400;
-        }
+  .eyeBtn {
+    .mgcIcon::before {
+      color: $neutral-400;
     }
+  }
 
-    hr {
-        border-top: 2px solid;
-        color: $neutral-50;
-    }
+  hr {
+    border-top: 2px solid;
+    color: $neutral-50;
+  }
 
-    .expandChart {
-        width: 100%;
-        min-height: 100px;
-    }
+  .expandChart {
+    width: 100%;
+    min-height: 100px;
+  }
 }
 
 // category-item
@@ -55,108 +55,131 @@
 
 // modal
 .modalBottom {
+  .modal-dialog {
+    width: 100%;
+    max-width: 393px;
+  }
 
-
+  // 出現消失動畫
+  &.fade {
     .modal-dialog {
-        width: 100%;
-        max-width: 393px;
+      // transition: transform 1s ease-out;
+      // transform: none;
+      transform: translateY(100%); // 初始狀態位於屏幕下方
+      opacity: 0; // 初始透明度為0
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+  }
+
+  &.show {
+    .modal-dialog {
+      // transform: translate(0, 200px);
+      transform: translateY(0); // 當 modal 顯示時，從屏幕底部滑上來
+      opacity: 1; // 顯示時恢復透明度
+    }
+  }
+
+  .modal-content {
+    background-color: $white;
+    border-top-left-radius: $border-radius-xl;
+    border-top-right-radius: $border-radius-xl;
+    box-shadow: 6px 4px 24px 0px #6e6e6e40;
+  }
+
+  // .nav-link {
+  //     padding: $spacer*.75 $spacer*2;
+
+  //     &:hover {
+  //         background-color: $neutral-100 ;
+  //     }
+
+  //     &.active {
+  //         // color: $white;
+  //         background-color: $neutral-200 ;
+  //     }
+  // }
+
+  // 修改樣式
+  .modal-title {
+    color: $neutral-950;
+  }
+
+  .navbar-nav {
+    padding-bottom: $spacer * 2;
+  }
+
+  .nav-link {
+    color: $neutral-800;
+    padding: $spacer * 0.75 $spacer * 2;
+    border-bottom: 1px solid $neutral-50;
+    border-radius: $border-radius-lg;
+
+    &:hover {
+      background-color: $neutral-50;
     }
 
-    // 出現消失動畫
-    &.fade {
-        .modal-dialog {
-            // transition: transform 1s ease-out;
-            // transform: none;
-            transform: translateY(100%); // 初始狀態位於屏幕下方
-            opacity: 0; // 初始透明度為0
-            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-        }
+    &.active {
+      // color: $white;
+      background-color: $neutral-50;
     }
-
-    &.show {
-        .modal-dialog {
-            // transform: translate(0, 200px);
-            transform: translateY(0); // 當 modal 顯示時，從屏幕底部滑上來
-            opacity: 1; // 顯示時恢復透明度
-        }
-    }
-
-    .modal-content {
-        background-color: $white;
-        border-top-left-radius: $border-radius-xl;
-        border-top-right-radius: $border-radius-xl;
-        box-shadow: 6px 4px 24px 0px #6E6E6E40;
-    }
-
-    .nav-link {
-        padding: $spacer*.75 $spacer*2;
-
-        &:hover {
-            background-color: $neutral-100 ;
-        }
-
-        &.active {
-            // color: $white;
-            background-color: $neutral-200 ;
-        }
-    }
+  }
 }
 
 // progress-bar
 .secondaryProgress {
-    background-color: $secondary-50;
-    height: $spacer * .25;
-    border-radius: $spacer * .25;
+  background-color: $secondary-50;
+  height: $spacer * 0.25;
+  border-radius: $spacer * 0.25;
 
-    .progress-bar {
-        border-radius: $spacer * .25;
-    }
+  .progress-bar {
+    border-radius: $spacer * 0.25;
+  }
 }
 
 // roundedTag-sm
 .roundedTag-sm {
-    color: $neutral-500;
-    background-color: $neutral-50;
-    font-weight: 700;
-    border: 1px solid $neutral-100;
-    border-radius: $border-radius-lg;
-    padding: $spacer * .25 $spacer * .5;
+  color: $neutral-500;
+  background-color: $neutral-50;
+  font-weight: 700;
+  border: 1px solid $neutral-100;
+  border-radius: $border-radius-lg;
+  padding: $spacer * 0.25 $spacer * 0.5;
 }
 
 // rounded-btn
 .roundedBtn {
-    padding: $spacer*.75 $spacer;
-    border-radius: $border-radius-lg;
+  padding: $spacer * 0.75 $spacer;
+  border-radius: $border-radius-lg;
 }
 
 .customBtn-primary {
-    color: $white;
-    background: $primary-500;
-    box-shadow: 2px 4px 20px 4px #22C55E33;
+  color: $white;
+  background: $primary-500;
+  box-shadow: 2px 4px 20px 4px #22c55e33;
 
-    // &:hover {
-    //     background: $primary-400;
-    // }
+  // &:hover {
+  //     background: $primary-400;
+  // }
 
-    &:focus {
-        background: $primary-600;
-    }
+  &:focus {
+    background: $primary-600;
+  }
 }
 
 // input-tag
 .input-tag-item {
-    margin-right: map-get($map: $spacers, $key: 2);
-    padding: map-get($spacers, 1) map-get($spacers, 2);
-    border-radius: $border-radius-lg;
+  margin-right: map-get($map: $spacers, $key: 2);
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  border-radius: $border-radius-lg;
 }
 
 .input-tag-neutral {
-    color: var(--filter-btn-text) !important;
-    background-color: var(--filter-btn-surface) !important;
-    border: none;
+  color: var(--filter-btn-text) !important;
+  background-color: var(--filter-btn-surface) !important;
+  border: none;
 
-    &.active {
-        color: var(--filter-btn-text-hover) !important;
-        background-color: var(--filter-btn-surface-hover) !important;
-    }
+  &.active {
+    color: var(--filter-btn-text-hover) !important;
+    background-color: var(--filter-btn-surface-hover) !important;
+  }
 }
