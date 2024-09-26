@@ -52,7 +52,8 @@
     /* 設置為 footer 的最大寬度 */
     height: auto;
     max-height: none;
-    border-radius: 16px;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
 
     // .cardTop {
     //   margin-top: -18px;
@@ -265,8 +266,12 @@
   }
 
   input::placeholder {
-    color: $neutral-300;
+    color: $neutral-400;
     font-weight: normal;
+  }
+  input:focus::placeholder {
+    color: $neutral-950;
+    font-weight: bold;
   }
 
   .img-upload-icon {
@@ -279,54 +284,54 @@
   }
 }
 
-.addrecord-item {
-  .input-group:focus-within label,
-  .input-group:focus-within .img-upload-icon {
-    border-bottom: 2px solid $primary-500;
-    transition: none;
+// .addrecord-item {
+//   .input-group:focus-within label,
+//   .input-group:focus-within .img-upload-icon {
+//     border-bottom: 2px solid $primary-500;
+//     transition: none;
 
-    [class^="mgc_"]::before {
-      color: $primary-500 !important;
-    }
-  }
+//     [class^="mgc_"]::before {
+//       color: $primary-500 !important;
+//     }
+//   }
 
-  .form-label {
-    height: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid $neutral-200;
-  }
+//   .form-label {
+//     height: 100%;
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//     border-bottom: 1px solid $neutral-200;
+//   }
 
-  .form-control {
-    height: 100%;
-    background-color: transparent;
-    border: transparent;
-    border-bottom: 1px solid $neutral-200;
-    border-radius: 0;
-    transition: none;
+//   .form-control {
+//     height: 100%;
+//     background-color: transparent;
+//     border: transparent;
+//     border-bottom: 1px solid $neutral-200;
+//     border-radius: 0;
+//     transition: none;
 
-    &:focus {
-      box-shadow: none;
-      caret-color: $neutral-500;
-      background-color: transparent;
-      border-bottom: 2px solid $primary-500;
-      transition: none;
-    }
-  }
+//     &:focus {
+//       box-shadow: none;
+//       caret-color: $neutral-500;
+//       background-color: transparent;
+//       border-bottom: 2px solid $primary-500;
+//       transition: none;
+//     }
+//   }
 
-  input::placeholder {
-    color: $neutral-300;
-    font-weight: normal;
-  }
+//   input::placeholder {
+//     color: $neutral-300;
+//     font-weight: normal;
+//   }
 
-  .img-upload-icon {
-    height: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid $neutral-200;
-    cursor: pointer !important;
-  }
-}
+//   .img-upload-icon {
+//     height: 100%;
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//     border-bottom: 1px solid $neutral-200;
+//     cursor: pointer !important;
+//   }
+// }
 
 .modal {
   left: auto;

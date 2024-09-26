@@ -29,7 +29,10 @@
     align-items: center;
     justify-content: space-between;
   }
+}
 
+// 切換按鈕
+.switch-btn {
   .form-check-input {
     position: relative;
     background-color: $neutral-500;
