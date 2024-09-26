@@ -10,8 +10,11 @@
     border: none;
     border-radius: 0.75rem;
     box-shadow: -1px 7px 5px 0px #bababa0d, -4px 21px 6px 0px #bababa00;
-    &.active {
-      background-color: var(--surface-primary-hover);
+    &:hover {
+      background-color: var(--surface-primary-hover) !important;
+    }
+    &:active {
+      background-color: var(--surface-primary-hover) !important;
     }
   }
 
