@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>設定</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-e639cda7.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-064b8102.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-6581b033.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-5bb0fe96.css">
   </head>
   <body>
     <header class="setting-status-bar">
@@ -50,7 +50,7 @@
             <p class="t1 p-secondary">12 位</p>
           </button>
         </li>
-        <li class="w-100">
+        <li class="w-100 switch-btn">
           <button class="form-check form-switch button button-style">
             <label
               class="form-check-label t1-b d-flex align-items-center"
@@ -181,7 +181,11 @@
             data-bs-dismiss="offcanvas"
           ></button>
           <h5 class="offcanvas-title t1-b">新增紀錄</h5>
-          <a href="./travel-record.html" class="custom-btn-sm custom-btn-primary done-btn">完成</a>
+          <a
+            href="./travel-record.html"
+            class="custom-btn-sm custom-btn-primary done-btn"
+            >完成</a
+          >
         </div>
         <div class="offcanvas-body">
           <ul
@@ -224,7 +228,7 @@
               <div class="d-flex">
                 <p class="h3-b pe-4">輸入金額</p>
               </div>
-  
+
               <div class="dropdown currencySwitch">
                 <button
                   class="btn dropdown-toggle t1-b border-0 p-0 d-flex justify-content-between align-items-center"
@@ -245,13 +249,13 @@
                 </ul> -->
               </div>
             </div>
-  
+
             <div class="d-flex flex-column align-items-end">
-              <div class="input-group align-items-center p-4 mb-2 result-input-wrapper">
-                  <p class="h3-b">
-                    THB
-                  </p>
-                
+              <div
+                class="input-group align-items-center p-4 mb-2 result-input-wrapper"
+              >
+                <p class="h3-b">THB</p>
+
                 <!-- 顯示結果的 input 元素 -->
                 <input
                   type="text"
@@ -262,13 +266,12 @@
                   readonly
                 />
               </div>
-  
+
               <!-- <p class="t2 d-flex align-items-center position-relative calendar">
                 今天
                 <input id="customDateInput" type="date" value="2024-07-25" class="form-control border-0 focus-shadow-none t2">
                 <span id="calendarIcon" class="mgc_down_small_fill icon-primary icon-md"></span>
               </p> -->
-            
             </div>
           </div>
 
@@ -507,12 +510,11 @@
           <!-- 修正版input-list 元件組 -->
           <ul class="input-list">
             <li>
-              <p class="t1-b">同步到個人總覽</p>
+              <label class="form-label t1-b m-0" for="Toggle"
+                >同步到個人總覽</label
+              >
+              <div class="switch-btn">
                 <div class="form-check form-switch">
-                  <label
-                    class="form-check-label t1-b d-flex align-items-center"
-                    for="Toggle"
-                    >
                   <input
                     class="form-check-input focus-shadow-none"
                     type="checkbox"
@@ -520,136 +522,183 @@
                     id="Toggle"
                   />
                 </div>
+              </div>
             </li>
             <li>
-              <div class="d-flex align-items-center overflow-hidden text-nowrap">
-                  <p class="t1-b pe-4">類別</p>
-                  <ul class="nav nav-pills flex-nowrap overflow-x-scroll scroll-none" id="spendingCategory-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">食物</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">飲料</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">交通</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">票卷</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">住宿</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">購物</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="input-tag-item input-tag-neutral t1-b"
-                        data-bs-toggle="pill"
-                        type="button"
-                        role="tab"
-                        aria-selected="true">其他</button>
-                    </li>
-                  </ul>                  
-                </div>
-            </li>
-            <li>
-              <div class="input-group align-items-center">
-                    <label class="form-label t1-b m-0 pe-3" for="inputGroup01"
-                      >名稱</label
+              <div
+                class="d-flex align-items-center overflow-hidden text-nowrap"
+              >
+                <p class="t1-b pe-4">類別</p>
+                <ul
+                  class="nav nav-pills flex-nowrap overflow-x-scroll scroll-none"
+                  id="spendingCategory-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
                     >
-                    <input
-                      class="form-control lh-1 t1-b p-0"
-                      type="text"
-                      placeholder="點擊紀錄"
-                      aria-label="點擊紀錄"
-                      id="inputGroup01"
-                    />
+                      食物
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      飲料
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      交通
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      票卷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      住宿
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      購物
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      其他
+                    </button>
+                  </li>
+                </ul>
               </div>
             </li>
             <li>
               <div class="input-group align-items-center">
-                    <label class="form-label t1-b m-0 pe-3" for="inputGroup02"
-                      >備註</label
-                    >
-                    <input
-                      class="form-control lh-1 t1-b p-0"
-                      type="text"
-                      placeholder="點擊紀錄（選填）"
-                      aria-label="點擊紀錄（選填）"
-                      id="inputGroup02"
-                    />
-                    <div>
-                      <label
-                        for="fileUpload"
-                        class="img-upload-icon d-flex align-items-center m-0"
-                      >
-                        <input
-                        type="file"
-                        id="fileUpload"
-                        style="display: none"
-                        />
-                        <span class="mgc_pic_fill icon-primary"></span>
-                      </label>
-                    </div>
+                <label class="form-label t1-b m-0 pe-3" for="inputGroup01"
+                  >名稱</label
+                >
+                <input
+                  class="form-control lh-1 t1-b p-0"
+                  type="text"
+                  placeholder="點擊紀錄"
+                  aria-label="點擊紀錄"
+                  id="inputGroup01"
+                />
               </div>
             </li>
             <li>
-              <div class="d-flex">
-                  <p class="t1-b pe-4">付款成員</p>
-                  <div class="d-flex flex-column gap-2">
-                    <div class="d-flex">
-                      <img
-                        src="/MoneyMate-app/assets/01-e7957e0c.png"
-                        class="rounded-circle object-fit m-0"
-                        width="28"
-                        height="28"
-                        alt="Neil"
-                      />
-                      <p class="t1-b ms-2">Neil</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="dropdown">
-                  <button
-                    class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
-                    type="button"
-                    id="sharing-dropdownbutton"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+              <div class="input-group align-items-center">
+                <label class="form-label t1-b m-0 pe-3" for="inputGroup02"
+                  >備註</label
+                >
+                <input
+                  class="form-control lh-1 t1-b p-0"
+                  type="text"
+                  placeholder="點擊紀錄（選填）"
+                  aria-label="點擊紀錄（選填）"
+                  id="inputGroup02"
+                />
+                <div>
+                  <label
+                    for="fileUpload"
+                    class="img-upload-icon d-flex align-items-center m-0"
                   >
-                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
-                  </button>
+                    <input type="file" id="fileUpload" style="display: none" />
+                    <span class="mgc_pic_fill icon-primary"></span>
+                  </label>
                 </div>
+              </div>
+            </li>
+            <li>
+              <div class="input-group align-items-center flex-nowrap">
+                <label class="form-label t1-b m-0 pe-3" for="inputGroup03"
+                  >付款成員</label
+                >
+                <div class="d-flex align-items-center gap-2 p-0">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <p class="t1-b m-0">Neil</p>
+                </div>
+                <!-- 隱藏 input 但留在可點擊範圍內 -->
+                <input
+                  type="text"
+                  style="
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                  "
+                  id="inputGroup03"
+                />
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                  type="button"
+                  id="sharing-dropdownbutton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                </button>
+              </div>
             </li>
             <li class="align-items-start">
               <div class="d-flex">
-                <p class="t1-b pe-4">分帳方式</p>
+                <label class="form-label t1-b m-0 pe-4" for="inputGroup04"
+                  >分帳方式</label
+                >
                 <div class="d-flex flex-column gap-2">
                   <div class="d-flex">
                     <img
@@ -681,8 +730,23 @@
                     />
                     <p class="t1-b ms-2">Monika</p>
                   </div>
+                  <!-- 隱藏 input 但留在可點擊範圍內 -->
+                  <input
+                    type="text"
+                    style="
+                      opacity: 0;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      border: none;
+                    "
+                    id="inputGroup04"
+                  />
                 </div>
               </div>
+
               <div class="dropdown">
                 <button
                   class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
@@ -852,14 +916,14 @@
                 type="button"
                 class="all-clear function btn btn-primary-500 btn-ac h1-b text-white"
                 value="all-clear"
-                >
+              >
                 AC
               </button>
               <button
                 type="button"
                 class="operator btn btn-primary-500 calculator-icon-btn text-white"
                 value="backspace"
-                >
+              >
                 <span class="mgc_arrow_left_fill align-text-bottom"></span>
               </button>
               <button
