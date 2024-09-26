@@ -57,8 +57,15 @@
     // .cardTop {
     //   margin-top: -18px;
     // }
-    .offcanvas-header .btn-close {
-      margin: 0;
+    .offcanvas-header {
+      .btn-close {
+        margin: 0;
+      }
+      .done-btn {
+        &:active {
+          background-color: $primary-600 !important;
+        }
+      }
     }
 
     .offcanvas-body {
