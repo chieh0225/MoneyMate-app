@@ -15,7 +15,8 @@
 
     .nav-link {
         font-size: map-get($font-sizes, c5);
-        color: var(--navbar-text);
+        font-weight: 700;
+        color: $neutral-200;
 
         .mgcIcon {
             font-size: map-get($font-sizes, 3);
@@ -23,11 +24,11 @@
         }
 
         .mgcIcon::before {
-            color: var(--navbar-text);
+            color: $neutral-200;
         }
 
         &.active {
-            color: var(--text-primary);
+            color: $black;
             border-bottom-color: $primary-500;
 
             .mgcIcon::before {
