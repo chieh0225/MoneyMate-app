@@ -7,9 +7,8 @@
     <title>圖表</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%> <%-
-    include('./layout/menu',{page:"index"}); -%>
-    <div class="px-2 mt-4 mb-3">
+    <%- include('./layout/menu',{page:"index"}); -%>
+    <div class="px-4 mt-4 mb-3">
       <div
         class="title-section d-flex justify-content-between align-items-center"
       >
@@ -52,30 +51,40 @@
                 data-allow-hover="true"
               ></canvas>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <p class="roundedTag-sm">票卷</p>
-              <p class="fw-bold">
-                ＄24,000 <span class="text-neutral-500 ms-4">48%</span>
-              </p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <p class="roundedTag-sm">食物</p>
-              <p class="fw-bold">
-                ＄12,050 <span class="text-neutral-500 ms-4">24%</span>
-              </p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <p class="roundedTag-sm">住宿</p>
-              <p class="fw-bold">
-                ＄9,080 <span class="text-neutral-500 ms-4">18%</span>
-              </p>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="roundedTag-sm">飲料</p>
-              <p class="fw-bold">
-                ＄4,950 <span class="text-neutral-500 ms-4">10%</span>
-              </p>
-            </div>
+            <ul>
+              <li
+                class="d-flex justify-content-between align-items-center px-5 mb-2"
+              >
+                <p class="roundedTag-sm">票卷</p>
+                <p class="fw-bold">
+                  ＄24,000 <span class="text-neutral-500 ms-4">48%</span>
+                </p>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center px-5 mb-2"
+              >
+                <p class="roundedTag-sm">食物</p>
+                <p class="fw-bold">
+                  ＄12,050 <span class="text-neutral-500 ms-4">24%</span>
+                </p>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center px-5 mb-2"
+              >
+                <p class="roundedTag-sm">住宿</p>
+                <p class="fw-bold">
+                  ＄9,080 <span class="text-neutral-500 ms-4">18%</span>
+                </p>
+              </li>
+              <li
+                class="d-flex justify-content-between align-items-center px-5"
+              >
+                <p class="roundedTag-sm">飲料</p>
+                <p class="fw-bold">
+                  ＄4,950 <span class="text-neutral-500 ms-4">10%</span>
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="mb-3">
@@ -86,7 +95,7 @@
               <h4 class="fs-6">近期支出</h4>
               <span class="mgc_question_fill mgcIcon"></span>
             </div>
-            <p class="fw-bold mb-1">
+            <p class="fw-bold px-5 mb-1">
               <span class="text-neutral-500 fw-normal me-2">平均</span>$45,680
             </p>
             <div class="expandChart">
@@ -102,7 +111,7 @@
               <h4 class="fs-6">近期收入</h4>
               <span class="mgc_question_fill mgcIcon"></span>
             </div>
-            <p class="fw-bold mb-1">
+            <p class="fw-bold px-5 mb-1">
               <span class="text-neutral-500 fw-normal me-2">平均</span>$0
             </p>
             <div class="expandChart">

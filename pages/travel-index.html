@@ -7,9 +7,8 @@
     <title>泰國旅遊總覽</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%> <%-
-    include('./layout/menu',{page:"group-index"}); -%>
-    <div class="px-2 mt-4 mb-3">
+    <%- include('./layout/menu',{page:"group-index"}); -%>
+    <div class="px-4 mt-4 mb-3">
       <div
         class="title-section d-flex justify-content-between align-items-center"
       >
@@ -116,7 +115,7 @@
               <h4 class="fs-6">月結餘</h4>
               <span class="mgc_question_fill mgcIcon"></span>
             </div>
-            <div class="d-flex">
+            <div class="d-flex px-5">
               <p class="text-primary-500 fw-bold me-2">TWD</p>
               <p class="fs-3 fw-bold">2,081,600</p>
               <button type="button" class="btn eyeBtn border-0 p-0 ms-auto">
@@ -124,7 +123,7 @@
               </button>
             </div>
             <hr />
-            <div class="d-flex">
+            <div class="d-flex px-5">
               <div class="d-flex flex-fill border-end me-2">
                 <p class="text-neutral-500 me-2">總支出</p>
                 <p class="text-neutral-950 fw-bold flex-grow-1">$45,202</p>
@@ -154,104 +153,110 @@
             <h4 class="fs-6">分帳關係</h4>
             <span class="mgc_question_fill mgcIcon"></span>
           </div>
-          <div class="py-3">
-            <div class="d-flex justify-content-between">
-              <div class="d-flex flex-column">
-                <img
-                  src="../assets/images/avator/01.png"
-                  class="rounded-circle object-fit mb-1"
-                  width="60"
-                  height="60"
-                  alt="Neil"
-                />
-                <p class="fw-bold text-center">Neil</p>
+          <ul>
+            <li class="category-item-bg-light py-3">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit mb-1"
+                    width="60"
+                    height="60"
+                    alt="Neil"
+                  />
+                  <p class="fw-bold text-center">Neil</p>
+                </div>
+                <div
+                  class="flex-grow-1 d-flex flex-column justify-content-center align-items-start px-3"
+                >
+                  <p class="text-neutral-400 mb-6">
+                    需支付<span class="text-neutral-950 fw-bold ms-2"
+                      >$1200</span
+                    >
+                  </p>
+                  <img src="../assets/images/Arrow 3.png" alt="Arrow" />
+                </div>
+                <div class="d-flex flex-column">
+                  <img
+                    src="../assets/images/avator/02.png"
+                    class="rounded-circle object-fit mb-1"
+                    width="60"
+                    height="60"
+                    alt="Brian"
+                  />
+                  <p class="fw-bold text-center">Brian</p>
+                </div>
               </div>
-              <div
-                class="flex-grow-1 d-flex flex-column justify-content-center align-items-start px-3"
-              >
-                <p class="text-neutral-400 mb-6">
-                  需支付<span class="text-neutral-950 fw-bold ms-2">$1200</span>
-                </p>
-                <img src="../assets/images/Arrow 3.png" alt="Arrow" />
+            </li>
+            <li class="category-item-bg-light py-3">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column">
+                  <img
+                    src="../assets/images/avator/03.png"
+                    class="rounded-circle object-fit mb-1"
+                    width="60"
+                    height="60"
+                    alt="Monica"
+                  />
+                  <p class="fw-bold text-center">Monica</p>
+                </div>
+                <div
+                  class="flex-grow-1 d-flex flex-column justify-content-center align-items-start px-3"
+                >
+                  <p class="text-neutral-400 mb-6">
+                    需支付<span class="text-neutral-950 fw-bold ms-2"
+                      >$360</span
+                    >
+                  </p>
+                  <img src="../assets/images/Arrow 3.png" alt="Arrow" />
+                </div>
+                <div class="d-flex flex-column">
+                  <img
+                    src="../assets/images/avator/04.png"
+                    class="rounded-circle object-fit mb-1"
+                    width="60"
+                    height="60"
+                    alt="Simon"
+                  />
+                  <p class="fw-bold text-center">Simon</p>
+                </div>
               </div>
-              <div class="d-flex flex-column">
-                <img
-                  src="../assets/images/avator/02.png"
-                  class="rounded-circle object-fit mb-1"
-                  width="60"
-                  height="60"
-                  alt="Brian"
-                />
-                <p class="fw-bold text-center">Brian</p>
+            </li>
+            <li class="category-item-bg-light py-3">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex flex-column">
+                  <img
+                    src="../assets/images/avator/01.png"
+                    class="rounded-circle object-fit mb-1"
+                    width="60"
+                    height="60"
+                    alt="Neil"
+                  />
+                  <p class="fw-bold text-center">Neil</p>
+                </div>
+                <div
+                  class="flex-grow-1 d-flex flex-column justify-content-center align-items-start px-3"
+                >
+                  <p class="text-neutral-400 mb-6">
+                    需支付<span class="text-neutral-950 fw-bold ms-2"
+                      >$2,680</span
+                    >
+                  </p>
+                  <img src="../assets/images/Arrow 3.png" alt="Arrow" />
+                </div>
+                <div class="d-flex flex-column">
+                  <img
+                    src="../assets/images/avator/04.png"
+                    class="rounded-circle object-fit mb-1"
+                    width="60"
+                    height="60"
+                    alt="Simon"
+                  />
+                  <p class="fw-bold text-center">Simon</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="py-3">
-            <div class="d-flex justify-content-between">
-              <div class="d-flex flex-column">
-                <img
-                  src="../assets/images/avator/03.png"
-                  class="rounded-circle object-fit mb-1"
-                  width="60"
-                  height="60"
-                  alt="Monica"
-                />
-                <p class="fw-bold text-center">Monica</p>
-              </div>
-              <div
-                class="flex-grow-1 d-flex flex-column justify-content-center align-items-start px-3"
-              >
-                <p class="text-neutral-400 mb-6">
-                  需支付<span class="text-neutral-950 fw-bold ms-2">$360</span>
-                </p>
-                <img src="../assets/images/Arrow 3.png" alt="Arrow" />
-              </div>
-              <div class="d-flex flex-column">
-                <img
-                  src="../assets/images/avator/04.png"
-                  class="rounded-circle object-fit mb-1"
-                  width="60"
-                  height="60"
-                  alt="Simon"
-                />
-                <p class="fw-bold text-center">Simon</p>
-              </div>
-            </div>
-          </div>
-          <div class="py-3">
-            <div class="d-flex justify-content-between">
-              <div class="d-flex flex-column">
-                <img
-                  src="../assets/images/avator/01.png"
-                  class="rounded-circle object-fit mb-1"
-                  width="60"
-                  height="60"
-                  alt="Neil"
-                />
-                <p class="fw-bold text-center">Neil</p>
-              </div>
-              <div
-                class="flex-grow-1 d-flex flex-column justify-content-center align-items-start px-3"
-              >
-                <p class="text-neutral-400 mb-6">
-                  需支付<span class="text-neutral-950 fw-bold ms-2"
-                    >$2,680</span
-                  >
-                </p>
-                <img src="../assets/images/Arrow 3.png" alt="Arrow" />
-              </div>
-              <div class="d-flex flex-column">
-                <img
-                  src="../assets/images/avator/04.png"
-                  class="rounded-circle object-fit mb-1"
-                  width="60"
-                  height="60"
-                  alt="Simon"
-                />
-                <p class="fw-bold text-center">Simon</p>
-              </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

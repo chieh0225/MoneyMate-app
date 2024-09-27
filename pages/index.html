@@ -7,9 +7,9 @@
     <title>總覽</title>
   </head>
   <body>
-    <%- include('./layout/header'); -%> <%-
-    include('./layout/menu',{page:"index"}); -%>
-    <div class="px-2 mt-4 mb-3">
+    <%- include('./layout/menu',{page:"index"}); -%>
+
+    <div class="px-4 mt-4 mb-3">
       <div
         class="title-section d-flex justify-content-between align-items-center"
       >
@@ -90,35 +90,7 @@
       </div>
     </div>
     <%- include('./layout/menu-category.ejs',{page:"index"}); -%>
-    <!-- <ul class="d-flex overflow-x-scroll scroll-none mb-4">
-      <li class="me-2 ms-4">
-        <a
-          href="./index.html"
-          class="rect-btn active d-flex flex-column align-items-center p-5"
-          ><span class="mgc_book_6_line mgcIcon mb-2"></span>個人總覽</a
-        >
-      </li>
-      <li class="me-2">
-        <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-          ><span class="mgc_dinner_line mgcIcon mb-2"></span>生活帳本</a
-        >
-      </li>
-      <li class="me-2">
-        <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-          ><span class="mgc_pig_money_line mgcIcon mb-2"></span>儲蓄帳本</a
-        >
-      </li>
-      <li class="me-2">
-        <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-          ><span class="mgc_trending_up_fill mgcIcon mb-2"></span>投資帳本</a
-        >
-      </li>
-      <li class="me-2">
-        <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-          ><span class="mgc_add_fill mgcIcon mb-2"></span>新增帳本</a
-        >
-      </li>
-    </ul> -->
+
     <div class="wrapper">
       <div class="py-4">
         <div
@@ -144,7 +116,7 @@
               <h4 class="fs-6">月結餘</h4>
               <span class="mgc_question_fill mgcIcon"></span>
             </div>
-            <div class="d-flex">
+            <div class="d-flex px-5">
               <p class="text-primary-500 fw-bold me-2">TWD</p>
               <p class="fs-3 fw-bold">2,081,600</p>
               <button type="button" class="btn eyeBtn border-0 p-0 ms-auto">
@@ -152,7 +124,7 @@
               </button>
             </div>
             <hr />
-            <div class="d-flex">
+            <div class="d-flex px-5">
               <div class="d-flex flex-fill border-end me-2">
                 <p class="text-neutral-500 me-2">總支出</p>
                 <p class="text-neutral-950 fw-bold flex-grow-1">$45,202</p>
@@ -184,7 +156,7 @@
             <span class="mgc_question_fill mgcIcon"></span>
           </div>
           <ul>
-            <li class="py-2">
+            <li class="category-item-bg-light py-2">
               <a href="#" class="category-item d-flex">
                 <div class="square-category me-4">
                   <span class="mgc_dinner_line mgcIcon mb-2"></span>
@@ -200,7 +172,7 @@
                 </div>
               </a>
             </li>
-            <li class="py-2">
+            <li class="category-item-bg-light py-2">
               <a href="#" class="category-item d-flex">
                 <div class="square-category me-4">
                   <span class="mgc_pig_money_line mgcIcon mb-2"></span>
@@ -216,7 +188,7 @@
                 </div>
               </a>
             </li>
-            <li class="py-2">
+            <li class="category-item-bg-light py-2">
               <a href="#" class="category-item d-flex">
                 <div class="square-category me-4">
                   <span class="mgc_trending_up_fill mgcIcon mb-2"></span>

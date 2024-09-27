@@ -118,3 +118,13 @@ footerSetting.addEventListener('click', (e) => {
     localStorage.setItem("pageBack", pageBack);
     window.location.href = 'setting.html';
 })
+
+
+
+// category-item prevent link
+const categoryItem = document.querySelectorAll('.category-item-bg-light');
+categoryItem.forEach(element => {
+    element.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+});
