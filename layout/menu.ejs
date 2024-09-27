@@ -1,9 +1,11 @@
 <header class="menuTab w-100 sticky-top">
-  <!-- <img src="../assets/images/statusbar.svg" alt="" class="status-bar" /> -->
-  <ul class="nav nav-underline bg-light d-flex">
+  <div>
+    <img src="../assets/images/statusbar.svg" alt="" class="status-bar-bg" />
+  </div>
+  <ul class="nav nav-underline nav-bg d-flex">
     <li class="nav-item w-50 px-0">
       <a
-        class="nav-link d-flex align-items-center justify-content-center <%= page === 'index' ? 'active' : '' %>"
+        class="nav-link d-flex align-items-bottom justify-content-center <%= page === 'index' ? 'active' : '' %>"
         href="./index.html"
         id="personIndex"
         ><span class="mgc_user_3_fill mgcIcon me-2"></span>個人記帳</a
@@ -11,7 +13,7 @@
     </li>
     <li class="nav-item w-50 px-0">
       <a
-        class="nav-link d-flex align-items-center justify-content-center <%= page === 'group-index' ? 'active' : '' %>"
+        class="nav-link d-flex align-items-bottom justify-content-center <%= page === 'group-index' ? 'active' : '' %>"
         href="./group-index.html"
         id="groupIndex"
         ><span class="mgc_group_3_fill mgcIcon me-2"></span
