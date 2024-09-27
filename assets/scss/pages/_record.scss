@@ -48,9 +48,30 @@
   input::placeholder {
     color: $neutral-300;
     font-weight: normal;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  input:focus::placeholder {
+    opacity: 0; /* 隱藏 placeholder */
+    transition: opacity 0.3s;
   }
   input[type="search"]::-webkit-search-cancel-button {
     display: none; // 隱藏 input[type="search"] 中的預設清除按鈕
+  }
+  input:-webkit-autofill {
+    background-color: white !important;
+
+    /* 使用 -webkit-box-shadow 覆蓋自動填充的背景顏色 */
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+
+    /* 覆蓋文字顏色（如果需要的話） */
+    -webkit-text-fill-color: $neutral-900 !important;
+
+    font-weight: 700;
+
+    /* 防止背景色再次被設置 */
+    transition: background-color 5000s ease-in-out 0s;
   }
 
   .custom-btn-close {
@@ -66,8 +87,9 @@
     display: none; /* 預設隱藏 */
     cursor: pointer;
   }
+  #search-input:focus + #clear-button,
   #search-input:not(:placeholder-shown) + #clear-button {
-    display: inline; /* 當有文字時顯示按鈕 */
+    display: inline;
   }
 }
 

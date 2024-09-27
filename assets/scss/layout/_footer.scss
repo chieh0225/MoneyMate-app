@@ -215,13 +215,13 @@
     display: none;
   }
 
-  .cost-list li {
-    border-bottom: 1px solid $neutral-200;
+  // .cost-list li {
+  //   border-bottom: 1px solid $neutral-200;
 
-    &:focus-within {
-      border-bottom: 2px solid $primary-500;
-    }
-  }
+  //   &:focus-within {
+  //     border-bottom: 2px solid $primary-500;
+  //   }
+  // }
 }
 
 // 不要抖修正 input-list 元件結構
@@ -268,10 +268,12 @@
   input::placeholder {
     color: $neutral-400;
     font-weight: normal;
+    opacity: 1;
+    transition: opacity 0.3s;
   }
   input:focus::placeholder {
-    color: $neutral-950;
-    font-weight: bold;
+    opacity: 0; /* 隱藏 placeholder */
+    transition: opacity 0.3s;
   }
 
   .img-upload-icon {
