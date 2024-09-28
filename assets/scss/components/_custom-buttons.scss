@@ -14,6 +14,7 @@
   background-color: var(--filter-btn-surface) !important;
   border: none !important;
   border-radius: 16px !important;
+  box-shadow: -1px 7px 5px 0px #bababa0d, -4px 21px 6px 0px #bababa00;
   &.active {
     color: var(--filter-btn-text-hover) !important;
     background-color: var(--filter-btn-surface-hover) !important;

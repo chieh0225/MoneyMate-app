@@ -20,12 +20,7 @@ const data = {
     {
       label: "My First Dataset",
       data: [12050, 24000, 9080, 4950], // 原始數據
-      backgroundColor: [
-        "#4ADE81",
-        "#22C55E",
-        "#86EFAD",
-        "#BBF7D1",
-      ],
+      backgroundColor: ["#4ADE81", "#22C55E", "#86EFAD", "#BBF7D1"],
       hoverBackgroundColor: [
         // 這是 hover 時的顏色
         "#4ADE81",
@@ -33,7 +28,8 @@ const data = {
         "#86EFAD",
         "#BBF7D1",
       ],
-      hoverOffset: 4,
+      hoverOffset: 0,
+      hoverBorderWidth: 0,
     },
   ],
 };
@@ -106,7 +102,7 @@ const chart = new Chart(document.getElementById("acquisitions"), {
           if (!tooltipEl) {
             tooltipEl = document.createElement("p");
             tooltipEl.id = "chartjs-tooltip";
-            tooltipEl.classList.add('roundedTag-sm');
+            tooltipEl.classList.add("roundedTag-sm");
             tooltipEl.style.color = "#737373";
             tooltipEl.style.border = "1px solid #e7e7e7";
             // tooltipEl.style.backgroundColor = "#F0FDF5";
@@ -135,10 +131,12 @@ const chart = new Chart(document.getElementById("acquisitions"), {
           }
 
           const position = context.chart.canvas.getBoundingClientRect();
-          tooltipEl.style.left = `${position.left + window.pageXOffset + tooltip.caretX
-            }px`;
-          tooltipEl.style.top = `${position.top + window.pageYOffset + tooltip.caretY
-            }px`;
+          tooltipEl.style.left = `${
+            position.left + window.pageXOffset + tooltip.caretX
+          }px`;
+          tooltipEl.style.top = `${
+            position.top + window.pageYOffset + tooltip.caretY
+          }px`;
           tooltipEl.style.width = "auto";
           tooltipEl.style.height = "auto";
 
@@ -155,7 +153,7 @@ const chart = new Chart(document.getElementById("acquisitions"), {
     hover: {
       mode: "nearest",
       intersect: true,
-      animationDuration: 300, // 設置懸停動畫的持續時間
+      animateScale: false,
     },
     layout: {
       padding: 20, // 為 hoverOffset 效果提供空間
