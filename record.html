@@ -5,32 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>紀錄</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-1e1348a0.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-b013bfb3.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-97aa75d2.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-f765a903.css">
   </head>
   <body>
-    <header class="header-status-bar">
-  <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
+    <header class="sticky-top header-w-btn">
+  <div class="setting-header">
+    <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
+    <div class="d-flex justify-content-between align-items-end record-title">
+      <h1 class="h1-b text-white">紀錄</h1>
+      <button
+        type="button"
+        class="btn dropdown-toggle t1-b text-white border-0 p-0 d-flex justify-content-between align-items-center"
+        data-bs-toggle="modal"
+        data-bs-target="#modalBottom"
+      >
+        儲蓄帳本
+        <span class="mgc_down_small_fill icon-primary ms-1"></span>
+      </button>
+    </div>
+  </div>
 </header>
 
     <div class="d-flex flex-column">
       <div class="bg-white d-flex flex-column gap-3 w-100 p-4">
+        <!-- modalBottom -->
         <div
-          class="d-flex justify-content-between align-items-end record-title"
-        >
-          <h1 class="text-black h1-b">紀錄</h1>
-          <div>
-            <button
-              type="button"
-              class="btn dropdown-toggle h3-b border-0 p-0"
-              data-bs-toggle="modal"
-              data-bs-target="#modalBottom"
-            >
-              儲蓄帳本
-              <span class="mgc_down_fill icon-primary ms-1"></span>
-            </button>
-            <!-- modalBottom -->
-            <div
   class="modalBottom modal fade"
   id="modalBottom"
   tabindex="-1"
@@ -68,9 +68,6 @@
     </div>
   </div>
 </div>
-          </div>
-        </div>
-
         <form class="d-flex search-record">
           <div class="input-group">
             <div class="search-icon lh-1">
@@ -210,7 +207,7 @@
         data-type="收入"
         data-amount="360"
       >
-        <div class="d-flex flex-column gap-1 w-100 m-0">
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
           <div class="card record-info">
             <div class="card-body p-0">
               <div class="d-flex justify-content-between mb-1">
@@ -359,7 +356,7 @@
           >
             <li class="nav-item flex-grow-1 p-0" role="presentation">
               <button
-                class="nav-link active py-3 text-center w-100"
+                class="nav-link active py-3 text-center h3-b w-100"
                 id="pills-home-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-home"
@@ -373,7 +370,7 @@
             </li>
             <li class="nav-item flex-grow-1 p-0" role="presentation">
               <button
-                class="nav-link py-3 text-center w-100"
+                class="nav-link py-3 text-center h3-b w-100"
                 id="pills-profile-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-profile"
