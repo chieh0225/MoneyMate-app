@@ -17,10 +17,12 @@
           type="button"
           class="btn border-0 p-0 dropdown-toggle"
           data-bs-toggle="modal"
-          data-bs-target="#AccountBook"
+          data-bs-target="#personalAccountBook"
         >
           全部帳本
         </button>
+        <!-- modalBottom -->
+        <%- include('./layout/personal-AccountBook-btmSheet.ejs'); -%>
       </div>
     </div>
     <%- include('./layout/menu-category.ejs',{page:"index"}); -%>
