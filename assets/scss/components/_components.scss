@@ -64,10 +64,12 @@
     }
 }
 
-// category-item
-// .category{
 
-// }
+.main-character {
+    outline: 2px solid $primary-500;
+    border: 2px solid transparent;
+}
+
 
 // modal
 .modalBottom {
@@ -198,4 +200,16 @@
         color: var(--filter-btn-text-hover) !important;
         background-color: var(--filter-btn-surface-hover) !important;
     }
+}
+
+// notification badge
+.circle-fill-badge {
+    width: 12px;
+    height: 12px;
+    border: 2px solid $white;
+    border-radius: $border-radius-circle;
+    background-color: $alert-r-500;
+    position: absolute;
+    top: 6%;
+    left: 94%;
 }

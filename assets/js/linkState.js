@@ -148,3 +148,23 @@ categoryItems.forEach((item) => {
     }
   });
 });
+
+// 隱藏金額狀態
+const eyeBtn = document.querySelector('#hiddenBtn');
+const eyeCloseBtn = document.querySelector('#showBtn');
+const visibleItem = document.querySelector('#info-visible-item');
+const invisibleItem = document.querySelector('#info-invisible-item');
+if (eyeBtn) {
+  eyeBtn.addEventListener('click', () => {
+    changeItemStatus();
+  })
+
+  eyeCloseBtn.addEventListener('click', () => {
+    changeItemStatus();
+  })
+}
+
+const changeItemStatus = () => {
+  visibleItem.classList.toggle('d-none');
+  invisibleItem.classList.toggle('d-none');
+}
