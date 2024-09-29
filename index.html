@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>總覽</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-d276de7b.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-f765a903.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/main-ee4b12f3.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/main-d7b465d0.css">
   </head>
   <body>
     <header class="menuTab w-100 sticky-top">
@@ -155,29 +155,34 @@
   <li class="me-2 ms-4">
     <a
       href="./index.html"
-      class="rect-btn active d-flex flex-column align-items-center p-5"
+      class="rect-btn active d-flex flex-column align-items-center position-relative"
     >
+      <span class="circle-fill-badge translate-middle"></span>
       <span class="mgc_book_6_line mgcIcon mb-2"></span>
-      個人總覽</a
-    >
+      個人總覽
+    </a>
   </li>
   <li class="me-2">
-    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+    <a href="#" class="rect-btn d-flex flex-column align-items-center"
       ><span class="mgc_dinner_line mgcIcon mb-2"></span>生活帳本</a
     >
   </li>
   <li class="me-2">
-    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+    <a href="#" class="rect-btn d-flex flex-column align-items-center"
       ><span class="mgc_pig_money_line mgcIcon mb-2"></span>儲蓄帳本</a
     >
   </li>
   <li class="me-2">
-    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
-      ><span class="mgc_trending_up_fill mgcIcon mb-2"></span>投資帳本</a
+    <a
+      href="#"
+      class="rect-btn d-flex flex-column align-items-center position-relative"
+    >
+      <span class="circle-fill-badge translate-middle"></span>
+      <span class="mgc_trending_up_fill mgcIcon mb-2"></span>投資帳本</a
     >
   </li>
   <li class="me-2">
-    <a href="#" class="rect-btn d-flex flex-column align-items-center p-5"
+    <a href="#" class="rect-btn d-flex flex-column align-items-center"
       ><span class="mgc_add_fill mgcIcon mb-2"></span>新增帳本</a
     >
   </li>
@@ -251,32 +256,58 @@
 </div>
         </div>
         <div class="mb-3">
-          <div class="main-card mb-4">
-            <div
-              class="titleArea d-flex justify-content-between align-items-center mb-5"
-            >
-              <h4 class="fs-6">月結餘</h4>
-              <span class="mgc_question_fill mgcIcon"></span>
-            </div>
-            <div class="d-flex px-5">
-              <p class="text-primary-500 fw-bold me-2">TWD</p>
-              <p class="fs-3 fw-bold">2,081,600</p>
-              <button type="button" class="btn eyeBtn border-0 p-0 ms-auto">
-                <span class="mgc_eye_2_fill mgcIcon"></span>
-              </button>
-            </div>
-            <hr />
-            <div class="d-flex px-5">
-              <div class="d-flex flex-fill border-end me-2">
-                <p class="text-neutral-500 me-2">總支出</p>
-                <p class="text-neutral-950 fw-bold flex-grow-1">$45,202</p>
-              </div>
-              <div class="d-flex flex-fill">
-                <p class="text-neutral-500 me-2">總收入</p>
-                <p class="text-neutral-950 fw-bold flex-grow-1">$120,000</p>
-              </div>
-            </div>
-          </div>
+          <div class="main-card mb-4" id="info-visible-item">
+  <div class="titleArea d-flex justify-content-between align-items-center mb-5">
+    <h4 class="fs-6">月結餘</h4>
+    <span class="mgc_question_fill mgcIcon"></span>
+  </div>
+  <div class="d-flex px-5">
+    <p class="text-primary-500 fw-bold me-2">TWD</p>
+    <p class="fs-3 fw-bold">2,081,600</p>
+    <button
+      type="button"
+      class="btn eyeBtn border-0 p-0 ms-auto"
+      id="hiddenBtn"
+    >
+      <span class="mgc_eye_2_fill mgcIcon"></span>
+    </button>
+  </div>
+  <hr />
+  <div class="d-flex px-5">
+    <div class="w-50 d-flex border-end me-2">
+      <p class="text-neutral-500 me-2">總支出</p>
+      <p class="text-neutral-950 fw-bold flex-grow-1">$45,202</p>
+    </div>
+    <div class="d-flex flex-fill">
+      <p class="text-neutral-500 me-2">總收入</p>
+      <p class="text-neutral-950 fw-bold flex-grow-1">$120,000</p>
+    </div>
+  </div>
+</div>
+<div class="main-card mb-4 d-none" id="info-invisible-item">
+  <div class="titleArea d-flex justify-content-between align-items-center mb-5">
+    <h4 class="fs-6">月結餘</h4>
+    <span class="mgc_question_fill mgcIcon"></span>
+  </div>
+  <div class="d-flex px-5">
+    <p class="text-primary-500 fw-bold me-2">TWD</p>
+    <p class="fs-3 fw-bold">****</p>
+    <button type="button" class="btn eyeBtn border-0 p-0 ms-auto" id="showBtn">
+      <span class="mgc_eye_close_fill mgcIcon"></span>
+    </button>
+  </div>
+  <hr />
+  <div class="d-flex px-5">
+    <div class="w-50 d-flex border-end me-2">
+      <p class="text-neutral-500 me-2">總支出</p>
+      <p class="text-neutral-950 fw-bold flex-grow-1">****</p>
+    </div>
+    <div class="d-flex flex-fill">
+      <p class="text-neutral-500 me-2">總收入</p>
+      <p class="text-neutral-950 fw-bold flex-grow-1">****</p>
+    </div>
+  </div>
+</div>
           <div class="main-card">
             <div
               class="titleArea d-flex justify-content-between align-items-center mb-5"
