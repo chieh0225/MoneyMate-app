@@ -17,9 +17,11 @@
         font-size: map-get($font-sizes, c5);
         font-weight: 700;
         color: $neutral-200;
+        border-bottom: 1px solid $neutral-200 ;
+        padding: map-get($spacers, 3) 0;
 
         .mgcIcon {
-            font-size: map-get($font-sizes, 3);
+            // font-size: map-get($font-sizes, 3);
             line-height: 1;
         }
 
@@ -29,6 +31,7 @@
 
         &.active {
             color: $black;
+            border-width: 2px;
             border-bottom-color: $primary-500;
 
             .mgcIcon::before {
