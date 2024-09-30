@@ -78,6 +78,22 @@
       }
     }
   }
+  .record-success {
+    padding-bottom: 95px;
+    .toast {
+      --bs-toast-max-width: 361px !important;
+      .icon-primary:before {
+        color: #ffffff !important;
+      }
+    }
+    .custom-btn-close {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+  }
 }
 
 .addrecord {
