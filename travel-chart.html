@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>旅遊測試</title>
-    <script type="module" crossorigin src="/MoneyMate-app/assets/main-da26a6e8.js"></script>
-    <link rel="stylesheet" href="/MoneyMate-app/assets/main-8976b3b4.css">
+    <script type="module" crossorigin src="/MoneyMate-app/assets/darkMode-8d9d8624.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/darkMode-60b21335.css">
   </head>
   <body>
     <header class="menuTab w-100 sticky-top">
@@ -163,7 +163,8 @@
             data-bs-dismiss="offcanvas"
           ></button>
           <a
-            href="./travel-record.html"
+            href="#"
+            onclick="clearToastParam(event)"
             class="custom-btn-sm custom-btn-primary done-btn"
             >完成</a
           >
@@ -763,6 +764,30 @@
       <a class="nav-link t3 pt-0 stretched-link" href="./setting.html">設定</a>
     </li>
   </ul>
+  <!-- Toast -->
+  <div
+    class="toast-container position-absolute px-0 bottom-0 start-50 translate-middle-x record-success"
+    id="toastPlacement"
+    data-original-class="toast-container position-absolute px-0"
+  >
+    <div class="toast text-white bg-primary fade mx-auto">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center t1">
+          <span class="mgc_check_circle_fill icon-primary me-2"></span
+          >成功完成記帳
+        </div>
+        <button
+          type="button"
+          class="custom-btn-close ms-auto d-flex align-items-center"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+          id="closeToastButton"
+        >
+          <span class="mgc_close_line icon-primary align-text-bottom"></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <!-- 計算機 Modal -->
