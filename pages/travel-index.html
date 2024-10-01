@@ -22,7 +22,9 @@
           全部帳本
         </button>
         <!-- modalBottom -->
-        <%- include('./layout/group-AccountBook-btmSheet.ejs'); -%>
+        <%-
+        include('./layout/group-AccountBook-btmSheet.ejs',{page:"travel-index"});
+        -%>
       </div>
     </div>
     <%- include('./layout/menu-catalog.ejs',{page:"travel-index"}); -%>

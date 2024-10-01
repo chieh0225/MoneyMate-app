@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>泰國旅遊圖表</title>
+    <title>群組圖表</title>
   </head>
   <body>
     <%- include('./layout/menu',{page:"group-index"}); -%>
@@ -23,11 +23,11 @@
         </button>
         <!-- modalBottom -->
         <%-
-        include('./layout/group-AccountBook-btmSheet.ejs',{page:"travel-index"});
+        include('./layout/group-AccountBook-btmSheet.ejs',{page:"group-index"});
         -%>
       </div>
     </div>
-    <%- include('./layout/menu-catalog.ejs',{page:"travel-index"}); -%>
+    <%- include('./layout/menu-catalog.ejs',{page:"group-index"}); -%>
     <div class="wrapper">
       <div class="py-4">
         <div
@@ -129,6 +129,17 @@
           </button>
         </div>
       </div>
+      <!-- <div class="d-flex flex-column w-100 cost-chart">
+        <div class="d-flex justify-content-center w-100">
+          <canvas
+            id="acquisitions"
+            width="200"
+            height="200"
+            data-disable-animations="true"
+            data-allow-hover="true"
+          ></canvas>
+        </div>
+      </div> -->
     </div>
 
     <%- include('./layout/footer'); -%>
