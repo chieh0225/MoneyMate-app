@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>群組紀錄</title>
+    <script type="module" crossorigin src="/MoneyMate-app/assets/darkMode-c01e2894.js"></script>
+    <link rel="stylesheet" href="/MoneyMate-app/assets/darkMode-257e06e6.css">
+  </head>
+  <body>
+    <header class="sticky-top header-w-btn">
+  <div class="setting-header">
+    <img src="/MoneyMate-app/assets/statusbar-6b90248a.svg" alt="" class="status-bar" />
+    <div class="d-flex justify-content-between align-items-end record-title">
+      <h1 class="h1-b text-white">紀錄</h1>
+      <button
+        type="button"
+        class="btn dropdown-toggle t1-b text-white border-0 p-0 d-flex justify-content-between align-items-center"
+        data-bs-toggle="modal"
+        data-bs-target="#groupAccountBook"
+      >
+        泰國旅遊
+        <span class="mgc_down_small_fill icon-primary ms-1"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+    <div class="d-flex flex-column">
+      <div class="bg-white d-flex flex-column gap-3 w-100 p-4 search-record">
+        <div
+  class="modalBottom modal fade"
+  id="groupAccountBook"
+  tabindex="-1"
+  aria-labelledby="modalBottomLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog fixed-bottom">
+    <div class="modal-content">
+      <div class="px-5 pt-3 pb-4">
+        <div class="d-flex justify-content-between">
+          <h3 class="modal-title h3-b" id="modalBottomLabel">切換帳本</h3>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+      <div class="px-4">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="./group-index.html"
+              >群組總覽</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">生日派對</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link "
+              href="./travel-index.html"
+              >泰國旅遊</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">日本行</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">台北之旅</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">民宿包棟</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+        <form class="d-flex search-input">
+          <div class="input-group">
+            <div class="search-icon lh-1">
+              <span
+                class="mgc_search_2_fill icon-primary align-text-bottom"
+              ></span>
+            </div>
+            <input
+              class="form-control lh-1 t1 search"
+              type="search"
+              placeholder="搜尋記帳記錄"
+              aria-label="搜尋記帳記錄"
+              id="search-input"
+            />
+            <button type="button" class="custom-btn-close" id="clear-button">
+              <span
+                class="mgc_close_line icon-primary align-text-bottom"
+              ></span>
+            </button>
+          </div>
+        </form>
+
+        <ul class="nav nav-pills gap-2 filter-btn-list" id="filter-buttons">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active filter-btn"
+              id="filter-all"
+              type="button"
+            >
+              全部
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link filter-btn" id="filter-date" type="button">
+              日期排序
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link filter-btn" id="filter-type" type="button">
+              記帳類型
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link filter-btn"
+              id="filter-amount"
+              type="button"
+            >
+              金額較高
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="record-list">
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="支出"
+        data-amount="360"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-info">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">pad thai</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄360</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="支出"
+        data-amount="9999"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-info">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">泰國機票來回</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄9,999</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/02-28d76561.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                  <img
+                    src="/MoneyMate-app/assets/04-758c527d.png"
+                    class="rounded-circle object-fit"
+                    width="28"
+                    height="28"
+                    alt="Simon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="支出"
+        data-amount="2500"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-info">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">水族館門票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span
+                    class="badge account-type-tag account-type-tag-secondary"
+                    >支出</span
+                  >
+                  <span class="ms-1 h3-b">＄2500</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/02-28d76561.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Ryan"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="收入"
+        data-amount="1000"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-info">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">公費</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-primary"
+                    >收入</span
+                  >
+                  <span class="ms-1 h3-b">＄1000</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Monika"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="record-item"
+        data-date="2024-07-25"
+        data-type="轉帳"
+        data-amount="180"
+      >
+        <div class="d-flex flex-column gap-1 w-100 mb-1">
+          <div class="card record-info">
+            <div class="card-body p-0">
+              <div class="d-flex justify-content-between mb-1">
+                <p class="t2 custom-text-muted">2024 / 07 / 25</p>
+                <span
+                  class="mgc_more_1_fill icon-primary align-text-bottom"
+                ></span>
+              </div>
+              <h5 class="card-title t1-b">地鐵票</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="badge account-type-tag account-type-tag-alert-b"
+                    >轉帳</span
+                  >
+                  <span class="ms-1 h3-b">＄180</span>
+                </div>
+                <!-- 使用者頭像 -->
+                <div class="d-flex user-list">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer w-100">
+  <ul class="d-flex align-items-start justify-content-between pt-4 pb-6">
+    <!-- 總覽 -->
+    <li
+      class="nav-item d-flex flex-column align-items-center gap-1 position-relative"
+    >
+      <span class="mgc_home_7_fill icon-primary align-text-bottom"></span>
+      <a
+        class="nav-link t3 pt-0 stretched-link"
+        aria-current="page"
+        href="./index.html"
+        >總覽</a
+      >
+    </li>
+
+    <!-- 圖表 -->
+    <li
+      class="nav-item d-flex flex-column align-items-center gap-1 position-relative"
+    >
+      <span class="mgc_chart_pie_2_fill icon-primary align-text-bottom"></span>
+      <a class="nav-link t3 pt-0 stretched-link" href="./chart.html">圖表</a>
+    </li>
+
+    <!-- 新增紀錄按鈕 -->
+    <li class="d-flex justify-content-center align-items-center">
+      <button
+        type="button"
+        class="add-btn border-0 d-flex justify-content-center align-items-center"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mainOffcanvas"
+        aria-controls="offcanvasBottom"
+      >
+        <span class="mgc_add_fill icon-add align-text-bottom"></span>
+      </button>
+      <!-- 第一個 Offcanvas -->
+      <div
+        class="offcanvas offcanvas-bottom addrecord"
+        tabindex="-1"
+        id="mainOffcanvas"
+        style="height: calc(100vh - 68px)"
+      >
+        <!-- <div class="cardTop">
+          <img
+          src="../assets/images/Card Top.png"
+          alt=""
+          width="361px"
+          height="10px"
+          class="mx-auto"
+          />
+        </div> -->
+        <img
+          src="/MoneyMate-app/assets/Grabber-ccef7bf3.svg"
+          alt=""
+          width="36px"
+          height="5px"
+          class="mx-auto mt-1"
+        />
+        <div class="offcanvas-header justify-content-between pt-1 pb-0">
+          <button
+            type="button"
+            class="btn-close text-reset focus-shadow-none"
+            data-bs-dismiss="offcanvas"
+          ></button>
+          <a
+            href="#"
+            onclick="clearToastParam(event)"
+            class="custom-btn-sm custom-btn-primary done-btn"
+            >完成</a
+          >
+        </div>
+        <div class="offcanvas-body">
+          <ul
+            class="nav nav-underline gap-0 d-flex"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item flex-grow-1 p-0" role="presentation">
+              <button
+                class="nav-link active py-3 text-center h3-b w-100"
+                id="pills-home-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-home"
+                type="button"
+                role="tab"
+                aria-controls="pills-home"
+                aria-selected="true"
+              >
+                支出
+              </button>
+            </li>
+            <li class="nav-item flex-grow-1 p-0" role="presentation">
+              <button
+                class="nav-link py-3 text-center h3-b w-100"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                收入
+              </button>
+            </li>
+          </ul>
+
+          <div class="d-flex flex-column gap-3 py-4">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <p class="h3-b pe-4">輸入金額</p>
+              </div>
+
+              <div class="dropdown currencySwitch">
+                <button
+                  class="btn dropdown-toggle t1-b border-0 p-0 d-flex justify-content-between align-items-center"
+                  type="button"
+                  id="currencySwitch-dropdownbutton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  幣值切換
+                  <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                </button>
+                <!-- <ul class="dropdown-menu mt-2" aria-labelledby="dropdownMenuButton1" style="min-width: 60px">
+                    <li><a class="dropdown-item" href="#">TWD</a></li>
+                    <li><a class="dropdown-item" href="#">USD</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">JPY</a>
+                    </li>
+                </ul> -->
+              </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-end">
+              <div
+                class="input-group align-items-center p-4 mb-2 result-input-wrapper"
+              >
+                <p class="h3-b">THB</p>
+
+                <!-- 顯示結果的 input 元素 -->
+                <input
+                  type="text"
+                  id="result-input"
+                  class="form-control text-end h2-b result-input"
+                  data-bs-toggle="modal"
+                  data-bs-target="#calculator-modal"
+                  readonly
+                />
+              </div>
+
+              <!-- <p class="t2 d-flex align-items-center position-relative calendar">
+                今天
+                <input id="customDateInput" type="date" value="2024-07-25" class="form-control border-0 focus-shadow-none t2">
+                <span id="calendarIcon" class="mgc_down_small_fill icon-primary icon-md"></span>
+              </p> -->
+            </div>
+          </div>
+
+          <div>
+            <ul>
+              <!-- <li class="d-flex justify-content-between align-items-center py-3 sync">
+                <p class="t1-b">同步到個人總覽</p>
+                <button class="form-check form-switch">
+                  <label
+                    class="form-check-label t1-b d-flex align-items-center"
+                    for="Toggle"
+                    >
+                  <input
+                    class="form-check-input focus-shadow-none border-0"
+                    type="checkbox"
+                    role="switch"
+                    id="Toggle"
+                  />
+                </button>
+              </li> -->
+
+              <!-- 類別 -->
+              <!-- <li class="py-3 spendingCategory">
+                <div class="d-flex align-items-center overflow-hidden text-nowrap">
+                  <p class="t1-b pe-4">類別</p>
+                  <ul class="nav nav-pills input-tag-list overflow-x-scroll scroll-none" id="spendingCategory-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-food-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-food"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-food"
+                        aria-selected="true">食物</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-drink-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-drink"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-drink"
+                        aria-selected="true">飲料</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-transport-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-transport"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-transport"
+                        aria-selected="false">交通</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-ticket-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-ticket"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-ticket"
+                        aria-selected="false">票卷</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-accommodation-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-accommodation"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-accommodation"
+                        aria-selected="false">住宿</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-shopping-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-shopping"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-shopping"
+                        aria-selected="false">購物</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link input-tag-item input-tag t1-b"
+                        id="spendingCategory-others-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#spendingCategory-others"
+                        type="button"
+                        role="tab"
+                        aria-controls="spendingCategory-others"
+                        aria-selected="false">其他</button>
+                    </li>
+                  </ul>                  
+                </div>
+              </li> -->
+
+              <!-- 名稱 -->
+              <!-- <li>
+                <form class="d-flex addrecord-item">
+                  <div class="input-group align-items-center">
+                    <label class="form-label t1-b m-0 pe-3" for="inputGroup01"
+                      >名稱</label
+                    >
+                    <input
+                      class="form-control lh-1 t1-b py-3"
+                      type="text"
+                      placeholder="點擊紀錄"
+                      aria-label="點擊紀錄"
+                      id="inputGroup01"
+                    />
+                  </div>
+                </form>
+              </li> -->
+
+              <!-- 備註 -->
+              <!-- <li>
+                <form class="d-flex addrecord-item">
+                  <div class="input-group align-items-center">
+                    <label class="form-label t1-b m-0 pe-3" for="inputGroup02"
+                      >備註</label
+                    >
+                    <input
+                      class="form-control lh-1 t1-b py-3"
+                      type="text"
+                      placeholder="點擊紀錄（選填）"
+                      aria-label="點擊紀錄（選填）"
+                      id="inputGroup02"
+                    />
+                    <div>
+                      <label
+                        for="fileUpload"
+                        class="img-upload-icon d-flex align-items-center m-0"
+                      >
+                        <input
+                        type="file"
+                        id="fileUpload"
+                        style="display: none"
+                        />
+                        <span class="mgc_pic_fill icon-primary"></span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </li> -->
+            </ul>
+          </div>
+
+          <div>
+            <!-- <ul class="cost-list">
+              <li class="d-flex justify-content-between py-3">
+                <div class="d-flex">
+                  <p class="t1-b pe-4">付款成員</p>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/01.png"
+                        class="rounded-circle object-fit m-0"
+                        width="28"
+                        height="28"
+                        alt="Neil"
+                      />
+                      <p class="t1-b ms-2">Neil</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                    type="button"
+                    id="sharing-dropdownbutton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                  </button>
+                </div>
+              </li>
+
+              <li class="d-flex justify-content-between py-3">
+                <div class="d-flex">
+                  <p class="t1-b pe-4">分帳方式</p>
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/01.png"
+                        class="rounded-circle object-fit m-0"
+                        width="28"
+                        height="28"
+                        alt="Neil"
+                      />
+                      <p class="t1-b ms-2">Neil</p>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/02.png"
+                        class="rounded-circle object-fit"
+                        width="28"
+                        height="28"
+                        alt="Ryan"
+                      />
+                      <p class="t1-b ms-2">Ryan</p>
+                    </div>
+                    <div class="d-flex">
+                      <img
+                        src="../assets/images/avator/03.png"
+                        class="rounded-circle object-fit"
+                        width="28"
+                        height="28"
+                        alt="Monika"
+                      />
+                      <p class="t1-b ms-2">Monika</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button
+                    class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                    type="button"
+                    id="sharing-dropdownbutton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                  </button>
+                </div>
+              </li>
+            </ul> -->
+          </div>
+
+          <!-- 修正版input-list 元件組 -->
+          <ul class="input-list">
+            <li>
+              <label class="form-label t1-b m-0" for="Toggle"
+                >同步到個人總覽</label
+              >
+              <div class="switch-btn">
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input border-0 focus-shadow-none"
+                    type="checkbox"
+                    role="switch"
+                    id="Toggle"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="d-flex align-items-center overflow-hidden text-nowrap"
+              >
+                <p class="t1-b pe-4">類別</p>
+                <ul
+                  class="nav nav-pills flex-nowrap overflow-x-scroll scroll-none"
+                  id="spendingCategory-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      食物
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      飲料
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      交通
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      票卷
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      住宿
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      購物
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="input-tag-item input-tag-neutral t1-b"
+                      data-bs-toggle="pill"
+                      type="button"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      其他
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="input-group align-items-center">
+                <label class="form-label t1-b m-0 pe-3" for="inputGroup01"
+                  >名稱</label
+                >
+                <input
+                  class="form-control lh-1 t1-b p-0"
+                  type="text"
+                  placeholder="點擊紀錄"
+                  aria-label="點擊紀錄"
+                  id="inputGroup01"
+                />
+              </div>
+            </li>
+            <li>
+              <div class="input-group align-items-center">
+                <label class="form-label t1-b m-0 pe-3" for="inputGroup02"
+                  >備註</label
+                >
+                <input
+                  class="form-control lh-1 t1-b p-0"
+                  type="text"
+                  placeholder="點擊紀錄（選填）"
+                  aria-label="點擊紀錄（選填）"
+                  id="inputGroup02"
+                />
+                <div>
+                  <label
+                    for="fileUpload"
+                    class="img-upload-icon d-flex align-items-center m-0"
+                  >
+                    <input type="file" id="fileUpload" style="display: none" />
+                    <span class="mgc_pic_fill icon-primary"></span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="input-group align-items-center flex-nowrap">
+                <label class="form-label t1-b m-0 pe-3" for="inputGroup03"
+                  >付款成員</label
+                >
+                <div class="d-flex align-items-center gap-2 p-0">
+                  <img
+                    src="/MoneyMate-app/assets/01-e7957e0c.png"
+                    class="rounded-circle object-fit m-0"
+                    width="28"
+                    height="28"
+                    alt="Neil"
+                  />
+                  <p class="t1-b m-0">Neil</p>
+                </div>
+                <!-- 隱藏 input 但留在可點擊範圍內 -->
+                <input
+                  type="text"
+                  style="
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                  "
+                  id="inputGroup03"
+                  readonly
+                />
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                  type="button"
+                  id="sharing-dropdownbutton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                </button>
+              </div>
+            </li>
+            <li class="align-items-start">
+              <div class="d-flex">
+                <label class="form-label t1-b m-0 pe-4" for="inputGroup04"
+                  >分帳方式</label
+                >
+                <div class="d-flex flex-column gap-2">
+                  <div class="d-flex">
+                    <img
+                      src="/MoneyMate-app/assets/01-e7957e0c.png"
+                      class="rounded-circle object-fit m-0"
+                      width="28"
+                      height="28"
+                      alt="Neil"
+                    />
+                    <p class="t1-b ms-2">Neil</p>
+                  </div>
+                  <div class="d-flex">
+                    <img
+                      src="/MoneyMate-app/assets/02-28d76561.png"
+                      class="rounded-circle object-fit"
+                      width="28"
+                      height="28"
+                      alt="Ryan"
+                    />
+                    <p class="t1-b ms-2">Ryan</p>
+                  </div>
+                  <div class="d-flex">
+                    <img
+                      src="/MoneyMate-app/assets/03-ab6d0fad.png"
+                      class="rounded-circle object-fit"
+                      width="28"
+                      height="28"
+                      alt="Monika"
+                    />
+                    <p class="t1-b ms-2">Monika</p>
+                  </div>
+                  <!-- 隱藏 input 但留在可點擊範圍內 -->
+                  <input
+                    type="text"
+                    style="
+                      opacity: 0;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      border: none;
+                    "
+                    id="inputGroup04"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle t1 border-0 p-0 d-flex justify-content-between align-items-center"
+                  type="button"
+                  id="sharing-dropdownbutton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="mgc_down_small_fill icon-primary ms-1"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <!-- 紀錄 -->
+    <li
+      class="nav-item d-flex flex-column align-items-center gap-1 position-relative"
+    >
+      <span class="mgc_list_search_fill icon-primary align-text-bottom"></span>
+      <a class="nav-link t3 pt-0 stretched-link" href="#">紀錄</a>
+    </li>
+
+    <!-- 設定 -->
+    <li
+      class="nav-item d-flex flex-column align-items-center gap-1 position-relative"
+    >
+      <span class="mgc_settings_5_fill icon-primary align-text-bottom"></span>
+      <a class="nav-link t3 pt-0 stretched-link" href="./setting.html">設定</a>
+    </li>
+  </ul>
+  <!-- Toast -->
+  <div
+    class="toast-container position-absolute px-0 bottom-0 start-50 translate-middle-x record-success"
+    id="toastPlacement"
+    data-original-class="toast-container position-absolute px-0"
+  >
+    <div class="toast text-white bg-primary fade mx-auto">
+      <div class="d-flex">
+        <div class="toast-body d-flex align-items-center t1">
+          <span class="mgc_check_circle_fill icon-primary me-2"></span
+          >成功完成記帳
+        </div>
+        <button
+          type="button"
+          class="custom-btn-close ms-auto d-flex align-items-center"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+          id="closeToastButton"
+        >
+          <span class="mgc_close_line icon-primary align-text-bottom"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- 計算機 Modal -->
+<div class="calculator-modal-wrapper">
+  <div
+    class="modal fade"
+    id="calculator-modal"
+    tabindex="-1"
+    aria-labelledby="calculatorModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog mb-0 calculator-modal">
+      <div class="modal-content border-0">
+        <div class="modal-body p-0">
+          <div class="calculator card border-0 rounded-0">
+            <div class="calculator-keys">
+              <button
+                type="button"
+                value="7"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                7
+              </button>
+              <button
+                type="button"
+                value="8"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                8
+              </button>
+              <button
+                type="button"
+                value="9"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                9
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn"
+                value="+"
+              >
+                <span class="mgc_add_fill align-text-bottom"></span>
+              </button>
+
+              <button
+                type="button"
+                value="4"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                4
+              </button>
+              <button
+                type="button"
+                value="5"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                5
+              </button>
+              <button
+                type="button"
+                value="6"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                6
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn"
+                value="-"
+              >
+                <span class="mgc_minimize_fill align-text-bottom"></span>
+              </button>
+
+              <button
+                type="button"
+                value="1"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                1
+              </button>
+              <button
+                type="button"
+                value="2"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                2
+              </button>
+              <button
+                type="button"
+                value="3"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                3
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn"
+                value="*"
+              >
+                <span class="mgc_close_fill align-text-bottom"></span>
+              </button>
+
+              <button
+                type="button"
+                value="00"
+                class="btn btn-light calculator-number-btn h1-b h-100 waves-effect"
+              >
+                00
+              </button>
+              <button
+                type="button"
+                value="0"
+                class="btn btn-light calculator-number-btn h1-b waves-effect"
+              >
+                0
+              </button>
+              <button
+                type="button"
+                class="decimal function btn btn-light h1-b calculator-number-btn"
+                value="."
+              >
+                .
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 h1-b text-white"
+                value="/"
+              >
+                ÷
+              </button>
+
+              <button
+                type="button"
+                class="all-clear function btn btn-primary-500 btn-ac h1-b text-white"
+                value="all-clear"
+              >
+                AC
+              </button>
+              <button
+                type="button"
+                class="operator btn btn-primary-500 calculator-icon-btn text-white"
+                value="backspace"
+              >
+                <span class="mgc_arrow_left_fill align-text-bottom"></span>
+              </button>
+              <button
+                type="button"
+                class="equal-sign operator btn btn-primary-600 h1-b text-white btn-ok"
+                value="="
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </body>
+</html>
