@@ -10,13 +10,13 @@
     <%- include('./layout/travel-record-header'); -%>
 
     <div class="d-flex flex-column">
-      <div class="bg-white d-flex flex-column gap-3 w-100 p-4">
+      <div class="bg-white d-flex flex-column gap-3 w-100 p-4 search-record">
         <!-- modalBottom -->
         <!-- <%- include('./layout/group-record-btmSheet.ejs'); -%> -->
         <%-
         include('./layout/group-AccountBook-btmSheet.ejs',{page:"travel-index"});
         -%>
-        <form class="d-flex search-record">
+        <form class="d-flex search-input">
           <div class="input-group">
             <div class="search-icon lh-1">
               <span
